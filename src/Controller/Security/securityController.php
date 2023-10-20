@@ -54,6 +54,20 @@ class securityController extends AbstractController
         {
             return $this->render('site/mines.html.twig');
         }
+        /**
+     * @Route("/Pierres Orenementales", name="Pierres Ornementales")
+     */
+    public function pierreornementale(Request $request)
+        {
+            return $this->render('site/pierreornementale.html.twig');
+        }
+        /**
+     * @Route("/Agregat", name="Agregat")
+     */
+    public function agregat(Request $request)
+        {
+            return $this->render('site/agregat.html.twig');
+        }
 
     /**
      * @Route("/About", name="About")

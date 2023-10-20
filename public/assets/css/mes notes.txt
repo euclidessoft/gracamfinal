@@ -1,0 +1,5 @@
+navbar position fixe
+pour pas que l'image deborde : class="img fluid" pour que 
+ca prenne 100% de la colonne 
+
+r!p&eZZ40x0@

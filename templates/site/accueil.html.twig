@@ -1,0 +1,675 @@
+{% extends 'layout.html.twig' %}
+
+{% block home %}actif{% endblock %}
+
+{% block body %}
+
+    <!--PreLoader Ends-->
+    {#<section class="banner d-flex justify-content-center align-items-center pt-5">
+
+    </section>#}{#
+    <div id="carouselExample" class="carousel carousel-fade slide banner">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('assets/img/image5.jpg') }}" class="d-block w-100 " alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('assets/img/image6.jpg') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('assets/img/image7.jpg') }}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>#}
+
+    <div class="container-fluid px-0">
+        <div id="header-carousel" class="carousel header-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active">
+                    <div class="carousel-img slide_1 animated fadeInLeft">
+                    </div>
+                    <div class="carousel-overlay">
+                        <div class="container mt-md-5">
+                            <div class="row justify-content-center mt-md-5 text-center">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="fs-2 text-primaire fw-bold mb-4 animated fadeInDownBig delay-05s">
+                                        {{ "Promotion médicale et pharmaceutique"|trans }}
+                                    </h1>
+                                    <div class="fs-5 text-white mb-4 pb-2 animated fadeInUpBig delay-05s">
+                                        <p class="paragraphe-1 mb-0">
+                                            {{ "Notre passion pour l'excellence médicale nous motive à redéfinir constamment les normes de l'industrie et à mettre la barre plus haut pour le bénéfice de tous."|trans }}
+                                        </p>
+                                        <p class="paragraphe-2">
+                                            {{ "Nous sommes bien plus qu'une entreprise, nous sommes des artisans de la santé, des guides de l'innovation et des catalyseurs du bien-être"|trans }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative">
+                    <div class="carousel-img slide_3 animated fadeInLeft">
+                    </div>
+                    <div class="carousel-overlay">
+                        <div class="container mt-md-5">
+                            <div class="row justify-content-center mt-md-5 text-center">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="fs-2 text-primaire fw-bold mb-4 animated fadeInDownBig delay-05s">
+                                        {{ "Importation et stockage de produits pharmaceutiques"|trans }}
+                                    </h1>
+                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeInUpBig delay-05s">
+                                        {{ "Nous prenons à cœur notre rôle essentiel dans la chaîne d'approvisionnement pharmaceutique en veillant à ce que chaque produit qui entre dans nos entrepôts soit traité avec le plus grand soin et la plus grande précision"|trans }}
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative">
+                    <div class="carousel-img slide_2 animated fadeInLeft">
+                    </div>
+                    <div class="carousel-overlay">
+                        <div class="container mt-md-5">
+                            <div class="row justify-content-center mt-md-5 text-center">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="fs-2 text-primaire fw-bold mb-4 animated fadeInDownBig delay-05s">
+                                        {{ "Distribution de produits pharmaceutiques"|trans }}
+                                    </h1>
+                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeInUpBig delay-05s">
+                                        {{ "Nous nous engageons à jouer un rôle crucial dans la chaîne d'approvisionnement pharmaceutique en fournissant des solutions de distribution innovantes et fiables pour les laboratoires à travers le monde"|trans }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" aria-label="Slide 1"
+                        class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-control">
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                        data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                        data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="bloc-contact">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="contact-item h-100">
+                            <div class="contact-inner">
+                                <div class="icon me-3">
+                                    <i class="fa-solid fa-location-dot fa-3x"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="text-center mb-3 mt-3">Adresse</h4>
+                                    <p>Nkolmekok-Myom II, Yaoundé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contact-item h-100">
+                            <div class="contact-inner">
+                                <div class="icon me-3">
+
+                                    <i class="fa-solid fa-phone fa-3x"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="text-center mb-3 mt-3">Telephone</h4>
+                                    <p>+237 665 549 639
+                                        <br>
+                                        +237 682 223 658</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contact-item h-100">
+                            <div class="contact-inner">
+                                <div class="icon me-3">
+                                    <i class="fa-solid fa-envelope fa-3x"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="text-center mb-3 mt-3">Email</h4>
+                                    <p>info@granulatsducameroun.com
+                                        <br>
+                                        gracamcmr@yahoo.fr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-5 p-5 position-relative">
+        <div class="text-center mt-5 mb-5  wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title bg-white text-center text-bleu px-3 ">
+                {{ "A PROPOS DE GRACAM"|trans }}
+            </h2>
+        </div>
+        <div class="row ">
+
+            <div class="col-lg-6  ">
+                <div class=" shadow p-5 rounded-4 bordure">
+
+                    <h3 class="font-weight-bold">
+                        Notre histoire
+                    </h3>
+                    <hr class="w-20 border-primaire border-4 ">
+                    <br>
+                    <p>
+                        Fondée depuis plusieurs décennies, Gracam est le fruit d'une vision audacieuse pour créer une
+                        entreprise qui soit à la fois un leader dans l'industrie des granulats et un exemple de
+                        responsabilité environnementale. Notre parcours a été marqué par des investissements continus
+                        dans la technologie, la formation de notre personnel, et la recherche de méthodes d'extraction
+                        novatrices, permettant ainsi à Gracam de devenir un acteur de premier plan dans le secteur.
+                    </p>
+
+                    <a class="btn btn-order rounded-4" href="{{ path('About') }}">Lire plus</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center ">
+                <div class="w-100">
+                    <img src="{{ asset('assets/img/image8.jpeg') }}"
+                         class="img-fluid img-centre start-0 mt-5 rounded-4 "
+                         alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid  p-5">
+
+        <div class="text-center mb-5  wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title bg-white text-center text-bleu px-3 mb-5">
+                {{ "POURQUOI NOUS CHOISIR"|trans }}
+            </h2>
+
+        </div>
+        <div class="row g-5 d-flex align-items-center ">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/carriere.avif') }}" class="img-fluid rounded-4 alt=" ...">
+
+            </div>
+            <div class="col-lg-6">
+                <div class="shadow p-5 rounded-4 bordure">
+
+                    <h5>
+                        La société GRACAM s’appuie sur des valeurs fortes qui lui permettent de garantir la satisfaction
+                        totale de ses partenaires.
+                    </h5>
+                    <hr class="w-20 border-primaire border-4 ">
+                    <br>
+                    <p>
+                        Vous organisez une conférence ou un colloque et recevez des visiteurs étrangers ? Votre
+                        prochaine
+                        réunion de travail avec vos clients chinois se tient dans vos locaux en France ? Vous avez
+                        besoin
+                        d’être accompagné dans vos négociations commerciales internationales par un interprète anglais ?
+                        Amgaka vous propose ses services d’interprétation professionnelle, pour des échanges fluides et
+                        compréhensibles par tous.
+                    </p>
+
+                    <a class="btn btn-order rounded-4" href="#">Lire plus</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="bannere mt-5 p-5 bg-light ">
+
+        <div class="text-center mb-5 mt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="  text-center  px-3 mb-5">
+                {{ "NOS PRINCIPAUX SERVICES"|trans }}
+            </h2>
+        </div>
+        <div class="container-fluid  mb-5 mt-5 ">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <h5 class="text-center">
+                        La société GRACAM est implantée dans la localité de NKOLMEKOK-NYOM II où elle exploite un
+                        gisement de gneiss. Son siège social est situé à Yaoundé.
+
+                    </h5>
+
+
+                </div>
+                <div class="col-lg-4 col-md-12 mt-3 ">
+                    <div class="bloc-blanc mb-5 rounded-4 p-5 text-center bloc-aspect">
+                        <div class="bloc-header-orange">
+                            <h2>Mines</h2>
+                        </div>
+                        <p class="mt-3">
+                            Le pôle "Mines" riche de plusieurs concessions et permis d’exploration/exploitation
+                            couvrant les principales zones minières du pays, dispose également d’un bureau de
+                            commercialisation des substances.
+                        </p>
+
+
+                        <a class="btn btn-order rounded-4 mt-2" href="#">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-3">
+                    <div class="bloc mb-5 rounded-4 p-5 text-center bloc-aspect">
+                        <div class="bloc-header">
+                            <h5>Pierres ornementales et marbres</h5>
+                        </div>
+
+                        <p class="mt-3">Le pôle "Pierre ornementale" exploite et gère une carrière de roche
+                            massive(granit) cette fois à des fins de production de blocs de roche dures destinés à
+                            l’unité de découpage, ponçage et traitement.
+                        </p>
+
+
+                        <a class="btn btn-order-orange rounded-4 mt-2" href="#">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-3">
+                    <div class="bloc-blanc mb-5 rounded-4 p-5 text-center bloc-aspect">
+                        <div class="bloc-header-orange">
+                            <h2>Agregat</h2>
+                        </div>
+
+                        <p class="mt-3">
+                            Le pôle "Agrégat"se spécialise dans l'extraction et la vente de matériaux granulaires,
+                            notamment le sable
+                            et le gravier, pour soutenir les besoins de l'industrie de la construction. Son
+                            engagement envers la qualité et l'approvisionnement fiable en font un acteur clé sur le
+                            marché.
+                        </p>
+
+
+                        <a class="btn btn-order rounded-4 mt-2" href="#">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid p-5 sable mt-5 align-items-center">
+        <div class="row ">
+
+            <div class="col-lg-6 text-center carriere-inner my-5 py-3 pe-5 wow fadeInLeft mt-5" data-wow-delay="0.2s"
+                 style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+
+
+                <div class="text-center mb-5  wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="  text-center  px-3 mb-5">
+                        {{ "NOS PRODUITS"|trans }}
+                    </h2>
+                </div>
+                <p class="fs-5 pe-5 mt-5 wow fadeInLeft" data-wow-delay="0.7s"
+                   style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                    Notre catalogue comprend du gravier 5/15, du gravier 15/25, du sable de carrière 0/5 ainsi
+                    que du Tout Venant 0/31.5. <br>Retrouvez chez nous les matériaux parfaits pour concrétiser vos
+                    projets de construction avec confiance
+                    et qualité.</p>
+                <div class="text-center">
+                    <a class="btn btn-order-orange btn-effect mt-5 mb-5" href="">
+                        Plus de détails ...
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-lg-6 text-center d-flex align-items-center">
+                <img src="{{ asset('assets/img/image12.jpg') }}" class="img-fluid  start-0 rounded-4 ">
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    {#
+    produit
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 ">
+         <div class="col">
+             <div class="card">
+                 <img src="{{ asset('assets/img/image12.jpg') }}" class="card-img-top" alt="...">
+                 <div class="card-body">
+                     <h5 class="card-title">Garvier 5/15</h5>
+                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                         additional content. This content is a little bit longer.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="col">
+             <div class="card">
+                 <img src="{{ asset('assets/img/image13.jpg') }}" class="card-img-top" alt="...">
+                 <div class="card-body">
+                     <h5 class="card-title">Garvier 15/25</h5>
+                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                         additional content. This content is a little bit longer.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="col">
+             <div class="card">
+                 <img src="{{ asset('assets/img/roches-empilees.jpg') }}" class="card-img-top" alt="...">
+                 <div class="card-body">
+                     <h5 class="card-title">Card title</h5>
+                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                         additional content.</p>
+                 </div>
+             </div>
+         </div>
+         #}{#<div class="col">
+             <div class="card">
+                 <img src="" class="card-img-top" alt="...">
+                 <div class="card-body">
+                     <h5 class="card-title">Card title</h5>
+                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                 </div>
+             </div>
+         </div>#}{#
+     </div>
+         </div>
+     #}
+
+
+    {#<div class="container-fluid p-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>FAQ</h5>
+                <h1>Foire aux <br> questions</h1>
+                <p>Réponses a interrogations courantes que vous pouvez avoir</p>
+                <a class="btn btn-order rounded-4" href="#">Tout voir</a>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed btn-order" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                Quel est l'objet de cette application d'interpretation ?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p>Cette application est conçue pour faciliter la communication entre des particuliers,
+                                    des
+                                    entreprises ou des organisations parlant des langues différentes à l'aide des
+                                    services
+                                    d'interprètes professionnels et des passionnés de langues.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed btn-order" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                Comment l'application fonctionne-t-elle pour les clients qui cherchent a embaucher des
+                                interpretes ?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Les clients peuvent s'inscrire, spécifier leurs besoins linguistiques, le lieu et les
+                                    détails de l'événement. L'application les met alors en relation avec les interprètes
+                                    disponibles qui répondent à leurs critères. Les clients peuvent consulter les
+                                    profils et
+                                    engager des interprètes en fonction de leurs préférences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed btn-order" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                Quelles sont les langues prises en charge par l'application ?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>L'application prend en charge un large éventail de langues, y compris des langues
+                                    couramment parlées et des dialectes moins courants. La liste exacte des langues
+                                    prises
+                                    en charge peut varier en fonction de la disponibilité des interprètes dans votre
+                                    région.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed btn-order" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapsefor" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapsefor">
+                                Comment les interpretes sont-ils selectionnes pour leur qualite et leur
+                                professionnalisme ?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapsefor" class="accordion-collapse collapse ">
+                            <div class="accordion-body">
+                                <p>Les interprètes présents sur notre plateforme font l'objet d'un processus de
+                                    sélection
+                                    rigoureux. Nous vérifions leurs qualifications, leurs certifications et leur
+                                    expérience
+                                    professionnelle. Les commentaires et les évaluations des clients contribuent
+                                    également à
+                                    garantir la qualité.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid p-5 bannere mb-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class=" text-center">Débloquer un monde de communication</p>
+                <h1 class="text-center">
+                    Abonnez-vous à Amgaka pour bénéficier de l'interprétation en direct et d'avantages de premier ordre
+
+                </h1>
+
+
+                <p class="text-center">
+                    Libérez la puissance de la communication sans frontières en vous abonnant à Amgaka.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-12 ">
+                <div class="bloc-blanc mb-5 rounded-4 p-5 text-center">
+                    <div class="bloc-header-orange">
+                        <h2>Basic</h2>
+                    </div>
+                    <div class="bloc-header-orange">
+                        <h2 class="mt-3">₣CFA
+
+                            5k
+
+                            /mois
+
+                            Facturé 80 ₣CFA par an
+                        </h2>
+
+                    </div>
+                    <p class="mt-3">Fonctionnalité déverrouillée :
+
+                        Recherche des interprètes
+
+
+                    </p>
+                    <a class="btn btn-order rounded-4 " href="#">Achetez maintenant</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 ">
+                <div class="bloc mb-5 rounded-4 p-5 text-center">
+                    <div class="bloc-header">
+                        <h2>Basic</h2>
+                    </div>
+                    <div class="bloc-header">
+                        <h2 class="mt-3">₣CFA
+
+                            5k
+
+                            /mois
+
+                            Facturé 80 ₣CFA par an
+                        </h2>
+
+                    </div>
+                    <p class="mt-3">Fonctionnalité déverrouillée :
+
+                        Recherche des interprètes
+
+
+                    </p>
+                    <a class="btn btn-order-orange rounded-4 " href="#">Achetez maintenant</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 ">
+                <div class="bloc-blanc mb-5 rounded-4 p-5 text-center">
+                    <div class="bloc-header-orange">
+                        <h2>Basic</h2>
+                    </div>
+                    <div class="bloc-header-orange">
+                        <h2 class="mt-3">₣CFA
+
+                            5k
+
+                            /mois
+
+                            Facturé 80 ₣CFA par an
+                        </h2>
+
+                    </div>
+                    <p class="mt-3">Fonctionnalité déverrouillée :
+
+                        Recherche des interprètes
+
+
+                    </p>
+                    <a class="btn btn-order rounded-4 " href="#">Achetez maintenant</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container-fluid p-5 pepeline mb-5  align-items-center">
+        <div class="row">
+            <div class="col-lg-12 text-center ">
+                <p>Newsletter</p>
+                <h1>Restez à jour</h1>
+                <p>Souscrire a notre NewsLetter et restez scotché tout en suivant tous nos événements et en étant
+                    informés
+                    de tous nos offres.</p>
+
+
+                <div>
+                    <form>
+
+                        <input type="email" id="email" name="email" required placeholder="Votre email"
+                               class="rounded-4 email">
+                        <button type="submit" class="btn-order rounded-4">Souscrire</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>#}
+    <div class="container-fluid p-5 h-100">
+
+        <div class="container ">
+            <div class="text-center ">
+
+                <div class="text-center mb-5  wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="section-title bg-white text-center text-bleu px-3 mb-5">
+                        {{ "GALERIE"|trans }}
+                    </h1>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-12 ">
+                    <div class="row ">
+                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+
+                            <a class="galerie-img" href=""> <img src="{{ asset('assets/img/image15.jpg') }}"
+                                                                 class="img-fluid   rounded-4 "></a>
+
+                        </div>
+                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+
+                            <a class="galerie-img" href=""> <img src="{{ asset('assets/img/image16.jpg') }}"
+                                                                 class="img-fluid   rounded-4 "></a>
+
+                        </div>
+
+                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+
+                            <a class="galerie-img" href=""><img src="{{ asset('assets/img/image18.jpg') }}"
+                                                                class="img-fluid   rounded-4 "></a>
+
+                        </div>
+                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+
+                            <a class="galerie-img" href=""> <img src="{{ asset('assets/img/image19.jpg') }}"
+                                                                 class="img-fluid   rounded-4 "></a>
+
+                        </div>
+                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+
+                            <a class="galerie-img" href=""><img src="{{ asset('assets/img/image20.jpg') }}"
+                                                                class="img-fluid  rounded-4 "></a>
+
+                        </div>
+                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+
+                            <a class="galerie-img" href=""><img src="{{ asset('assets/img/image21.jpg') }}"
+                                                                class="img-fluid   rounded-4 "></a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

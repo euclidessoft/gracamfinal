@@ -1,0 +1,16 @@
+index:
+    path: /
+    controller: App\Controller\Security\SecurityController::accueil
+
+
+# config/routes.yaml
+
+carrieres:
+    path: /carrieres
+    controller: App\Controller\SiteController::carrieres
+
+# config/routes.yaml
+
+galerie:
+    path: /galerie
+    controller: App\Controller\SiteController::galerie

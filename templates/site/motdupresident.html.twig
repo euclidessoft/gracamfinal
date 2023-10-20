@@ -1,0 +1,98 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "A propos"|trans }} - Gracam {% endblock %}
+{% block about %}actif{% endblock %}
+{% block body %}
+
+    {# <div class="container-fluid image10">
+
+     </div>#}
+    <div class="container-fluid py-5 mb-5 page-header-about">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ "Mot du president"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "Mot du president"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Start -->
+
+    <div class="container-fluid  ">
+        <div class="container fs-5 mb-5 mt-5">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-10 col-md-12  bg-light wow fadeInRight shadow rounded-4 bg-light bordure"
+                     data-wow-delay="0.1s">
+                    <h3 class="mt-5">Mot du president </h3>
+                    <hr class="w-20 border-primaire border-4 ">
+                    <h5 class="mt-5">{{ 'Chers collaborateurs, partenaires et amis de Gracam'|trans }},</h5>
+                    <p class="mb-4">
+
+
+                        {{ "C'est avec une immense fierté et un profond sentiment de gratitude que je m'adresse à vous aujourd'hui en tant que président de Gracam."|trans }}
+                        {{ "Depuis notre création, notre entreprise a parcouru un chemin extraordinaire, évoluant et grandissant grâce à l'engagement inébranlable de notre équipe et à la confiance continue de nos précieux clients et partenaires."|trans }}
+                    </p>
+                    <p class="mb-4">
+                        {{ "Gracam est bien plus qu'une simple entreprise d'extraction de granulats."|trans }}
+                        {{ "Nous sommes un symbole d'excellence, d'innovation et de responsabilité environnementale dans l'industrie."|trans }}
+                        {{ "Notre engagement envers la qualité inégalée de nos produits et notre dévouement envers la préservation de l'environnement sont au cœur de notre mission."|trans }}
+                    </p>
+                    <p class="mb-4">
+                        {{ "Au fil des années, nous avons réussi à repousser les limites de l'excellence en investissant dans la technologie de pointe, en formant notre équipe aux meilleures pratiques de l'industrie, et en développant des partenariats solides."|trans }}
+                        {{ "Ces efforts ont abouti à des produits de la plus haute qualité, des services sur mesure pour nos clients et une empreinte environnementale minimale."|trans }}
+                    </p>
+                    <p class="mb-4">
+                        {{ "Je tiens à exprimer ma profonde gratitude envers chaque membre de notre équipe, dont le dévouement et l'expertise sont les piliers de notre succès."|trans }}
+                        {{ "Vous incarnez l'esprit de Gracam, et je suis honoré de travailler à vos côtés."|trans }}
+                    </p>
+                    <p class="mb-4">
+                        {{ "Je remercie également nos clients et partenaires pour leur confiance indéfectible."|trans }}
+                        {{ "Votre soutien continu nous pousse à aller toujours plus loin, à innover et à élever nos normes pour répondre à vos besoins et à surpasser vos attentes."|trans }}
+                    </p>
+                    <p class="mb-4">
+                        {{ "Alors que nous avançons vers l'avenir, je tiens à réaffirmer notre engagement envers l'excellence, la durabilité et la satisfaction de nos clients."|trans }}
+                        {{ "Nous continuerons à évoluer, à investir dans la recherche et le développement, et à contribuer positivement aux communautés dans lesquelles nous opérons."|trans }}
+                    </p>
+                    <p class="mb-4">
+                        {{ "Ensemble, nous bâtissons un avenir solide et prometteur pour Gracam."|trans }}
+                        {{ "Je vous invite à partager notre vision, à collaborer avec nous et à être partie prenante de notre succès continu."|trans }}
+                    </p>
+                    <h5>  {{ "Je vous remercie encore une fois pour votre soutien indéfectible."|trans }}</h5>
+
+                    <h6> {{ 'Avec gratitude et détermination'|trans }},</h6>
+                    <p>
+                        [Signature du Président]
+
+                        [Votre nom]
+                        Président de Gracam
+                    </p>
+                </div>
+
+                <!-- Button trigger modal -->
+
+                <!-- Modal -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- About End -->
+{% endblock %}
+
+
+

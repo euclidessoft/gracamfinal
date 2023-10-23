@@ -1,4 +1,0 @@
-C:/Program Files/Google/Chrome/Application/chrome.exe
-
-
-$list_projects[] = $file;

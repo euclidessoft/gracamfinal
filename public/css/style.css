@@ -184,12 +184,12 @@ body {
 }
 
 .bloc {
-    background-color: var(--primaire) !important;
+    background: rgba(var(--primaire-rgb), 0.8); !important;
     overflow: hidden;
 }
 
 .bloc-blanc {
-    background-color: var(--secondaire) !important;
+    background: rgba(var(--secondaire-rgb), 0.8); !important;
     overflow: hidden;
     color: black;
 }
@@ -205,7 +205,7 @@ body {
 }
 
 .bannere {
-    background: url('../images/bannere_service.png');
+    background: url('../images/service.png');
     background-size: cover;
     color: var(--secondaire);
 
@@ -223,7 +223,7 @@ body {
 }
 
 .sable {
-    background: url('../images/sable.jpg') center center fixed no-repeat;
+    background: url('../images/image11.jpg') center center fixed no-repeat;
     background-size: cover;
     aspect-ratio: 20 / 8;
     color: var(--secondaire);
@@ -364,17 +364,14 @@ hr {
 }
 
 .page-header-produit {
-    background: var(--header-overlay), url(../images/image25.jpg) center center no-repeat;
+    background: var(--header-overlay), url(../images/produit_header.png) center center no-repeat;
     background-size: cover;
 }
 
-.page-header-carriere_culture {
-    background: var(--header-overlay), url(../images/image27.jpg) center center no-repeat;
-    background-size: cover;
-}
+
 
 .page-header-carriere {
-    background: var(--header-overlay), url(../images/image36.jpg) center center no-repeat;
+    background: var(--header-overlay), url(../images/carriere_header.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -384,7 +381,7 @@ hr {
 }
 
 .page-header-contact {
-    background: var(--header-overlay), url(../images/image33-33.jpg) center center no-repeat;
+    background: var(--header-overlay), url(../images/image36.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -394,6 +391,13 @@ hr {
     aspect-ratio: 4 / 1 !important;
 
 }
+.image37 {
+    background: url('../images/slide_1.jpg') ;
+    background-size: cover;
+
+
+}
+
 
 .couleur-soft {
     background: url('../images/image37.jpg') center center;
@@ -534,7 +538,7 @@ a {
 }
 
 .carousel-overlay {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     width: 100%;
     position: absolute;
     top: 0;
@@ -688,7 +692,9 @@ a {
 
 
 }
-
+#candidature_cv{
+    display: none;
+}
 
 @media (max-width: 768px) {
 

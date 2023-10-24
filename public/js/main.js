@@ -187,3 +187,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 */
+
+function upload() {
+    $('#candidature_cv').trigger('click');
+    return false;
+}
+
+function label_input() {
+    $('#choice').html(document.getElementById('candidature_cv').value);
+}

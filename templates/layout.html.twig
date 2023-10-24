@@ -86,7 +86,16 @@
             <div class="col-lg-3 ">
                 <h1>Gracam</h1>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 ">
+                <h4 class="text-white mb-3">{{ "Liens utiles"|trans}}</h4>
+                <a class="btn btn-link " href="{{ path('Accueil')}}">{{ "Accueil"|trans}}</a>
+                <a class="btn btn-link" href="{{ path('About')}}">{{ "A propos de nous"|trans}}</a>
+                <a class="btn btn-link" href="{{ path('Produits')}}">{{ "Produits"|trans}}</a>
+                <a class="btn btn-link" href="{{ path('Carriere')}}">{{ "Carriere"|trans}}</a>
+                <a class="btn btn-link" href="{{ path('Gallery')}}">{{ "Galerie"|trans}}</a>
+                <a class="btn btn-link" href="{{ path('Contact')}}">{{ "Nous contacter"|trans}}</a>
+            </div>
+           {# <div class="col-lg-3">
                 <h3>Autres pages</h3>
                 <a class="nav-link footer" href="#">Accueil</a>
                 <a class="nav-link footer" href="#">A propos de nous</a>
@@ -95,7 +104,7 @@
                 <a class="nav-link footer" href="#">Carriere</a>
                 <a class="nav-link footer" href="#">Galerie</a>
                 <a class="nav-link footer" href="#">Nous contacter</a>
-            </div>
+            </div>#}
             <div class="col-lg-3">
                 <h3>Reseaux sociaux</h3>
                 <p>Facebook

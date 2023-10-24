@@ -31,7 +31,7 @@ body {
 
 .cc-navbar {
     background-color: rgba(255, 255, 255, 0.7) !important; /* Couleur de fond blanche */
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Heebo', sans-serif;
     box-shadow: none; /* Supprimer l'ombre */
     z-index: 2000;
     color: var(--noir); /* Couleur du texte noire */
@@ -727,6 +727,39 @@ a {
     transition: .5s;
 }
 
+.footer .footer-link {
+    display: inline-block !important;
+}
+
+.footer .btn.btn-link,
+.footer .footer-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--secondaire);
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f101";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--primaire);
+    font-size: 17px;
+}
+
+.footer .btn.btn-link:hover,
+.footer .footer-link:hover {
+    /*letter-spacing: 1px;*/
+    box-shadow: none;
+    transform: translateX(10px);
+}
 
 
 

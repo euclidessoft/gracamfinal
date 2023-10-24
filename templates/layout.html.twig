@@ -20,15 +20,37 @@
 <body>
 <nav class="cc-navbar navbar navbar-expand-lg  navbar-dark w-100 bg-body-tertiary fixed-top" id="cc-top-bar">
     <a class="navbar-brand text-uppercase fw-bolder mx-4  text-dark" href="#">
-        <img src="{{ asset('images/logo.png') }}" class="logo" alt="logo"></a>
+        <img src="{{ asset('images/logo.png') }}" class="logo" alt="logo">
+    </a>
     <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
           <i class="fas fa-bars fa-2x"></i>
         </span>
     </button>
+    <div class="collapse navbar-collapse pe-5" id="main-nav">
+        <div class="navbar-nav ms-auto d-flex align-items-center p-4 p-lg-0">
+            <a href="{{ path('Accueil')}}" class="nav-item nav-link {% block home %} {% endblock %}">
+                {{ "Accueil"|trans }}
+            </a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle {% block about %} {% endblock %}" data-bs-toggle="dropdown">{{ "A propos"|trans }}</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="{{ path('About') }}" class="dropdown-item {% block qui_sommes_nous %} {% endblock %}">{{ "Qui sommes nous"|trans }}</a>
+                    <a href="{{ path('Motdupresident') }}" class="dropdown-item {% block mot_du_president %} {% endblock %}">{{ "Mot du président"|trans }}</a>
+                </div>
+            </div>
+            <a href="{{ path('Produits') }}" class="nav-item nav-link {% block produit %} {% endblock %}">{{ "Produits"|trans }}</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a href="{{ path('Carriere') }}" class="nav-item nav-link {% block carriere %} {% endblock %}">{{ "Carrière"|trans }}</a>
+            <a href="{{ path('Gallery') }}" class="nav-item nav-link {% block gallerie %} {% endblock %}">{{ "Galerie"|trans}}</a>
+            <a href="{{ path('Contact') }}" class="nav-item nav-link {% block contact %} {% endblock %}">{{ "Contact"|trans}}</a>
+            <button id="changelang" class="lang-button">
+                <span id="lang" class="anglais" title="{{ "English"|trans }}"></span>
+            </button>
+        </div>
+    </div>
+    {#<div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item {% block home %}{% endblock %}">
                 <a class="nav-link" href="{{ path('Accueil') }}">
@@ -37,10 +59,10 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="false"{# onmouseover="openDropdown(this)"#}>
+                   aria-expanded="false"#}{# onmouseover="openDropdown(this)"#}{#>
                     {{ "A propos"|trans}}
                 </a>
-                <ul class="dropdown-menu" {#onmouseleave="closeDropdown(this)"#}>
+                <ul class="dropdown-menu" #}{#onmouseleave="closeDropdown(this)"#}{#>
                     <li>
                         <a class="dropdown-item" href="{{ path('About') }}">
                             {{ "Qui sommes nous"|trans}}
@@ -75,7 +97,7 @@
             </li>
 
         </ul>
-    </div>
+    </div>#}
 </nav>
 {% block body %}
 

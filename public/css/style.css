@@ -4,7 +4,7 @@
 :root {
     --primaire: #0066ff;
     --primaire-rgb: 0, 102, 255;
-    --primaire-soft: #00eaff;
+    --primaire-soft: #dae9ff;
     --primaire-soft-rgb: 0, 234, 255;
     --secondaire: #ffffff;
     --secondaire-rgb: 255, 255, 255;
@@ -695,6 +695,40 @@ a {
 #candidature_cv{
     display: none;
 }
+
+
+
+.back-to-top {
+    border-radius: 10px;
+    position: fixed;
+    display: none;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: var(--primaire);
+    color: var(--primaire-soft) !important;
+    border: 1px solid var(--primaire);
+    transition: all ease 300ms;
+    z-index: 99;
+}
+
+.back-to-top:hover {
+    background: var(--primaire-soft);
+    color: var(--primaire) !important;
+    border: 1px solid var(--primaire);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/*** Button ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+
+
 
 @media (max-width: 768px) {
 

@@ -723,43 +723,39 @@ a {
 /*** Button ***/
 .btn {
     font-family: 'Nunito', sans-serif;
-    font-weight: 600;
+    /*font-weight: 600;*/
     transition: .5s;
 }
 
-.footer .footer-link {
-    display: inline-block !important;
-}
 
-.footer .btn.btn-link,
-.footer .footer-link {
+.footer-link {
     display: block;
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: var(--secondaire);
+    color: var(--secondaire) !important;
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
     transition: .3s;
 }
 
-.footer .btn.btn-link::before {
+.footer-link::before {
     position: relative;
     content: "\f101";
     font-family: "Font Awesome 5 Free", sans-serif;
     font-weight: 900;
     margin-right: 10px;
-    color: var(--primaire);
-    font-size: 17px;
+    color: var(--tertiaire) !important;
+    font-size: 15px;
 }
 
-.footer .btn.btn-link:hover,
-.footer .footer-link:hover {
+.footer-link:hover {
     /*letter-spacing: 1px;*/
     box-shadow: none;
     transform: translateX(10px);
 }
+
 
 
 

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo:wght@400;500;600');
-@import url('https://fonts.googleapis.com/css?amily=Nunito:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:wght@600;700;800&display=swap');
 
 :root {
     --primaire: #0066ff;
@@ -47,7 +47,7 @@ body {
 }
 
 .logo {
-    height: 70px;
+    height: 50px;
     width: auto;
     padding: 0;
 }
@@ -57,18 +57,19 @@ body {
     top: calc(100%);
 }
 
-/*.cc-navbar .nav-link {
+.cc-navbar .nav-link {
     border-bottom: 1px solid transparent;
     transition: padding-bottom 0.4s ease-in-out, border-color 0.3s ease;
-    color: var(--noir);
+    color: var(--primaire);
     font-size: 18px;
-}*/
+    padding: 24px 20px;
+}
 
-/*.cc-navbar .nav-link:hover {
+.cc-navbar .nav-link:hover {
     color: var(--primaire);
     border-bottom: 5px solid var(--primaire);
     padding-bottom: 1rem;
-}*/
+}
 
 .footer:hover {
 
@@ -83,23 +84,23 @@ body {
     /*position: fixed;*/
 }
 
-.cc-navbar li {
+.cc-navbar a {
     padding: 14px;
     transition: all ease-in-out 0.5s;
 }
 
-.cc-navbar li .nav-link {
+.cc-navbar a .nav-link {
     border-bottom: 1px solid transparent;
     transition: padding-bottom 0.4s ease-in-out, border-color 0.3s ease;
     color: var(--noir);
     font-size: 18px;
 }
 
-.cc-navbar li {
+.cc-navbar a {
     border-bottom: 5px solid transparent;
 }
 
-.cc-navbar li:hover {
+.cc-navbar .nav-item a:hover {
     color: var(--primaire);
     border-bottom: 5px solid var(--primaire);
 }

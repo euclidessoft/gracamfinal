@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return false;
     });
 
-    // Realisation carousel
+   /* // Realisation carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -118,7 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 items: 3
             }
         }
-    });
+    });*/
+/*
 
     $('#gallery').photobox('a', {thumbs: true}, callback);
     // using setTimeout to make sure all images were in the DOM, before the history.load() function is looking them up to match the url hash
@@ -127,12 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function callback() {
         console.log('callback for loaded content:', this);
     }
+*/
 
-    // Chiffre
+ /*   // Chiffre
     $('.compteur').counterUp({
         delay: 10,
         time: 2000
-    });
+    });*/
 
     var url = $(location).attr("href");
     var fr = url.indexOf("/fr/");

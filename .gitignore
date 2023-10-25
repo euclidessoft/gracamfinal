@@ -1,0 +1,5 @@
+.gitignore
+.env
+var/
+vendor/
+.idea/

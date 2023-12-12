@@ -826,3 +826,16 @@ a {
     }
 
 }
+
+
+@media (max-width: 450px) {
+    .carousel-img.slide_1 {
+        background-image: url('../images/slide_1.jpg');
+    }
+    .carousel-img.slide_2 {
+        background-image: url('../images/slide_2.jpg');
+    }
+    .carousel-img.slide_3 {
+        background-image: url('../images/slide_3.jpg');
+    }
+}

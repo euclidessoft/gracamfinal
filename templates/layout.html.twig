@@ -18,86 +18,41 @@
 
 </head>
 <body>
-<nav class="cc-navbar navbar navbar-expand-lg  navbar-dark w-100 bg-body-tertiary fixed-top" id="cc-top-bar">
-    <a class="navbar-brand text-uppercase fw-bolder mx-4  text-dark" href="#">
-        <img src="{{ asset('images/logo.png') }}" class="logo" alt="logo">
-    </a>
-    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-          <i class="fas fa-bars fa-2x"></i>
-        </span>
-    </button>
-    <div class="collapse navbar-collapse pe-5" id="main-nav">
-        <div class="navbar-nav ms-auto d-flex align-items-center p-4 p-lg-0">
-            <a href="{{ path('Accueil')}}" class="nav-item nav-link {% block home %} {% endblock %}">
-                {{ "Accueil"|trans }}
-            </a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle {% block about %} {% endblock %}" data-bs-toggle="dropdown">{{ "A propos"|trans }}</a>
-                <div class="dropdown-menu fade-down m-0">
-                    <a href="{{ path('About') }}" class="dropdown-item {% block qui_sommes_nous %} {% endblock %}">{{ "Qui sommes nous"|trans }}</a>
-                    <a href="{{ path('Motdupresident') }}" class="dropdown-item {% block mot_du_president %} {% endblock %}">{{ "Mot du président"|trans }}</a>
-                </div>
-            </div>
-            <a href="{{ path('Produits') }}" class="nav-item nav-link {% block produits %} {% endblock %}">{{ "Produits"|trans }}</a>
-
-            <a href="{{ path('Carriere') }}" class="nav-item nav-link {% block carriere %} {% endblock %}">{{ "Carrière"|trans }}</a>
-            <a href="{{ path('Gallery') }}" class="nav-item nav-link {% block gallerie %} {% endblock %}">{{ "Galerie"|trans}}</a>
-            <a href="{{ path('Contact') }}" class="nav-item nav-link {% block contact %} {% endblock %}">{{ "Contact"|trans}}</a>
-            <button id="changelang" class="lang-button">
-                <span id="lang" class="anglais" title="{{ "English"|trans }}"></span>
-            </button>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar scroll</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Link
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Link</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </div>
-    {#<div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto text-center">
-            <li class="nav-item {% block home %}{% endblock %}">
-                <a class="nav-link" href="{{ path('Accueil') }}">
-                    {{ "Accueil"|trans}}
-                </a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="false"#}{# onmouseover="openDropdown(this)"#}{#>
-                    {{ "A propos"|trans}}
-                </a>
-                <ul class="dropdown-menu" #}{#onmouseleave="closeDropdown(this)"#}{#>
-                    <li>
-                        <a class="dropdown-item" href="{{ path('About') }}">
-                            {{ "Qui sommes nous"|trans}}
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{{ path('Motdupresident') }}">
-                            {{ "Mot du président"|trans}}
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item  {% block produits %}{% endblock %}">
-                <a class="nav-link " href="{{ path('Produits') }}">
-                    {{ "Produits"|trans}}
-                </a>
-            </li>
-            <li class="nav-item  {% block carriere %}{% endblock %}">
-                <a class="nav-link" href="{{ path('Carriere') }}">
-                    {{ "Carrière"|trans}}
-                </a>
-            </li>
-            <li class="nav-item  {% block gallery %}{% endblock %} ">
-                <a class="nav-link " href="{{ path('Gallery') }}">
-                    {{ "Galerie"|trans}}
-                </a>
-            </li>
-            <li class="nav-item  {% block contact %}{% endblock %}">
-                <a class="nav-link " href="{{ path('Contact') }}">
-                    {{ "Contact"|trans}}
-                </a>
-            </li>
-
-        </ul>
-    </div>#}
 </nav>
 {% block body %}
 

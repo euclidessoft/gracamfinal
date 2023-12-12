@@ -20,14 +20,6 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-/*
-.redressed {
-    font-family: 'Redressed', cursive;
-}
-
-.merriweather {
-    font-family: 'Merriwearher', serif;
-}*/
 
 .cc-navbar {
     background-color: rgba(255, 255, 255, 0.7) !important; /* Couleur de fond blanche */

@@ -27,27 +27,69 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link" active aria-current="page" href="#">Accueil</a>
+                    <a class="nav-link" active aria-current="page" href="{{ path('Accueil')}}">{{ "Accueil"|trans}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">A propos</a>
+                    <a class="nav-link" href="{{ path('About')}}">{{ "About"|trans}}</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{{ path('Produits')}}">{{ "Produits"|trans}}</a>
+                    <ul class="dropdown-menu megaMenu text-center">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <li>
+                                    <h6 class="dropdown-header px-3">Sables</h6>
+                                </li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                            </div>
+                            <div class="col-md-3">
+                                <li>
+                                    <h6 class="dropdown-header px-3">Graviers</h6>
+                                </li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                            </div>
+                            <div class="col-md-3">
+                                <li>
+                                    <h6 class="dropdown-header px-3">GRAVIERS DECO</h6>
+                                </li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                            </div>
+                            <div class="col-md-3">
+                                <li>
+                                    <h6 class="dropdown-header px-3">REMBLAIS</h6>
+                                </li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                                <li><a href="#" class="nav-link px-4 text-white">Graviers</a></li>
+                            </div>
+                        </div>
+                    </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Matériaux</a></li>
+                        <li><a class="dropdown-item" href="#">Exploitation</a></li>
+                        <li><a class="dropdown-item" href="#">Accompagnement</a></li>
+                        <li><a class="dropdown-item" href="#">Transformation</a></li>
                     </ul>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Galerie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="{{ path('Contact')}}">{{ "Contact"|trans}}</a>
                 </li>
             </ul>
         </div>

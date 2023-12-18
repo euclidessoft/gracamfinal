@@ -14,3 +14,9 @@ carrieres:
 galerie:
     path: /galerie
     controller: App\Controller\SiteController::galerie
+    
+# config/routes.yaml
+
+blog:
+    path: /blog
+    controller: App\Controller\SiteController::blog

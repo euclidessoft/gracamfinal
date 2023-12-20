@@ -181,31 +181,32 @@ h3.text-dark{
 .custom-card {
     width: calc(25% - 10px);
     margin-bottom: 20px;
-    background-color: var(--primaire-soft);
-    color: #fff;
+    background-color: var(--secondaire);
+    color: var(--primaire);
     box-shadow: rgba(195, 178, 149, 0.4) 0 5px,
                 rgba(195, 178, 149, 0.3) 0 10px,
                 rgba(195, 178, 149, 0.2) 0 15px,
                 rgba(195, 178, 149, 0.1) 0 20px,
                 rgba(240, 46, 170, 0.05) 0 25px;
-    transition: transform 0.5s ease-in-out;
     border-radius: 25px;
     cursor: pointer;
 }
 .custom-card:hover {
-    transform: scale(1.05) rotate(160deg); 
+    transform: scale(1.05) rotate(360deg);
+    transition: transform 0.9s ease-in-out;
 } 
 
 .card-title {
     background-color: var(--primaire);
     padding: 10px;
     margin-bottom: 0;
-    color: var(--secondaire);
+    color: var(--blanc);
     border-radius: 10px;
 }
 .title{
     font-size: 3rem;
-    color: #C7B295;
+    color: var(--primaire);
+    margin-bottom: 25px !important;
 }
 
 .page-header-about{

@@ -2,18 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:wght@600;700;800&display=swap');
 
 :root {
-    --primaire: #2E2D33;
-    --primaire-rgb: 46, 45, 51;
-    --primaire-soft: #C7B295;
-    --primaire-soft-rgb: 195, 178, 149;
-    --secondaire: #ffffff;
-    --secondaire-rgb: 255, 255, 255;
-    --tertiaire: #001432;
-    --tertiaire-rgb: 0, 20, 50;
+    --primaire: #0b0134;
+    --primaire-rgb: 11, 1, 52;
+    --primaire-soft: #73699b;
+    --primaire-soft-rgb: 115, 105, 155;
+    --secondaire: #fad7a5;
+    --secondaire-rgb: 250, 215, 165;
+    --tertiaire: #373737;
+    --tertiaire-rgb: 55, 55, 55;
     --noir: #0c0c0c;
     --noir-rgb: 12, 12, 12;
+    --blanc: #fff;
+    --blanc-rgb: 255, 255, 255;
     --header-overlay: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
-    --bs-navbar-color:#fff;
+    --transdelay: 600ms;
+    /*--bs-navbar-color: #ffffff;*/
 }
 
 body {
@@ -22,46 +25,48 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* Navbar design */
 .navbar{
-    background-color:rgba(46, 45, 51, .95);
+    background-color: var(--primaire);
     --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(199, 178, 150, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar .img-logo{
-    width: 100px;
     height: 60px;
     /* background-color: #ffffff; */
 }
-.navbar .nav-link{
-    font-size: 15px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--secondaire);
-}
+
 .navbar .nav-item{
     padding: 20px 40px !important;
     border-bottom: 5px solid transparent;
-}
-.img_logo{
-    width: 100px;
-    height: 80px;
+    transition: var(--transdelay);
 }
 
 .navbar .nav-item:hover{
-    border-bottom: 5px solid var(--primaire-soft);
-    color: white;
+    border-bottom: 5px solid var(--secondaire);
 }
+
+.navbar .nav-link{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--secondaire);
+}
+
 .navbar .dropdown-menu{
-    background-color: var(--primaire-soft);
+    background-color: var(--secondaire);
     margin-top: 25px;
     right: 7%;
-}
+}/*
 .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
     position: relative;
-    color: white !important;
-}
+    !*color: white !important;*!
+}*/
 .navbar .dropdown-menu a{
     color: var(--secondaire);
     font-size: 15px;
@@ -70,9 +75,6 @@ body {
 }
 .navbar .dropdown-menu .dropdown-item:hover{
     background-color: var(--primaire-soft);
-    /* border-bottom: 5px solid var(--primaire); */
-    color: var(--primaire-soft);
-    color: white;
 }
 .navbar .dropdown-menu a:hover{
     background-color: var(--primaire) !important;
@@ -99,14 +101,14 @@ body {
     border-left: 0.3em solid transparent;
 }
 .navbar .nav-item .dropdown-menu {
-    background-color: var(--primaire-soft);
+    background-color: var(--secondaire);
 }
-
 
 .megaMenu .dropdown-header{
     font-size: 1rem !important;
     font-weight: bolder;
     text-transform: uppercase;
+    color: var(--primaire);
 }
 .dropdown-menu .col-md-3{
     border-right: 1px solid var(--primaire);
@@ -138,7 +140,7 @@ body {
 .container-bottom{
     width: 90%;
     padding: 45px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
 }
 .btn {
     background: var(--primaire-soft) !important;
@@ -181,7 +183,11 @@ h3.text-dark{
     margin-bottom: 20px;
     background-color: var(--primaire-soft);
     color: #fff;
-    box-shadow: rgba( 195, 178, 149, 0.4) 0px 5px, rgba( 195, 178, 149, 0.3) 0px 10px, rgba( 195, 178, 149, 0.2) 0px 15px, rgba( 195, 178, 149, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    box-shadow: rgba(195, 178, 149, 0.4) 0 5px,
+                rgba(195, 178, 149, 0.3) 0 10px,
+                rgba(195, 178, 149, 0.2) 0 15px,
+                rgba(195, 178, 149, 0.1) 0 20px,
+                rgba(240, 46, 170, 0.05) 0 25px;
     transition: transform 0.5s ease-in-out;
     border-radius: 25px;
     cursor: pointer;
@@ -241,7 +247,7 @@ h3.text-dark{
     width: 100%;
     background-size: cover;
     background-position: center center;
-    aspect-ratio: 18.5 / 9;
+    aspect-ratio: 18 / 9;
     height: 700px;
 }
 

@@ -1,80 +1,86 @@
 <!doctype html>
-<html lang="fr">
+<html lang="{{ app.request.locale }}">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Gracam - {{ "Les granulats du Cameroun" }}</title>
+    <meta name="description" content="Les granulats du Cameroun">
+    <meta name="title" content="GRACAM">
+    <meta name="author" content="EUCLIDES">
+    <title>Gracam - {{ "Les granulats du Cameroun"|trans }}</title>
 
     <!-- Libraries Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    {%  block photobox_css %} {% endblock %}
+    {% block photobox_css %} {% endblock %}
 
     <!-- Site Stylesheet -->
-    <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     {#    <link href="{{ asset('css/style.min.css')}}" rel="stylesheet">#}
-
 </head>
 <body>
-<nav class="navbar navbar-light navbar-expand-lg sticky-top p-0">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-           <img class="img-logo" src="{{asset('../images/logo.png')}}" alt="">
+<nav class="navbar navbar-expand-lg sticky-top p-0">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ path('Accueil') }}">
+            <img class="img-logo" src="{{ asset('../images/logo.png') }}" alt="Logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" active aria-current="page" href="{{ path('Accueil')}}">{{ "Accueil"|trans}}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('About')}}">{{ "About"|trans}}</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{ path('Produits')}}">{{ "Produits"|trans}}</a>
-                    <ul class="dropdown-menu megaMenu text-center">
+            <div class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll align-items-center">
+                <div class="nav-item active">
+                    <a class="nav-link" aria-current="page" href="{{ path('Accueil') }}">
+                        {{ "Accueil"|trans }}
+                    </a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown" href="{{ path('Produits') }}">
+                        {{ "Produits"|trans }}
+                    </a>
+                    <div class="dropdown-menu megaMenu text-center">
                         <div class="row">
                             <div class="col-md-3">
-                                <li>
-                                    <h6 class="dropdown-header">SABLES</h6>
-                                </li>
-                                <li><a href="#" class="dropdown-item">SABLE DE RIVIERE</a></li>
-                                <li><a href="#" class="dropdown-item">SABLE DE SANAGA</a></li><br>
+                                <div>
+                                    <h5 class="dropdown-header">SABLES</h5>
+                                </div>
+                                <div><a href="#" class="dropdown-item">Sable de rivière</a></div>
+                                <div><a href="#" class="dropdown-item">Sable de Sanaga</a></div>
+                                <br>
                                 <!-- <li><a href="#" class="dropdown-item">Graviers</a></li> -->
                             </div>
                             <div class="col-md-3">
-                                <li>
+                                <div>
                                     <h6 class="dropdown-header">Graviers</h6>
-                                </li>
-                                <li><a href="#" class="dropdown-item">Gravier 5 /15</a></li>
-                                <li><a href="#" class="dropdown-item">Gravier 15/25</a></li>
-                                <li><a href="#" class="dropdown-item">Gravier 6/10</a></li>
+                                </div>
+                                <div><a href="#" class="dropdown-item">Gravier 5 /15</a></div>
+                                <div><a href="#" class="dropdown-item">Gravier 15/25</a></div>
+                                <div><a href="#" class="dropdown-item">Gravier 6/10</a></div>
                             </div>
                             <div class="col-md-3">
-                                <li>
+                                <div>
                                     <h6 class="dropdown-header">GRAVIERS DECO</h6>
-                                </li>
-                                
+                                </div>
 
-                                <li><a href="#" class="dropdown-item">Graviers déco</a></li>
-                                <li><a href="#" class="dropdown-item">Blocs paysagers</a></li><br>
+
+                                <div><a href="#" class="dropdown-item">Graviers déco</a></div>
+                                <div><a href="#" class="dropdown-item">Blocs paysagers</a></div>
+                                <br>
                             </div>
                             <div class="col-md-3">
-                                <li>
+                                <div>
                                     <h6 class="dropdown-header">REMBLAIS</h6>
-                                </li>
-                                <li><a href="#" class="dropdown-item">Graves</a></li>
-                                <li><a href="#" class="dropdown-item">Couche d'assise</a></li>
-                                <li><a href="#" class="dropdown-item">Sous-couche</a></li>
+                                </div>
+                                <div><a href="#" class="dropdown-item">Graves</a></div>
+                                <div><a href="#" class="dropdown-item">Couche d'assise</a></div>
+                                <div><a href="#" class="dropdown-item">Sous-couche</a></div>
                             </div>
                         </div>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
                     <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
@@ -84,15 +90,22 @@
                         <li><a class="dropdown-item" href="#">Accompagnement</a></li>
                         <li><a class="dropdown-item" href="#">Transformation</a></li>
                     </ul>
-                </li>
-
-                <li class="nav-item">
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Commandes</a>
+                </div>
+                <div class="nav-item">
                     <a class="nav-link" href="#">Galerie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('Contact')}}">{{ "Contact"|trans}}</a>
-                </li>
-            </ul>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{ path('About') }}">
+                        {{ "A propos"|trans }}
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{ path('Contact') }}">{{ "Contact"|trans }}</a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -106,24 +119,24 @@
                 <h1>Gracam</h1>
             </div>
             <div class="col-lg-3 ">
-                <h4 class="text-white mb-3">{{ "Liens utiles"|trans}}</h4>
-                <a class="footer-link" href="{{ path('Accueil')}}">{{ "Accueil"|trans}}</a>
-                <a class="footer-link" href="{{ path('About')}}">{{ "A propos de nous"|trans}}</a>
-                <a class="footer-link" href="{{ path('Produits')}}">{{ "Produits"|trans}}</a>
-                <a class="footer-link" href="{{ path('Carriere')}}">{{ "Carriere"|trans}}</a>
-                <a class="footer-link" href="{{ path('Gallery')}}">{{ "Galerie"|trans}}</a>
-                <a class="footer-link" href="{{ path('Contact')}}">{{ "Nous contacter"|trans}}</a>
+                <h4 class="text-white mb-3">{{ "Liens utiles"|trans }}</h4>
+                <a class="footer-link" href="{{ path('Accueil') }}">{{ "Accueil"|trans }}</a>
+                <a class="footer-link" href="{{ path('About') }}">{{ "A propos de nous"|trans }}</a>
+                <a class="footer-link" href="{{ path('Produits') }}">{{ "Produits"|trans }}</a>
+                <a class="footer-link" href="{{ path('Carriere') }}">{{ "Carriere"|trans }}</a>
+                <a class="footer-link" href="{{ path('Gallery') }}">{{ "Galerie"|trans }}</a>
+                <a class="footer-link" href="{{ path('Contact') }}">{{ "Nous contacter"|trans }}</a>
             </div>
-           {# <div class="col-lg-3">
-                <h3>Autres pages</h3>
-                <a class="nav-link footer" href="#">Accueil</a>
-                <a class="nav-link footer" href="#">A propos de nous</a>
-                <a class="nav-link footer" href="#">Services</a>
-                <a class="nav-link footer" href="#">Produits</a>
-                <a class="nav-link footer" href="#">Carriere</a>
-                <a class="nav-link footer" href="#">Galerie</a>
-                <a class="nav-link footer" href="#">Nous contacter</a>
-            </div>#}
+            {# <div class="col-lg-3">
+                 <h3>Autres pages</h3>
+                 <a class="nav-link footer" href="#">Accueil</a>
+                 <a class="nav-link footer" href="#">A propos de nous</a>
+                 <a class="nav-link footer" href="#">Services</a>
+                 <a class="nav-link footer" href="#">Produits</a>
+                 <a class="nav-link footer" href="#">Carriere</a>
+                 <a class="nav-link footer" href="#">Galerie</a>
+                 <a class="nav-link footer" href="#">Nous contacter</a>
+             </div>#}
             <div class="col-lg-3">
                 <h3>Reseaux sociaux</h3>
                 <p>Facebook
@@ -174,7 +187,7 @@
 {#<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.min.js"></script>#}
 
 <!-- Main Javascript -->
-<script src="{{ asset('js/main.js')}}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 {#<script src="{{ asset('js/main.min.js')}}"></script>#}
 </body>
 </html>

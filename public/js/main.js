@@ -136,16 +136,18 @@ document.addEventListener("DOMContentLoaded", function () {
         time: 2000
     });*/
 
+
+    // Change lang
     var url = $(location).attr("href");
     var fr = url.indexOf("/fr/");
-    var lang = $('#lang');
+    var lang = $('#changelang');
     if (fr !== -1) {
-        lang.attr('class', 'english');
+        lang.html('EN');
 
     } else {
-        lang.attr('class', 'francais');
+        lang.html('FR');
     }
-    $('#changelang').click(function () {
+    lang.click(function () {
         if (fr !== -1) {
             url = url.replace("/fr/", "/en/");
         } else {

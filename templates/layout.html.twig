@@ -17,7 +17,7 @@
 
     <!-- Site Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    {#    <link href="{{ asset('css/style.min.css')}}" rel="stylesheet">#}
+{#        <link href="{{ asset('css/style.min.css')}}" rel="stylesheet">#}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg sticky-top p-0">
@@ -37,65 +37,134 @@
                     </a>
                 </div>
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{ path('Produits') }}">
+                    <a class="nav-link" href="{{ path('Produits') }}">
                         {{ "Produits"|trans }}
                     </a>
-                    <div class="dropdown-menu megaMenu text-center">
+                    <div class="dropdown-menu megaMenu text-center py-5">
                         <div class="row">
                             <div class="col-md-3">
                                 <div>
-                                    <h5 class="dropdown-header">SABLES</h5>
+                                    <h5 class="dropdown-header mb-3 p-0">
+                                        {{ "Sables"|trans }}
+                                    </h5>
                                 </div>
-                                <div><a href="#" class="dropdown-item">Sable de rivière</a></div>
-                                <div><a href="#" class="dropdown-item">Sable de Sanaga</a></div>
-                                <br>
-                                <!-- <li><a href="#" class="dropdown-item">Graviers</a></li> -->
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Sable de rivière"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Sable de Sanaga"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    &nbsp;
+                                </div>
                             </div>
                             <div class="col-md-3">
                                 <div>
-                                    <h6 class="dropdown-header">Graviers</h6>
+                                    <h5 class="dropdown-header mb-3 p-0">
+                                        {{ "Graviers"|trans }}
+                                    </h5>
                                 </div>
-                                <div><a href="#" class="dropdown-item">Gravier 5 /15</a></div>
-                                <div><a href="#" class="dropdown-item">Gravier 15/25</a></div>
-                                <div><a href="#" class="dropdown-item">Gravier 6/10</a></div>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Gravier 5/15"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Gravier 15/25"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Gravier 6/10"|trans }}
+                                    </a>
+                                </div>
                             </div>
                             <div class="col-md-3">
                                 <div>
-                                    <h6 class="dropdown-header">GRAVIERS DECO</h6>
+                                    <h5 class="dropdown-header mb-3 p-0">
+                                        {{ "Pierre ornementale"|trans }}
+                                    </h5>
                                 </div>
-
-
-                                <div><a href="#" class="dropdown-item">Graviers déco</a></div>
-                                <div><a href="#" class="dropdown-item">Blocs paysagers</a></div>
-                                <br>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Graviers déco"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Blocs paysagers"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    &nbsp;
+                                </div>
                             </div>
                             <div class="col-md-3">
                                 <div>
-                                    <h6 class="dropdown-header">REMBLAIS</h6>
+                                    <h5 class="dropdown-header mb-3 p-0">
+                                        {{ "Remblais"|trans }}
+                                    </h5>
                                 </div>
-                                <div><a href="#" class="dropdown-item">Graves</a></div>
-                                <div><a href="#" class="dropdown-item">Couche d'assise</a></div>
-                                <div><a href="#" class="dropdown-item">Sous-couche</a></div>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Graves"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Couche d'assise"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="dropdown-item">
+                                        {{ "Sous-couche"|trans }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Matériaux</a></li>
-                        <li><a class="dropdown-item" href="#">Exploitation</a></li>
-                        <li><a class="dropdown-item" href="#">Accompagnement</a></li>
-                        <li><a class="dropdown-item" href="#">Transformation</a></li>
-                    </ul>
+                    <div class="dropdown-menu">
+                        <div>
+                            <a class="dropdown-item" href="#">
+                                {{ "Matériaux"|trans }}
+                            </a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item" href="#">
+                                {{ "Exploitation"|trans }}
+                            </a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item px-5" href="#">
+                                {{ "Accompagnement"|trans }}
+                            </a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item" href="#">
+                                {{ "Transformation"|trans }}
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link" href="#">Commandes</a>
+                    <a class="nav-link" href="#">
+                        {{ "Commandes"|trans }}
+                    </a>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link" href="#">Galerie</a>
+                    <a class="nav-link" href="#">
+                        {{ "Galerie"|trans }}
+                    </a>
                 </div>
                 <div class="nav-item">
                     <a class="nav-link" href="{{ path('About') }}">
@@ -103,11 +172,15 @@
                     </a>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link" href="{{ path('Contact') }}">{{ "Contact"|trans }}</a>
+                    <a class="nav-link" href="{{ path('Contact') }}">
+                        {{ "Contact"|trans }}
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+    <button id="changelang" class="lang-button me-5">
+    </button>
 </nav>
 {% block body %}
 
@@ -179,6 +252,7 @@
 <a href="#" class="btn btn-lg back-to-top"><i class="fa-solid fa-chevron-up"></i></a>
 <!-- JavaScript Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

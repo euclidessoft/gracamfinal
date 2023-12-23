@@ -198,8 +198,8 @@ h3.text-dark {
 }
 
 .custom-card:hover {
-    transform: scale(1.05) rotate(360deg);
-    transition: transform 0.9s ease-in-out;
+    transition: transform 0.5s ease-in;
+    transform: rotate(360deg);
 }
 
 .card-title {
@@ -445,13 +445,13 @@ h3.text-dark {
     box-shadow: 0 0 0.75rem rgba(var(--primaire-rgb), 0.3);
 }
 
-/*.form-control:not(:-ms-input-placeholder) + label {*/
-/*    left: 10px!important;*/
-/*    top: -10px;*/
-/*    background-color: white;*/
-/*    padding: 5px 10px;*/
-/*    height: auto !important;*/
-/*}*/
+.form-control:not(:-ms-input-placeholder) + label {
+    left: 10px!important;
+    top: -10px;
+    background-color: white;
+    padding: 5px 10px;
+    height: auto !important;
+}
 .form-control:focus + label,
 .form-control:not(:placeholder-shown) + label {
     left: 10px!important;

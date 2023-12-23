@@ -200,3 +200,21 @@ function upload() {
 function label_input() {
     $('#choice').html(document.getElementById('candidature_cv').value);
 }
+
+/*************Start Product image*************/
+Var ProductImg = document.getElementById("ProductImg");
+var small-img = document.getElementsByClassName("small-img");
+small-img[0].onclick = function () {
+ProductImg.src = smallImg[0].src;
+}
+small-img[1].onclick = function () {
+    ProductImg.src = smallImg[1].src;
+}
+small-img[2].onclick = function () {
+    ProductImg.src = smallImg[2].src;
+}
+small-img[2].onclick = function () {
+    ProductImg.src = smallImg[2].src;
+}
+
+/*************End Product image*************/

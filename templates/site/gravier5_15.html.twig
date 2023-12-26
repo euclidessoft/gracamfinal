@@ -1,0 +1,148 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Gravier 5/15"|trans }} - Gracam {% endblock %}
+{% block about %}actif{% endblock %}
+{% block body %}
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row g-5 mt-2">
+                <div class="col-lg-6">
+                    <div class="col">
+                        <img src="{{ asset('images/produits1.jpg') }}" class="img-fluid rounded-4" id="ProductImg"
+                             alt="produits1">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <div class="col">
+                                <img src="{{ asset('images/image20.jpg') }}" class="img-fluid rounded-3 small-img"
+                                     alt="produits1">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col">
+                                <img src="{{ asset('images/sable.jpg') }}" class="img-fluid rounded-3 small-img"
+                                     alt="produits1">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col">
+                                <img src="{{ asset('images/produits1.jpg') }}" class="img-fluid rounded-3 small-img"
+                                     alt="produits1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 shadow rounded-3 p-3">
+                    <div class="row">
+                        <h2 class="text-title">Description</h2>
+                        <span class="texte_titre">Gravier 5/15</span>
+                    </div>
+                    <div class="row">
+                        <h4 class="header-title">Caractéristiques</h4>
+                        <ul>
+                            <li><span class="fw-bold">Granulométrie:</span> de 0 à 4 mm</li>
+                            <li><span class="fw-bold">Couleur:</span> Gris - bleu dominant avec nuances en fonction du
+                                site
+                                de production
+                            </li>
+                            <li><span class="fw-bold">Forme:</span> Concassé</li>
+                            <li><span class="fw-bold">Origine:</span> Nos carrières de roche massive</li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h4 class="header-title">Usages</h4>
+                        <ul>
+                            <li><span class="fw-bold">Assainissement et réseau:</span> Enrobage de canalisations, gaines
+                                techniques.
+                            </li>
+                            <li><span class="fw-bold">Allée et voie d’accès:</span> Couche de finition pour vos allées
+                                de jardin.
+                            </li>
+                            <li><span class="fw-bold">Jardin et décoration:</span> Pose de pavage, terrain de pétanque.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h4 class="header-title">Conditionnement : </h4>
+                        <ul>
+                            <li> Sable vendu en vrac et Big Bag.</li>
+                            <li>Prix/ : 4192 FCFA /Tonne</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+                <div class="col-lg-6 end-0 shadow rounded-3">
+                    <form name="calculateur" method="post" id="form" enctype="multipart/form-data">
+                        <div class="col-lg-12">
+                            <div class="row g-4 py-4">
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="longueur" required="required"
+                                               maxlength="255" placeholder="Longueur (en m)"
+                                               class="form-control"/>
+                                        <label for="longueur" class="required">Longueur (en m)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="longueur" required="required"
+                                               maxlength="255" placeholder="Longueur (en m)"
+                                               class="form-control"/>
+                                        <label for="longueur" class="required">Largeur (en m)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="epaisseur" required="required" placeholder="epaisseur"
+                                               class="form-control"/>
+                                        <label for="epaisseur" class="required">Epaisseur (en cm)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-primaire p-3 w-100" type="submit">
+                                        <strong>{{ 'Calculer'|trans }}</strong>
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="tonnage" required="required" placeholder="tonnage"
+                                               class="form-control" disabled/>
+                                        <label for="tonnage" class="required">Tonnage (en t)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="volume" required="required" placeholder="Volume"
+                                               class="form-control" disabled/>
+                                        <label for="volume" class="required">Volume (en m3)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="total" required="required" placeholder="Total"
+                                               class="form-control" disabled/>
+                                        <label for="total" class="required">Total :</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <button class="btn btn-primaire btn-effect p-3 w-100"
+                                                type="submit" disabled><strong>{{ 'Commander'|trans }}</strong>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- item End -->
+{% endblock %}
+
+
+

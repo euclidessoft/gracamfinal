@@ -200,3 +200,15 @@ function upload() {
 function label_input() {
     $('#choice').html(document.getElementById('candidature_cv').value);
 }
+
+/*************Start Product image*************/
+var ProductImg = document.getElementById("ProductImg");
+var SmallImg = document.getElementsByClassName("small-img");
+
+for (var i = 0; i < SmallImg.length; i++) {
+    SmallImg[i].onclick = function(event) {
+        ProductImg.src = event.target.src;
+    };
+}
+
+/*************End Product image*************/

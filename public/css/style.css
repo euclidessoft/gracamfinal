@@ -90,25 +90,6 @@ a {
     color: var(--secondaire);
 }
 
-/*.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 6 Free", sans-serif;
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
-}
-
-.dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
-}*/
 
 .navbar .nav-item .dropdown-menu {
     background-color: var(--secondaire);
@@ -164,7 +145,7 @@ a {
 }
 
 .btn {
-    background: var(--primaire-soft) !important;
+    background: var(--primaire) !important;
     color: var(--secondaire) !important;
     padding: 1rem !important;
     font-weight: 600;
@@ -185,7 +166,8 @@ h3.text-dark {
 }
 
 .btn:hover {
-    background: var(--primaire) !important;
+    background: var(--secondaire) !important;
+    color: var(--primaire) !important;
 }
 
 /* End css contact */
@@ -213,11 +195,11 @@ h3.text-dark {
     rgba(240, 46, 170, 0.05) 0 25px;
     border-radius: 25px;
     cursor: pointer;
+    transition: transform 1.5s ease-in;
 }
 
 .custom-card:hover {
-    transform: scale(1.05) rotate(360deg);
-    transition: transform 0.9s ease-in-out;
+    transform: rotate(360deg);
 }
 
 .card-title {
@@ -428,7 +410,80 @@ h3.text-dark {
 
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
+
+/***********Start Pages d'un produits***********/
+.shadow{
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0 !important;
+}
+.text-title {
+    background-color: var(--primaire);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondaire);
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+.texte_titre{
+    font-size: 1.9rem;
+    color: var(--secondaire);
+}
+.header-title> h4{
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--secondaire);
+}
+.form-control {
+    border: 1px solid var(--primaire) !important;
+    border-radius: unset;
+    font-size: 1.2rem;
+    padding: 1rem .75rem !important;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0.75rem rgba(var(--primaire-rgb), 0.3);
+}
+
+.form-control:not(:-ms-input-placeholder) + label {
+    left: 10px!important;
+    top: -10px;
+    background-color: white;
+    padding: 5px 10px;
+    height: auto !important;
+}
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+    left: 10px!important;
+    top: -10px;
+    background-color: white;
+    padding: 5px 10px;
+    height: auto !important;
+}
+
+.newsletter-form .form-control {
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem !important;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+textarea.form-control {
+    height: 200px !important;
+}
+
+.container .small-img{
+    cursor: pointer;
+}
+/***********End agregats***********/
+
+
+@media (min-width: 769px) and (max-width: 1300px) {
     .navbar .navbar-toggler {
         background-color: transparent;
         border-radius: 10px;
@@ -436,7 +491,6 @@ h3.text-dark {
         line-height: 1;
         color: var(--secondaire);
     }
-
 
     .custom-card {
         width: 47%;
@@ -780,24 +834,19 @@ textarea.form-control {
 }
 
 .back-to-top {
-    border-radius: 0 !important;
+    border-radius: 10px;
     position: fixed;
     display: none;
     right: 50px;
-    bottom: 80px;
+    bottom: 50px;
     width: 50px;
     height: 50px;
-    font-weight: bold;
-    font-size: 2rem;
-    align-items: center;
-    justify-content: center;
     background: var(--primaire);
     color: var(--secondaire);
     border: 1px solid var(--secondaire);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     transition: all ease 300ms;
     z-index: 99;
-    overflow: hidden;
 }
 
 .back-to-top:hover {

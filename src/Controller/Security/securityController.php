@@ -282,6 +282,7 @@ class securityController extends AbstractController
         ]);
         return $response;
     }
+
 //
 //    /**
 //     * @Route("/registration", name="security_register")

@@ -195,10 +195,10 @@ h3.text-dark {
     rgba(240, 46, 170, 0.05) 0 25px;
     border-radius: 25px;
     cursor: pointer;
+    transition: transform 1.5s ease-in;
 }
 
 .custom-card:hover {
-    transition: transform 0.5s ease-in;
     transform: rotate(360deg);
 }
 
@@ -411,7 +411,6 @@ h3.text-dark {
 }
 
 
-
 /***********Start Pages d'un produits***********/
 .shadow{
     box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0 !important;
@@ -427,6 +426,10 @@ h3.text-dark {
     margin-bottom: 15px;
     padding: 10px;
     width: 100%;
+}
+.texte_titre{
+    font-size: 1.9rem;
+    color: var(--secondaire);
 }
 .header-title> h4{
     line-height: 1.5;
@@ -488,7 +491,6 @@ textarea.form-control {
         line-height: 1;
         color: var(--secondaire);
     }
-
 
     .custom-card {
         width: 47%;
@@ -832,24 +834,19 @@ textarea.form-control {
 }
 
 .back-to-top {
-    border-radius: 0 !important;
+    border-radius: 10px;
     position: fixed;
     display: none;
     right: 50px;
-    bottom: 80px;
+    bottom: 50px;
     width: 50px;
     height: 50px;
-    font-weight: bold;
-    font-size: 2rem;
-    align-items: center;
-    justify-content: center;
     background: var(--primaire);
     color: var(--secondaire);
     border: 1px solid var(--secondaire);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     transition: all ease 300ms;
     z-index: 99;
-    overflow: hidden;
 }
 
 .back-to-top:hover {

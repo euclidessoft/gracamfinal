@@ -3,57 +3,145 @@
 {% block about %}actif{% endblock %}
 {% block body %}
 
-    {# <div class="container-fluid image10">
-
-     </div>#}
-
-
-    <!-- About Start -->
-
-    <div class="bannere  p-5 bg-light ">
-
-        <div class="text-center mb-5 mt-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h2 class="  text-center  px-3 mb-5">
-                {{ "SERVICE MINIER"|trans }}
-            </h2>
-        </div>
-        <div class="container-fluid  mb-5  ">
-            <div class="row d-flex justify-content-center">
-
-                <div class="col-lg-8 col-md-12 mt-3  ">
-                    <div class="bloc-blanc mb-5 rounded-4 p-5 text-center bloc-aspect ">
-                        <div class="bloc-header-orange">
-                            <h2>Mines</h2>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row g-5 mt-2">
+                <div class="col-lg-6">
+                    <div class="col">
+                        <img src="{{ asset('images/produits1.jpg') }}" class="img-fluid rounded-4" id="ProductImg"
+                             alt="produits1">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <div class="col">
+                                <img src="{{ asset('images/image20.jpg') }}" class="img-fluid rounded-3 small-img"
+                                     alt="produits1">
+                            </div>
                         </div>
-                        <p class="mb-4 mt-5">
-
-
-                            {{ "Le pôle \"Mines\" est un élément essentiel de l'industrie minière de notre pays, doté de plusieurs concessions et permis d'exploration/exploitation couvrant les principales zones minières du territoire. Ces zones renferment une variété de ressources précieuses, allant des métaux précieux comme l'or et l'argent aux minéraux industriels tels que le charbon, la bauxite, et bien d'autres."|trans }}
-
-                        </p>
-                        <p class="mb-4">
-                            {{ "Outre l'exploration et l'exploitation des gisements miniers, le pôle \"Mines\" joue un rôle crucial dans la commercialisation des substances extraites. Son bureau de commercialisation est chargé de mettre en relation les producteurs locaux avec les marchés nationaux et internationaux. Grâce à son expertise dans le secteur minier, le pôle \"Mines\" est en mesure de négocier des contrats avantageux, de garantir des normes de qualité élevées et de répondre aux besoins spécifiques des clients, que ce soit dans le secteur de la construction, de l'industrie automobile, de l'électronique, ou de tout autre domaine nécessitant des matières premières minérales."|trans }}
-                            {{ "Nous sommes un symbole d'excellence, d'innovation et de responsabilité environnementale dans l'industrie."|trans }}
-                            {{ "Notre engagement envers la qualité inégalée de nos produits et notre dévouement envers la préservation de l'environnement sont au cœur de notre mission."|trans }}
-                        </p>
-                        <p class="mb-4">
-                            {{ "Le bureau de commercialisation agit également comme un intermédiaire entre les entreprises minières et les organismes gouvernementaux, veillant à ce que toutes les réglementations environnementales et de sécurité soient respectées. Il contribue ainsi à assurer une exploitation minière durable, minimisant les impacts négatifs sur l'environnement tout en maximisant les avantages économiques pour le pays."|trans }}
-                            {{ "De plus, le pôle \"Mines\" s'engage activement dans la recherche et le développement de technologies minières innovantes, visant à améliorer l'efficacité de l'extraction et à réduire l'empreinte environnementale de l'industrie. Cette approche progressive favorise la croissance à long terme du secteur minier en alignant ses pratiques sur les normes internationales les plus élevées."|trans }}
-                        </p>
-
-
-
-
+                        <div class="col-md-4">
+                            <div class="col">
+                                <img src="{{ asset('images/sable.jpg') }}" class="img-fluid rounded-3 small-img"
+                                     alt="produits1">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col">
+                                <img src="{{ asset('images/produits1.jpg') }}" class="img-fluid rounded-3 small-img"
+                                     alt="produits1">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-6 shadow rounded-3 p-3">
+                    <div class="row">
+                        <h2 class="text-title">Description</h2>
+                        <span class="texte_titre">Sables</span>
+                    </div>
+                    <div class="row">
+                        <h4 class="header-title">Caractéristiques</h4>
+                        <ul>
+                            <li><span class="fw-bold">Granulométrie:</span> de 0 à 4 mm</li>
+                            <li><span class="fw-bold">Couleur:</span> Gris - bleu dominant avec nuances en fonction du
+                                site
+                                de production
+                            </li>
+                            <li><span class="fw-bold">Forme:</span> Concassé</li>
+                            <li><span class="fw-bold">Origine:</span> Nos carrières de roche massive</li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h4 class="header-title">Usages</h4>
+                        <ul>
+                            <li><span class="fw-bold">Assainissement et réseau:</span> Enrobage de canalisations, gaines
+                                techniques.
+                            </li>
+                            <li><span class="fw-bold">Allée et voie d’accès:</span> Couche de finition pour vos allées
+                                de jardin.
+                            </li>
+                            <li><span class="fw-bold">Jardin et décoration:</span> Pose de pavage, terrain de pétanque.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h4 class="header-title">Conditionnement : </h4>
+                        <ul>
+                            <li> Sable vendu en vrac et Big Bag.</li>
+                            <li>Prix/ : 4192 FCFA /Tonne</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
 
+                </div>
+                <div class="col-lg-6 end-0 shadow rounded-3">
+                    <form name="calculateur" method="post" id="form" enctype="multipart/form-data">
+                        <div class="col-lg-12">
+                            <div class="row g-4 py-4">
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="longueur" required="required"
+                                               maxlength="255" placeholder="Longueur (en m)"
+                                               class="form-control"/>
+                                        <label for="longueur" class="required">Longueur (en m)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="longueur" required="required"
+                                               maxlength="255" placeholder="Longueur (en m)"
+                                               class="form-control"/>
+                                        <label for="longueur" class="required">Largeur (en m)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="epaisseur" required="required" placeholder="epaisseur"
+                                               class="form-control"/>
+                                        <label for="epaisseur" class="required">Epaisseur (en cm)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-primaire p-3 w-100" type="submit">
+                                        <strong>{{ 'Calculer'|trans }}</strong>
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="tonnage" required="required" placeholder="tonnage"
+                                               class="form-control" disabled/>
+                                        <label for="tonnage" class="required">Tonnage (en t)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="volume" required="required" placeholder="Volume"
+                                               class="form-control" disabled/>
+                                        <label for="volume" class="required">Volume (en m3)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" id="total" required="required" placeholder="Total"
+                                               class="form-control" disabled/>
+                                        <label for="total" class="required">Total :</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <button class="btn btn-primaire btn-effect p-3 w-100"
+                                                type="submit" disabled><strong>{{ 'Commander'|trans }}</strong>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-
         </div>
     </div>
 
-    <!-- About End -->
+    <!-- item End -->
 {% endblock %}
 
 

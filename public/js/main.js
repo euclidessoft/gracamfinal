@@ -202,19 +202,13 @@ function label_input() {
 }
 
 /*************Start Product image*************/
-Var ProductImg = document.getElementById("ProductImg");
-var small-img = document.getElementsByClassName("small-img");
-small-img[0].onclick = function () {
-ProductImg.src = smallImg[0].src;
-}
-small-img[1].onclick = function () {
-    ProductImg.src = smallImg[1].src;
-}
-small-img[2].onclick = function () {
-    ProductImg.src = smallImg[2].src;
-}
-small-img[2].onclick = function () {
-    ProductImg.src = smallImg[2].src;
+var ProductImg = document.getElementById("ProductImg");
+var SmallImg = document.getElementsByClassName("small-img");
+
+for (var i = 0; i < SmallImg.length; i++) {
+    SmallImg[i].onclick = function(event) {
+        ProductImg.src = event.target.src;
+    };
 }
 
 /*************End Product image*************/

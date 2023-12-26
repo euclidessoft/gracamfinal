@@ -474,7 +474,9 @@ textarea.form-control {
     height: 200px !important;
 }
 
-
+.container .small-img{
+    cursor: pointer;
+}
 /***********End agregats***********/
 
 

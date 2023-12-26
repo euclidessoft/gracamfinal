@@ -887,34 +887,7 @@ textarea.form-control {
     width: 100%;
     /*background: radial-gradient(ellipse at top, #e66465, transparent);*/
     /*opacity:.4;*/
-
-}
-.overlay {
-
-
-
-}
-
-.categorie-1 {
-    background-image: url(../images/gravier6-10.jpg);
-    aspect-ratio: 3/4;
-    background-size: cover;
-    width: 100%;
-}
-.categorie-2 {
-    background-image: url(../images/remblais.png);
-    aspect-ratio: 3/4;
-    background-size: cover;
-    width: 100%;
-}
-.categorie-3 {
-    background-image: url(../images/image20.jpg);
-    aspect-ratio: 3/4;
-    background-size: cover;
-    width: 100%;
-}
-.categorie-title{
-    color: var(--primaire);
+    color: var(--secondaire);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -924,10 +897,59 @@ textarea.form-control {
     font-size: 2rem;
     font-weight: bolder;
 }
-.p-4{
+.categorie-title-1 {
+    background-image:radial-gradient(transparent, rgba(var(--primaire-rgb), 0.9)), url(../images/gravier.png);
+    aspect-ratio: 3/4;
+    background-size: cover;
+    width: 100%;
+    /*background: radial-gradient(ellipse at top, #e66465, transparent);*/
+    /*opacity:.4;*/
+    color: var(--secondaire);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*text-align: center;*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.categorie-title-2 {
+    background-image:radial-gradient(transparent, rgba(var(--primaire-rgb), 0.9)), url(../images/image20.jpg);
+    aspect-ratio: 3/4;
+    background-size: cover;
+    width: 100%;
+    /*background: radial-gradient(ellipse at top, #e66465, transparent);*/
+    /*opacity:.4;*/
+    color: var(--secondaire);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*text-align: center;*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    font-size: 2rem;
+    font-weight: bolder;
+}
+p-4{
     padding: 40px !important;
     top: 50%;
 }
 
 
+.card-img-top {
+    aspect-ratio:4/3;
+}
 
+.fw-bolder {
+    color: var(--secondaire);
+}
+.card-body {
+    background-color: var(--primaire);
+}
+.card-body:hover {
+    background-color: var(--secondaire);
+}
+.card-body:hover .fw-bolder {
+    color: var(--primaire);
+}

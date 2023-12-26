@@ -878,76 +878,63 @@ textarea.form-control {
 }
 
 .categorie-title {
-
-    background-image:radial-gradient(transparent, rgba(var(--primaire-rgb), 0.9)), url(../images/about_2.png);
-    aspect-ratio: 3/4;
+    /*aspect-ratio: 2/1;*/
     background-size: cover;
     width: 100%;
-    /*background: radial-gradient(ellipse at top, #e66465, transparent);*/
-    /*opacity:.4;*/
     color: var(--secondaire);
     display: flex;
     align-items: center;
     justify-content: center;
-    /*text-align: center;*/
-    /*position: relative;*/
-    /*top: 50%;*/
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bolder;
-}
-.categorie-title-1 {
-    background-image:radial-gradient(transparent, rgba(var(--primaire-rgb), 0.9)), url(../images/gravier.png);
-    aspect-ratio: 3/4;
-    background-size: cover;
-    width: 100%;
-    /*background: radial-gradient(ellipse at top, #e66465, transparent);*/
-    /*opacity:.4;*/
-    color: var(--secondaire);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*text-align: center;*/
-    /*position: relative;*/
-    /*top: 50%;*/
-    font-size: 2rem;
-    font-weight: bolder;
-}
-.categorie-title-2 {
-    background-image:radial-gradient(transparent, rgba(var(--primaire-rgb), 0.9)), url(../images/image20.jpg);
-    aspect-ratio: 3/4;
-    background-size: cover;
-    width: 100%;
-    /*background: radial-gradient(ellipse at top, #e66465, transparent);*/
-    /*opacity:.4;*/
-    color: var(--secondaire);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*text-align: center;*/
-    /*position: relative;*/
-    /*top: 50%;*/
-    font-size: 2rem;
-    font-weight: bolder;
-}
-p-4{
-    padding: 40px !important;
-    top: 50%;
+    text-shadow: 2px -2px var(--primaire);
+    height: 100%;
+    border-radius: 5px 0 0 5px;
 }
 
+.sable .categorie-title {
+    background-image:radial-gradient(transparent, rgba(var(--primaire-rgb), 0.9)), url(../images/sable.jpg);
+}
 
-.card-img-top {
-    aspect-ratio:4/3;
+.gravier .categorie-title {
+    background-image: radial-gradient(transparent, rgba(var(--primaire-rgb), 0.9)), url(../images/gravier10.jpg);
+}
+
+.pierre .categorie-title {
+    background-image: radial-gradient(transparent, rgba(var(--primaire-rgb), 0.9)), url(../images/image20.jpg);
+}
+
+.border-primaire {
+    border: 1px solid var(--primaire) !important;
+}
+.border-secondaire {
+    border: 1px solid var(--primaire) !important;
+}
+
+.produit {
+
+}
+
+.produit-img {
+    aspect-ratio:1/1;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden !important;
+}
+
+.produit-img:hover img {
+    transform: scale(1.2);
 }
 
 .fw-bolder {
     color: var(--secondaire);
 }
-.card-body {
+.produit-description {
     background-color: var(--primaire);
 }
-.card-body:hover {
+.produit-description:hover {
     background-color: var(--secondaire);
 }
-.card-body:hover .fw-bolder {
+.produit-description:hover .fw-bolder {
     color: var(--primaire);
 }

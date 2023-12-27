@@ -118,4 +118,23 @@ class AccueilController extends AbstractController
 
         return $this->render('site/moellons.html.twig');
     }
+
+
+    /**
+     * @Route("/distribution", name="distribution")
+     */
+    public function distribution()
+    {
+
+        return $this->render('site/distribution.html.twig');
+    }
+
+    /**
+     * @Route("/accompagnement", name="accompagnement")
+     */
+    public function accompagnement()
+    {
+
+        return $this->render('site/distribution.html.twig');
+    }
 }

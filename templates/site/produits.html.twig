@@ -7,18 +7,18 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                    <h1 class="display-5 text fw-bold mt-5 mb-3 animated fadeIn">
                         {{ "Produits"|trans }}
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item">
-                                <a class="text-white" href="{{ path('Accueil') }}">
+                                <a class="text" href="{{ path('Accueil') }}">
                                     {{ "Accueil"|trans }}
                                 </a>
                             </li>
-                            <li class="breadcrumb-item text-white">
-                                {{ "Produits"|trans }}
+                            <li class="breadcrumb-item text">
+                               / {{ "Produits"|trans }}
                             </li>
                         </ol>
                     </nav>
@@ -36,225 +36,26 @@
                     SABLES
                 </div>
             </div>
-            <div class="col-lg-9 p-4 d-flex align-items-center">
+            <div class="col-lg-9 p-5 d-flex align-items-center">
                 <div class="row g-5">
                     <div class="col-lg-4">
                         <a href="">
-                            <div class="card h-100">
+                            <div class="produit">
                                 <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/sable.jpg') }}"
-                                     alt="sable"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4">
-                                    <div class="text-center h-100">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">SABLE SANAGA</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">4300 TTC - 3605 HT</span>
-
-                                    </div>
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/sable.jpg') }}"
+                                         alt="sable"/>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/sanaga.jpg') }}"
-                                     alt="sable"/>
                                 <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4">
+                                <div class="produit-description">
                                     <div class="text-center">
                                         <!-- Product name-->
-                                        <h5 class="fw-bolder">SABLE CARRIERE</h5>
+                                        <h5 class="fw-bolder">CARRIERE</h5>
                                         <!-- Product price-->
-                                        <span class="fw-bolder">5000 TTC - 4192 HT</span>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/sanaga.jpg') }}"
-                                     alt="sable"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4">
-                                    <div class="text-center">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">SABLE SANAGA</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">4300 TTC - 3605 HT</span>
+                                        <span class="fw-bolder">4192F HT - 5000F TTC </span>
                                     </div>
                                 </div>
                                 <!-- Product actions-->
-
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gravier row border border-3  rounded-3 mt-5 border-secondaire">
-            <div class="col-lg-3 ps-0">
-                <div class="categorie-title">
-                    GRAVIERS
-                </div>
-            </div>
-            <div class="col-lg-9 p-4 d-flex align-items-center">
-                <div class="row g-5">
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/image19.jpg') }}"
-                                     alt="gravier"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4">
-                                    <div class="text-center h-100">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">GRAVIER 5/15</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">8000 TTC - 6708 HT</span>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/15-25.jpg') }}"
-                                     alt="gravier"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4">
-                                    <div class="text-center">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">GRAVIER 15/25</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">8000 TTC - 6708 HT</span>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/5-25.png') }}"
-                                     alt="gravier"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4">
-                                    <div class="text-center">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">GRAVIER 5/25</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">7000 TTC - 5870 HT</span>
-                                    </div>
-                                </div>
-                                <!-- Product actions-->
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/image19.jpg') }}"
-                                     alt="gravier"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom2 p-4">
-                                    <div class="text-center h-100">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">GRAVIER 0/50</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">8200 TTC - 6876 HT</span>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/grav 0-50.png') }}"
-                                     alt="gravier"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4">
-                                    <div class="text-center">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">GRAVIER 0/100</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">8200 TTC - 6876 HT</span>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/grav 0-50.png') }}"
-                                     alt="gravier"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4">
-                                    <div class="text-center">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">BALLAST 20/50</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">7000 TTC - 5870 HT</span>
-                                    </div>
-                                </div>
-                                <!-- Product actions-->
-
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pierre row border border-3  rounded-3 mt-5 border-primaire">
-            <div class="col-lg-3 p-0">
-                <div class="categorie-title">
-                    PIERRES
-                </div>
-            </div>
-            <div class="col-lg-9 d-flex align-items-center">
-                <div class="row p-5 g-5">
-                    <div class="col-lg-4">
-                        <a href="">
-                            <div class="card h-100">
-                                <!-- Product image-->
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/image35.jpg') }}"
-                                     alt="pierre"/>
-                                <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4 h-100">
-                                    <div class="text-center h-100">
-                                        <!-- Product name-->
-
-                                        <h5 class="fw-bolder">PIERRE ORNEMENTALE</h5>
-                                        <!-- Product price-->
-                                        <span class="fw-bolder">4300 TTC - 3605 HT</span>
-                                    </div>
-                                </div>
                             </div>
                         </a>
                     </div>
@@ -262,17 +63,17 @@
                         <a href="">
                             <div class="produit">
                                 <!-- Product image-->
-                                <div class="produit-img p-0">
-                                    <img class="rounded-top-2" src="{{ asset('images/moellons.png') }}"
-                                         alt="pierre"/>
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/sanaga.jpg') }}"
+                                         alt="sable"/>
                                 </div>
                                 <!-- Product details-->
-                                <div class="produit-description p-4 h-100">
+                                <div class="produit-description">
                                     <div class="text-center">
                                         <!-- Product name-->
-                                        <h5 class="fw-bolder">MOELLONS</h5>
+                                        <h5 class="fw-bolder"> SANAGA</h5>
                                         <!-- Product price-->
-                                        <span class="fw-bolder">7500 TTC - 6289 HT </span>
+                                        <span class="fw-bolder">3605F HT -4300F TTC </span>
                                     </div>
                                 </div>
                                 <!-- Product actions-->
@@ -281,18 +82,230 @@
                     </div>
                     <div class="col-lg-4">
                         <a href="">
-                            <div class="card h-100">
+                            <div class="produit">
                                 <!-- Product image-->
-
-                                <img class="produit-img rounded-top-2" src="{{ asset('images/sterile.png') }}"
-                                     alt="pierre"/>
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/sanaga.jpg') }}"
+                                         alt="sable"/>
+                                </div>
                                 <!-- Product details-->
-                                <div class="card-footer rounded-bottom-2 p-4 h-100">
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder"> SANAGA</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bold">3605F HT - 4300F TTC </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gravier row border border-3  rounded-3 mt-5 border-secondaire">
+            <div class="col-lg-3 p-0">
+                <div class="categorie-title">
+                    GRAVIERS
+                </div>
+            </div>
+            <div class="col-lg-9 p-5 d-flex align-items-center">
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/image19.jpg') }}"
+                                         alt="gravier"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">5/15</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bolder">6708F HT- 7000F TTC </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/15-25.jpg') }}"
+                                         alt="gravier"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">15/25</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bolder">6708F HT - 8000F TTC </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/5-25.png') }}"
+                                         alt="gravier"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">5/25</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bolder">5870F HT - 7000F TTC </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/image19.jpg') }}"
+                                         alt="gravier"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">0/50</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bolder">6876F HT - 8200F TTC </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/grav 0-50.png') }}"
+                                         alt="gravier"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">0/50</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bolder">6876F HT - 8200F TTC </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/grav 0-50.png') }}"
+                                         alt="gravier"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">0/100</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bolder">6876F HT - 8200F TTC </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pierre row border border-3 rounded-3 mt-5 border-primaire">
+            <div class="col-lg-3 p-0">
+                <div class="categorie-title">
+                    PIERRES
+                </div>
+            </div>
+            <div class="col-lg-9 p-5 d-flex align-items-center">
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/image35.jpg') }}"
+                                         alt="pierre"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">GRANITE VERT ROSE/CHATOYANT</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bolder">7500F TTC - 6289F HT </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/moellons.png') }}"
+                                         alt="pierre"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">MOELLONS</h5>
+                                        <!-- Product price-->
+                                        <span class="fw-bolder"> 6289F HT-7500F TTC </span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div class="produit">
+                                <!-- Product image-->
+                                <div class="produit-img">
+                                    <img class="rounded-top-2" src="{{ asset('images/sterile.png') }}"
+                                         alt="pierre"/>
+                                </div>
+                                <!-- Product details-->
+                                <div class="produit-description">
                                     <div class="text-center">
                                         <!-- Product name-->
                                         <h5 class="fw-bolder">STERILE</h5>
                                         <!-- Product price-->
-                                        <span class="fw-bolder">3000 TTC - 2515 HT</span>
+                                        <span class="fw-bolder">2515F HT- 3000F TTC</span>
                                     </div>
                                 </div>
                                 <!-- Product actions-->

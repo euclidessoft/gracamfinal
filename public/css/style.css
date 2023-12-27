@@ -244,6 +244,10 @@ h3.text-dark {
     padding-bottom: 3rem !important;
 }
 
+.page-header-produit .text {
+    color: var(--secondaire);
+}
+
 
 .carousel-img {
     width: 100%;
@@ -914,29 +918,36 @@ textarea.form-control {
 }
 
 .produit {
-
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
 }
 
 .produit-img {
-    aspect-ratio:1/1;
-    object-fit: cover;
-    width: 100%;
     overflow: hidden !important;
+    width: 100%;
 }
 
 .produit-img:hover img {
     transform: scale(1.2);
 }
 
-.fw-bolder {
-    color: var(--secondaire);
+.produit-img img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    padding: 0;
+    aspect-ratio:1/1;
+    object-fit: cover;
 }
+
 .produit-description {
     background-color: var(--primaire);
+    color: var(--secondaire);
+    padding: 1.5rem;
+    height: 100%;
 }
 .produit-description:hover {
     background-color: var(--secondaire);
-}
-.produit-description:hover .fw-bolder {
     color: var(--primaire);
+
 }

@@ -1,0 +1,96 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "A propos"|trans }} - Gracam {% endblock %}
+{% block about %}actif{% endblock %}
+{% block body %}
+
+    {# <div class="container-fluid image10">
+
+     </div>#}
+    <div class="container-fluid py-5 mb-5 page-header-service">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ "Nos Services"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "Services Distribution"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid py-5">
+        <div class="container fs-5 mt-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="section-title bg-white text-center px-3 mb-5">
+                    Distribution des produits
+                </h2>
+
+            </div>
+            <div class="row g-5 mt-5">
+                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100 rounded-start fit-cover"
+                             src="../images/about_1.png" alt="distribution">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s">
+                    <p class="mb-5">
+                        La planification est la première étape cruciale de tout projet.
+                        Notre équipe de professionnels chevronnés travaille en étroite collaboration avec vous pour comprendre vos objectifs, vos contraintes et vos exigences spécifiques.
+                        Nous effectuons une analyse approfondie du terrain, des ressources disponibles et des réglementations en vigueur pour élaborer des plans détaillés qui optimisent l'efficacité et la sécurité de votre infrastructure.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-5 mt-5">
+                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s">
+                    <p class="mb-5">
+                        La conception est une étape essentielle dans la création de granulats fiables et performants.
+                        Nos experts en ingénierie utilisent les dernières technologies et les meilleures pratiques de l'industrie pour développer des solutions sur mesure qui répondent aux normes les plus élevées.
+                        Nous prenons en compte tous les aspects, de la résistance structurelle à la gestion des risques, en passant par la durabilité environnementale, afin de garantir des installations sûres, durables et efficientes.
+                    </p>
+                </div>
+                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100 rounded-end fit-cover d-block"
+                             src="/images/image36.jpg" alt="ingenieurs">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt-5">
+                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100 fit-cover d-block"
+                             src="/images/image10.jpg" alt="bac_1">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s">
+                    <p class="mb-5">
+                        La construction est l'étape où nos compétences techniques prennent vie.
+                        Nous avons une équipe de professionnels qualifiés et expérimentés qui travaillent avec précision et efficacité pour réaliser votre projet.
+                        En utilisant des méthodes de construction avancées et en respectant les délais convenus, nous assurons la mise en place de granulats de haute qualité, conformes aux spécifications requises.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-5">&nbsp;</div>
+    </div>
+
+
+    <!-- About End -->
+{% endblock %}
+
+
+

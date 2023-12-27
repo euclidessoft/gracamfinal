@@ -17,7 +17,7 @@
 
     <!-- Site Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-{#        <link href="{{ asset('css/style.min.css')}}" rel="stylesheet">#}
+{#    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">#}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg sticky-top p-0">
@@ -190,51 +190,80 @@
 {% block body %}
 
 {% endblock %}
-<footer class="couleur">
-    <div class="container-fluid p-5 mb-5 mt-5">
-        <div class="row">
-            <div class="col-lg-3 ">
-                <h1>Gracam</h1>
-            </div>
-            <div class="col-lg-3 ">
-                <h4 class="text-white mb-3">{{ "Liens utiles"|trans }}</h4>
-                <a class="footer-link" href="{{ path('Accueil') }}">{{ "Accueil"|trans }}</a>
-                <a class="footer-link" href="{{ path('About') }}">{{ "A propos de nous"|trans }}</a>
-                <a class="footer-link" href="{{ path('Produits') }}">{{ "Produits"|trans }}</a>
-                <a class="footer-link" href="{{ path('Carriere') }}">{{ "Carriere"|trans }}</a>
-                <a class="footer-link" href="{{ path('Gallery') }}">{{ "Galerie"|trans }}</a>
-                <a class="footer-link" href="{{ path('Contact') }}">{{ "Nous contacter"|trans }}</a>
-            </div>
-            {# <div class="col-lg-3">
-                 <h3>Autres pages</h3>
-                 <a class="nav-link footer" href="#">Accueil</a>
-                 <a class="nav-link footer" href="#">A propos de nous</a>
-                 <a class="nav-link footer" href="#">Services</a>
-                 <a class="nav-link footer" href="#">Produits</a>
-                 <a class="nav-link footer" href="#">Carriere</a>
-                 <a class="nav-link footer" href="#">Galerie</a>
-                 <a class="nav-link footer" href="#">Nous contacter</a>
-             </div>#}
-            <div class="col-lg-3">
-                <h3>Reseaux sociaux</h3>
-                <p>Facebook
-                    <br>
-                    Instagram
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <h3>Contact</h3>
-                <div class="mt-1">
-                    Nkolmekok-Myom II, Yaoundé
+
+<footer class="text-secondaire">
+    <div class="container-fluid footer pt-3">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-3 ">
+                    <h1>Gracam</h1>
                 </div>
-                <div class="mt-1">
-                    Tel : +237 682 223 658 / 665 549 639
+                <div class="col-lg-3 col-md-6 position-relative">
+                    <h4 class="footer-tittle">{{ "Liens utiles"|trans }}</h4>
+                    <a class="btn btn-link" href="{{ path('About') }}">{{ "A propos"|trans }}</a>
+                    <a class="btn btn-link" href="{{ path('Gallery') }}">{{ "Galerie"|trans }}</a>
+                    <a class="btn btn-link" href="{{ path('Carriere') }}">{{ "Carrière"|trans }}</a>
+                    <a class="btn btn-link" href="{{ path('Contact') }}">{{ "Contact"|trans }}</a>
                 </div>
-                <div class="mt-1">
-                    BP : 3582 Yaoundé
+                <div class="col-lg-3 col-md-6 position-relative">
+                    <h4 class="footer-tittle">{{ "Réseaux sociaux"|trans }}</h4>
+                    <div class="row">
+                        <div class="col-12">
+                            <a class="socialink" href="#">
+                                <span class="socialink-facebook">
+                                    Gracam
+                                </span>
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="socialink" href="#">
+                                <span class="socialink-twitter">
+                                    Gracam
+                                </span>
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="socialink" href="#">
+                                <span class="socialink-instagram">
+                                    Gracam
+                                </span>
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="socialink" href="#">
+                                <span class="socialink-youtube">
+                                    Gracam
+                                </span>
+                                <i class="fab fa-youtube fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="socialink" href="#">
+                                <span class="socialink-linkedin">
+                                    Gracam
+                                </span>
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="mt-1">
-                    Email : info@granulatsducameroun.com
+                <div class="col-lg-3">
+                    <h3>Contact</h3>
+                    <div class="mt-1">
+                        Nkolmekok-Myom II, Yaoundé
+                    </div>
+                    <div class="mt-1">
+                        Tel : +237 682 223 658 / 665 549 639
+                    </div>
+                    <div class="mt-1">
+                        BP : 3582 Yaoundé
+                    </div>
+                    <div class="mt-1">
+                        Email : info@granulatsducameroun.com
+                    </div>
                 </div>
             </div>
         </div>
@@ -244,17 +273,26 @@
             <div class="py-4 px-5 text-center text-md-start">
                 <p class="mb-0">&copy; 2023 Gracam, {{ "Tout droits réservés."|trans }}</p>
             </div>
-            <div class="py-4 px-5 bg-blanc footer-shape position-relative text-center text-md-end ">
-                <p class="text-primaire mb-0">
+            <div class="py-4 px-5 bg-secondaire footer-shape position-relative text-center text-md-end">
+                <p class="mb-0 text-primaire">
                     Designed By
                     <a class="fw-bold text-primaire" href="https://euclideservices.com" target="_blank">EUCLIDES</a>
                 </p>
             </div>
         </div>
     </div>
-</footer>
 
-<a href="#" class="btn btn-lg back-to-top"><i class="fa-solid fa-chevron-up"></i></a>
+</footer>
+<!-- Footer End -->
+
+<!-- Back to Top -->
+<a href="#" class="back-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
+
+<a href="#" class="btn btn-lg back-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
 <!-- JavaScript Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>

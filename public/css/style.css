@@ -8,12 +8,19 @@
     --primaire-soft-rgb: 115, 105, 155;
     --secondaire: #fad7a5;
     --secondaire-rgb: 250, 215, 165;
-    --tertiaire: #373737;
-    --tertiaire-rgb: 55, 55, 55;
+    --gris: #373737;
+    --gris-rgb: 55, 55, 55;
+    --gris-clair: #c3c3c3;
+    --gris-clair-rgb: 195, 195, 195;
     --noir: #0c0c0c;
     --noir-rgb: 12, 12, 12;
     --blanc: #fff;
     --blanc-rgb: 255, 255, 255;
+    --twitter: #1d9bf0;
+    --facebook: #385898;
+    --linkedin: #004182;
+    --instagram: #e83e8c;
+    --youtube: #ff0000;
     --header-overlay: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
     --transdelay: 600ms;
 }
@@ -244,6 +251,10 @@ h3.text-dark {
     padding-bottom: 3rem !important;
 }
 
+.page-header-produit .text {
+    color: var(--secondaire);
+}
+
 
 .carousel-img {
     width: 100%;
@@ -438,7 +449,6 @@ h3.text-dark {
 }
 .form-control {
     border: 1px solid var(--primaire) !important;
-    border-radius: unset;
     font-size: 1.2rem;
     padding: 1rem .75rem !important;
     border-radius: 10px;
@@ -914,29 +924,36 @@ textarea.form-control {
 }
 
 .produit {
-
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
 }
 
 .produit-img {
-    aspect-ratio:1/1;
-    object-fit: cover;
-    width: 100%;
     overflow: hidden !important;
+    width: 100%;
 }
 
 .produit-img:hover img {
     transform: scale(1.2);
 }
 
-.fw-bolder {
-    color: var(--secondaire);
+.produit-img img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    padding: 0;
+    aspect-ratio:1/1;
+    object-fit: cover;
 }
+
 .produit-description {
     background-color: var(--primaire);
+    color: var(--secondaire);
+    padding: 1.5rem;
+    height: 100%;
 }
 .produit-description:hover {
     background-color: var(--secondaire);
-}
-.produit-description:hover .fw-bolder {
     color: var(--primaire);
+
 }

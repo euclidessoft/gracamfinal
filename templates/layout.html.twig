@@ -312,9 +312,17 @@
 
 <script>
     function calcule() {
-        $("#surface").val($("#longueur").val() * $("#largeur").val());
-        $("#quantite").val("");
-        $("#total").val("");
+        if ($("#longueur").val() > 0 || $("#largeur").val() > 0) {
+            $("#surface").val($("#longueur").val() * $("#largeur").val());
+            $("#quantite").val("");
+            $("#total").val("");
+        }
+        else {
+
+            $("#longueur").val("");
+            $("#largeur").val("");
+
+        }
 
     }
 
@@ -417,8 +425,8 @@
         var dimension = $('#calcul_dimenssion').val();
         var epaiss = $('#calcul_epaisseur').val();
 
-        if (!longueur || !largeur || !dimension || !epaiss) {
-            alert("Veuillez remplir tous les champs avant de calculer.");
+        if (!longueur || !largeur || !dimension || !epaiss || longueur <0 || largeur<0) {
+            alert("Veuillez remplir correctement tous les champs avant de calculer.");
             return;
         }
 
@@ -433,19 +441,24 @@
 
         switch (dimension) {
 
+
             case '1':
                 position = 1200 * 600;
                 quantity = Math.ceil(surface / position);
                 quantite.val(quantity);
                 if (epaiss === '1') {
                     $("#prixUnitaire").val("72000");
-                    $("#total").val(quantity * 72000);
+                    var tot =new Intl.NumberFormat().format(quantity * 72000);
+                    $("#total").val(tot);
                 } else if(epaiss ==='2'){
                     $("#prixUnitaire").val("55000");
-                    $("#total").val(quantity * 55000);
+                    $("#total").val(tot);
+                    var tot =new Intl.NumberFormat().format(quantity * 55000);
+
                 }else if(epaiss ==='3'){
                     $("#prixUnitaire").val("77000");
-                    $("#total").val(quantity * 77000);
+                    $("#total").val(tot);
+                    var tot =new Intl.NumberFormat().format(quantity * 77000);
                 }else if(epaiss ==='4'){
                     $("#prixUnitaire").val("80000");
                     $("#total").val(quantity * 80000);

@@ -17,7 +17,7 @@
 
     <!-- Site Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-{#    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">#}
+    {#    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">#}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg sticky-top p-0">
@@ -311,17 +311,242 @@
 {#<script src="{{ asset('js/main.min.js')}}"></script>#}
 
 <script>
-   function calcule() {
+    function calcule() {
         $("#surface").val($("#longueur").val() * $("#largeur").val());
+        $("#quantite").val("");
+        $("#total").val("");
 
     }
-    function quantites(){
-       alert($('#calcul_dimenssion option:selected').text());
-       var surface = $("#surface").val($("#longueur").val() * $("#largeur").val()) * 10000;
-        var dimension =$('#calcul_dimenssion option:selected').val() ;
-         $("#quantite").val("13");
+
+
+    function Prix() {
+
+        $("#quantite").val("");
+        $("#total").val("");
+        var dimension = $('#calcul_dimenssion option:selected').val();
+        var epaiss = $('#calcul_epaisseur option:selected').val();
+
+
+        // if (!dimension || !epaiss) {
+        //     alert("Veuillez remplir la dimension et l'épaisseur.");
+        //     return;
+        // }
+        switch (dimension) {
+            case '1':
+                position = 1200 * 600;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("72000");
+                } else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("55000");
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("77000");
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("80000");
+                }
+                break;
+            case '2':
+                position = 600 * 600;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            case '3':
+                position = 600 * 300;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            case '4':
+                position = 600 * 100;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            case '5':
+                position = 300 * 300;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            case '6':
+                position = 300 * 100;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            default:
+                break;
+        }
+
     }
 
+
+    function quantites() {
+        var longueur = $("#longueur").val();
+        var largeur = $("#largeur").val();
+        var dimension = $('#calcul_dimenssion').val();
+        var epaiss = $('#calcul_epaisseur').val();
+
+        if (!longueur || !largeur || !dimension || !epaiss) {
+            alert("Veuillez remplir tous les champs avant de calculer.");
+            return;
+        }
+
+        var surface = longueur * largeur * 1000000;
+        var dimension = $('#calcul_dimenssion option:selected').val();
+        var position;
+        var quantity;
+        var quantite = $("#quantite");
+        var epaiss = $('#calcul_epaisseur option:selected').val();
+
+
+
+        switch (dimension) {
+
+            case '1':
+                position = 1200 * 600;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("72000");
+                    $("#total").val(quantity * 72000);
+                } else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("55000");
+                    $("#total").val(quantity * 55000);
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("77000");
+                    $("#total").val(quantity * 77000);
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("80000");
+                    $("#total").val(quantity * 80000);
+                }
+                break;
+            case '2':
+                position = 600 * 600;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                    $("#total").val(quantity * 50000);
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                    $("#total").val(quantity * 38000);
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                    $("#total").val(quantity * 54000);
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                    $("#total").val(quantity * 55000);
+                }
+                break;
+            case '3':
+                position = 600 * 300;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                    $("#total").val(quantity * 50000);
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                    $("#total").val(quantity * 38000);
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                    $("#total").val(quantity * 54000);
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                    $("#total").val(quantity * 55000);
+                }
+                break;
+            case '4':
+                position = 600 * 100;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                    $("#total").val(quantity * 50000);
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                    $("#total").val(quantity * 38000);
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                    $("#total").val(quantity * 54000);
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                    $("#total").val(quantity * 55000);
+                }
+                break;
+            case '5':
+                position = 300 * 300;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                    $("#total").val(quantity * 50000);
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                    $("#total").val(quantity * 38000);
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                    $("#total").val(quantity * 54000);
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                    $("#total").val(quantity * 55000);
+                }
+                break;
+            case '6':
+                position = 300 * 100;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                    $("#total").val(quantity * 50000);
+                }  else if(epaiss ==='2'){
+                    $("#prixUnitaire").val("38000");
+                    $("#total").val(quantity * 38000);
+                }else if(epaiss ==='3'){
+                    $("#prixUnitaire").val("54000");
+                    $("#total").val(quantity * 54000);
+                }else if(epaiss ==='4'){
+                    $("#prixUnitaire").val("55000");
+                    $("#total").val(quantity * 55000);
+                }
+                break;
+            default:
+                break;
+        }
+
+    }
 </script>
+
 </body>
 </html>

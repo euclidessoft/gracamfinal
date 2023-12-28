@@ -59,46 +59,46 @@
         {%- set attr = attr|merge({class: (attr.class|default('') ~ ' form-inline')|trim}) -%}
         <div {{ block('widget_container_attributes') }}>
             {%- if with_years -%}
-            <div class="col-auto">
-                {{ form_label(form.years) }}
-                {{ form_widget(form.years) }}
-            </div>
+                <div class="col-auto">
+                    {{ form_label(form.years) }}
+                    {{ form_widget(form.years) }}
+                </div>
             {%- endif -%}
             {%- if with_months -%}
-            <div class="col-auto">
-                {{ form_label(form.months) }}
-                {{ form_widget(form.months) }}
-            </div>
+                <div class="col-auto">
+                    {{ form_label(form.months) }}
+                    {{ form_widget(form.months) }}
+                </div>
             {%- endif -%}
             {%- if with_weeks -%}
-            <div class="col-auto">
-                {{ form_label(form.weeks) }}
-                {{ form_widget(form.weeks) }}
-            </div>
+                <div class="col-auto">
+                    {{ form_label(form.weeks) }}
+                    {{ form_widget(form.weeks) }}
+                </div>
             {%- endif -%}
             {%- if with_days -%}
-            <div class="col-auto">
-                {{ form_label(form.days) }}
-                {{ form_widget(form.days) }}
-            </div>
+                <div class="col-auto">
+                    {{ form_label(form.days) }}
+                    {{ form_widget(form.days) }}
+                </div>
             {%- endif -%}
             {%- if with_hours -%}
-            <div class="col-auto">
-                {{ form_label(form.hours) }}
-                {{ form_widget(form.hours) }}
-            </div>
+                <div class="col-auto">
+                    {{ form_label(form.hours) }}
+                    {{ form_widget(form.hours) }}
+                </div>
             {%- endif -%}
             {%- if with_minutes -%}
-            <div class="col-auto">
-                {{ form_label(form.minutes) }}
-                {{ form_widget(form.minutes) }}
-            </div>
+                <div class="col-auto">
+                    {{ form_label(form.minutes) }}
+                    {{ form_widget(form.minutes) }}
+                </div>
             {%- endif -%}
             {%- if with_seconds -%}
-            <div class="col-auto">
-                {{ form_label(form.seconds) }}
-                {{ form_widget(form.seconds) }}
-            </div>
+                <div class="col-auto">
+                    {{ form_label(form.seconds) }}
+                    {{ form_widget(form.seconds) }}
+                </div>
             {%- endif -%}
             {%- if with_invert %}{{ form_widget(form.invert) }}{% endif -%}
         </div>
@@ -120,14 +120,14 @@
 
 {% block file_widget -%}
     <{{ element|default('div') }} class="custom-file">
-        {%- set type = type|default('file') -%}
-        {{- block('form_widget_simple') -}}
-        {%- set label_attr = label_attr|merge({ class: (label_attr.class|default('') ~ ' custom-file-label')|trim })|filter((value, key) => key != 'id') -%}
-        <label for="{{ form.vars.id }}" {% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}>
-            {%- if attr.placeholder is defined and attr.placeholder is not none -%}
-                {{- translation_domain is same as(false) ? attr.placeholder : attr.placeholder|trans({}, translation_domain) -}}
-            {%- endif -%}
-        </label>
+    {%- set type = type|default('file') -%}
+    {{- block('form_widget_simple') -}}
+    {%- set label_attr = label_attr|merge({ class: (label_attr.class|default('') ~ ' custom-file-label')|trim })|filter((value, key) => key != 'id') -%}
+    <label for="{{ form.vars.id }}" {% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}>
+        {%- if attr.placeholder is defined and attr.placeholder is not none -%}
+            {{- translation_domain is same as(false) ? attr.placeholder : attr.placeholder|trans({}, translation_domain) -}}
+        {%- endif -%}
+    </label>
     </{{ element|default('div') }}>
 {% endblock %}
 
@@ -238,9 +238,9 @@
         <{{ element|default('label') }}{% if label_attr %}{% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}{% endif %}>{{ translation_domain is same as(false) ? label : label|trans(label_translation_parameters, translation_domain) }}{% block form_label_errors %}{{- form_errors(form) -}}{% endblock form_label_errors %}</{{ element|default('label') }}>
     {%- else -%}
         {%- if errors|length > 0 -%}
-        <div id="{{ id }}_errors" class="mb-2">
-            {{- form_errors(form) -}}
-        </div>
+            <div id="{{ id }}_errors" class="mb-2">
+                {{- form_errors(form) -}}
+            </div>
         {%- endif -%}
     {%- endif -%}
 {%- endblock form_label %}
@@ -294,9 +294,9 @@
         {%- set widget_attr = {attr: {'aria-describedby': id ~"_help"}} -%}
     {%- endif -%}
     <{{ element|default('div') }}{% with {attr: row_attr|merge({class: (row_attr.class|default('') ~ ' form-floating')|trim})} %}{{ block('attributes') }}{% endwith %}>
-        {{- form_label(form) -}}
-        {{- form_widget(form, widget_attr) -}}
-        {{- form_help(form) -}}
+    {{- form_widget(form, widget_attr) -}}
+    {{- form_label(form) -}}
+    {{- form_help(form) -}}
     </{{ element|default('div') }}>
 {%- endblock form_row %}
 
@@ -307,7 +307,8 @@
         <span class="{% if form is not rootform %}invalid-feedback{% else %}alert alert-danger{% endif %} d-block">
             {%- for error in errors -%}
                 <span class="d-block">
-                    <span class="form-error-icon badge badge-danger text-uppercase">{{ 'Error'|trans({}, 'validators') }}</span> <span class="form-error-message">{{ error.message }}</span>
+                    <span class="form-error-icon badge badge-danger text-uppercase">{{ 'Error'|trans({}, 'validators') }}</span> <span
+                            class="form-error-message">{{ error.message }}</span>
                 </span>
             {%- endfor -%}
         </span>

@@ -17,7 +17,7 @@
 
     <!-- Site Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-{#    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">#}
+    {#    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">#}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg sticky-top p-0">
@@ -62,51 +62,47 @@
                                     &nbsp;
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <div>
                                     <h5 class="dropdown-header mb-3 p-0">
                                         {{ "Graviers"|trans }}
                                     </h5>
                                 </div>
-                                <div>
-                                    <a href="{{ path('gravier5_15') }}" class="dropdown-item">
-                                        {{ "Gravier 5/15"|trans }}
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="{{ path('gravier15_25') }}" class="dropdown-item">
-                                        {{ "Gravier 15/25"|trans }}
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="{{ path('gravier5_25') }}" class="dropdown-item">
-                                        {{ "Gravier 5/25"|trans }}
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div>
-                                    <h5 class="dropdown-header mb-3 p-0">
-                                        {{ "Graviers"|trans }}
-                                    </h5>
-                                </div>
-                                <div>
-                                    <a href="{{ path('gravier0_5') }}" class="dropdown-item">
-                                        {{ "Graviers 0/50"|trans }}
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="{{ path('gravier0_100') }}" class="dropdown-item">
-                                        {{ "Graviers 0/100"|trans }}
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="{{ path('ballast') }}" class="dropdown-item">
-                                        {{ "Ballast"|trans }}
-                                    </a>
-                                </div>
-                                <div>
-                                    &nbsp;
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div>
+                                            <a href="{{ path('gravier5_15') }}" class="dropdown-item">
+                                                {{ "Gravier 5/15"|trans }}
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ path('gravier15_25') }}" class="dropdown-item">
+                                                {{ "Gravier 15/25"|trans }}
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ path('gravier5_25') }}" class="dropdown-item">
+                                                {{ "Gravier 5/25"|trans }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div>
+                                            <a href="{{ path('gravier0_5') }}" class="dropdown-item">
+                                                {{ "Graviers 0/50"|trans }}
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ path('gravier0_100') }}" class="dropdown-item">
+                                                {{ "Graviers 0/100"|trans }}
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ path('ballast') }}" class="dropdown-item">
+                                                {{ "Ballast"|trans }}
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -117,17 +113,17 @@
                                 </div>
                                 <div>
                                     <a href="{{ path('pierreornementale') }}" class="dropdown-item">
-                                        {{ "Pierres Ornementales"|trans }}
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="{{ path('sterile') }}" class="dropdown-item">
-                                        {{ "Sterile"|trans }}
+                                        {{ "Granite"|trans }}
                                     </a>
                                 </div>
                                 <div>
                                     <a href="{{ path('moellons') }}" class="dropdown-item">
                                         {{ "Moellons"|trans }}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="{{ path('sterile') }}" class="dropdown-item">
+                                        {{ "Sterile"|trans }}
                                     </a>
                                 </div>
                             </div>
@@ -287,12 +283,9 @@
 
 <!-- Back to Top -->
 <a href="#" class="back-to-top">
-    <i class="fa-solid fa-chevron-up"></i>
+    <i class="fa-solid fa-angles-up"></i>
 </a>
 
-<a href="#" class="btn btn-lg back-to-top">
-    <i class="fa-solid fa-chevron-up"></i>
-</a>
 <!-- JavaScript Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>

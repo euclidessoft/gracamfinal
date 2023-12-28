@@ -1,15 +1,18 @@
-<form name="calculateurpierre" method="post" id="form" enctype="multipart/form-data">
+{{ form_start(form, {'attr':{'id': 'form'}}) }}
+<div class="col-lg-12">
     <div class="row g-4 py-4">
         <div class="col-md-4">
             <div class="form-floating">
-                <input type="number" id="longueur" required="required" maxlength="255" placeholder="Longueur (en m)"
+                <input type="number" id="longueur" required="required" onchange="calcule()"
+                       maxlength="255" placeholder="Longueur (en m)"
                        class="form-control"/>
-                <label for="longueur">Longueur (en m)</label>
+                <label for="longueur" class="required">Longueur (en m)</label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-floating">
-                <input type="number" id="largeur" required="required" maxlength="255" placeholder="Largeur (en m)"
+                <input type="number" id="largeur" required="required" onchange="calcule()"
+                       maxlength="255" placeholder="largeur (en m)"
                        class="form-control"/>
                 <label for="largeur" class="required">Largeur (en m)</label>
             </div>
@@ -18,64 +21,53 @@
             <div class="form-floating">
                 <input type="number" id="surface" required="required" placeholder="surface"
                        class="form-control" readonly/>
-                <label for="surface">Surface (en m²)</label>
+                <label for="surface" class="required">Surface (en m²)</label>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="form-floating">
-                <select id="dimension" class="form-control">
-                    <option value="test 1">test 1</option>
-                    <option value="test 2">test 2</option>
-                </select>
-                <label for="dimension">
-                    Dimension pierre
-                </label>
-            </div>
+            {#                {{ form_row(form.dimenssion) }}#}
+            {{ form_row(form.dimenssion,{'attr':{'onchange':'Prix()'}}) }}
         </div>
         <div class="col-md-4">
             <div class="form-floating">
-                <select id="epaisseur" class="form-control">
-                    <option value="test 1">test 1</option>
-                    <option value="test 2">test 2</option>
-                </select>
-                <label for="epaisseur">
-                    Epaisseur pierre
-                </label>
+                {{ form_row(form.epaisseur,{'attr':{'onchange':'Prix()'}}) }}
             </div>
         </div>
 
         <div class="col-md-4">
-            <button class="btn btn-primaire p-3 w-100" type="submit">
+            <button class="btn btn-primaire p-3 w-100" id="btnCal" type="button" onclick="quantites()">
                 <strong>{{ 'Calculer'|trans }}</strong>
             </button>
         </div>
         <div class="col-md-4">
             <div class="form-floating">
                 <input type="number" id="prixUnitaire" required="required" placeholder="prixUnitaire"
+                       class="form-control"/>
+                <label for="prixUnitaire" class="required">Prix Unitaire</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating">
+                <input type="number" id="quantite" required="required" placeholder="quantite" onchange="quantites"
+                       class="form-control"/>
+                <label for="quantite" class="required">Quantite</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating">
+                <input type="text" id="total" required="required" placeholder="Total"
                        class="form-control" readonly/>
-                <label for="prixUnitaire">Prix Unitaire</label>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-floating">
-                <input type="number" id="quantite" required="required" placeholder="quantite" class="form-control"
-                       readonly/>
-                <label for="quantite">Quantité</label>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-floating">
-                <input type="number" id="total" required="required" placeholder="Total" class="form-control"
-                       readonly/>
-                <label for="total">Total</label>
+                <label for="total" class="required">Total</label>
             </div>
         </div>
         <div class="col-md-12">
             <div class="form-floating">
-                <button class="btn btn-primaire p-3 w-100" type="submit" disabled>
-                    <strong>{{ 'Commander'|trans }}</strong>
+                <button class="btn btn-primaire btn-effect p-3 w-100"
+                        type="submit" disabled><strong>{{ 'Commander'|trans }}</strong>
                 </button>
             </div>
         </div>
     </div>
-</form>
+</div>
+{{ form_rest(form) }}
+{{ form_end(form) }}

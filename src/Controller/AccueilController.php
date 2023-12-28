@@ -2,9 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Calcul;
+use App\Entity\Produit;
+use App\Form\CalculType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class AccueilController extends AbstractController
 {
@@ -94,10 +98,23 @@ class AccueilController extends AbstractController
     /**
      * @Route("/pierreornementale", name="pierreornementale")
      */
-    public function pierreornementale()
+    public function pierreornementale(Request $request)
     {
-
-        return $this->render('site/pierreornementale.html.twig');
+        $calcul = new Produit();
+        $form = $this->createForm(CalculType::class, $calcul);
+        if ($request->isMethod('POST')) {
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+//                $em = $this->getDoctrine()->getManager();
+//                $em->persist($calcul);
+//                $em->flush();
+//                $this->addFlash('notice', 'Message enregistrée avec succée');
+//                return $this->redirectToRoute('Contact');
+            }
+        }
+        return $this->render('site/pierreornementale.html.twig',[
+        'form' => $form->createView(),
+            ]);
     }
 
 

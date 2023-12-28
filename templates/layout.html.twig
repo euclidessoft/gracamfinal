@@ -188,9 +188,11 @@
     </button>
 </nav>
 {% block body %}
+    #707676
 
+    #d85914
 {% endblock %}
-
+<script async src="https://js.convertflow.co/production/websites/59507.js"></script>
 <footer class="text-secondaire">
     <div class="container-fluid footer pt-3">
         <div class="container py-5">
@@ -307,5 +309,19 @@
 <!-- Main Javascript -->
 <script src="{{ asset('js/main.js') }}"></script>
 {#<script src="{{ asset('js/main.min.js')}}"></script>#}
+
+<script>
+   function calcule() {
+        $("#surface").val($("#longueur").val() * $("#largeur").val());
+
+    }
+    function quantites(){
+       alert($('#calcul_dimenssion option:selected').text());
+       var surface = $("#surface").val($("#longueur").val() * $("#largeur").val()) * 10000;
+        var dimension =$('#calcul_dimenssion option:selected').val() ;
+         $("#quantite").val("13");
+    }
+
+</script>
 </body>
 </html>

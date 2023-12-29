@@ -1,4 +1,5 @@
 .gitignore
 .env
+style.min.min.css
 /var/
 /.idea/

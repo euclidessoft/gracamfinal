@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $('.back-to-top').fadeIn('slow');
+            $('.back-to-top').css('display','flex');
         } else {
             $('.back-to-top').fadeOut('slow');
         }
@@ -197,9 +198,9 @@ function upload() {
     return false;
 }
 
-function label_input() {
+/*function label_input() {
     $('#choice').html(document.getElementById('candidature_cv').value);
-}
+}*/
 
 /*************Start Product image*************/
 var ProductImg = document.getElementById("ProductImg");

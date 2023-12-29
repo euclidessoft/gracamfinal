@@ -41,15 +41,15 @@
         </div>
         <div class="col-md-4">
             <div class="form-floating">
-                <input type="number" id="prixUnitaire" required="required" placeholder="prixUnitaire"
+                <input type="text" id="prixUnitaire" required="required" placeholder="prixUnitaire"
                        class="form-control"/>
                 <label for="prixUnitaire" class="required">Prix Unitaire</label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-floating">
-                <input type="number" id="quantite" required="required" placeholder="quantite" onchange="quantites"
-                       class="form-control"/>
+                <input type="number" id="quantite" required="required" placeholder="quantite" onchange="quantites()"
+                       class="form-control" readonly/>
                 <label for="quantite" class="required">Quantite</label>
             </div>
         </div>

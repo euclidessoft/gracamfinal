@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-floating">
-                    <input type="number" id="tonnage" required="required" placeholder="tonnage" onchange="ValeurNeg()"
+                    <input type="text" id="tonnage" required="required" placeholder="tonnage" onchange="ValeurNeg()"
                            class="form-control" readonly/>
                     <label for="tonnage" class="required">Tonnage (en t)</label>
                 </div>
@@ -72,7 +72,7 @@
     function Calcules() {
 
         if ($('#largeur').val() > 0 && $('#longueur').val() > 0 && ($('#epaisseur').val() / 100) > 0) {
-            $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100).toFixed(2));
+            $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100));
          }
         else {
             $("#longueur").val("");
@@ -81,9 +81,12 @@
         }
 
         $('#tonnage').val(($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100) * 1.35).toFixed(2));
-        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 4192));
+        $('#total').val(Math.ceil($('#tonnage').val() * 5870));
+        $('#totalTTc').val(Math.ceil($('#tonnage').val() * 7000));
+
+        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 5870));
         $('#total').val(prix);
-        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 5000));
+        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 7000));
         $('#totalTTc').val(prix);
     }
     function ValeurNeg() {

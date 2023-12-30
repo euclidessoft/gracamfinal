@@ -43,7 +43,15 @@ a {
 
 /************** Nav start **********/
 .navbar {
+    background-color: transparent;
+}
+/* Couleur de fond de la navbar lors du défilement */
+.navbar.scrolled {
     background-color: var(--primaire);
+    transition: var(--transdelay);
+}
+.navbar.scrolled .nav-link{
+    color: var(--secondaire) !important;
 }
 
 .navbar .img-logo {
@@ -70,7 +78,7 @@ a {
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--secondaire) !important;
+    color: var(--primaire) !important;
     text-align: center;
 }
 

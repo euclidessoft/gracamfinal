@@ -72,7 +72,7 @@
     function Calcules() {
 
         if ($('#largeur').val() > 0 && $('#longueur').val() > 0 && ($('#epaisseur').val() / 100) > 0) {
-            $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100)).toFixed(2);
+            $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100).toFixed(2));
          }
         else {
             $("#longueur").val("");

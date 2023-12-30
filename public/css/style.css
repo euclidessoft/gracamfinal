@@ -36,6 +36,12 @@
     /*transition: var(--transdelay) !important;*/
 }
 
+.bordere{
+    border: 5px solid black;
+}
+body{
+    margin-top: -84px;
+}
 a {
     text-decoration: none;
 }
@@ -47,7 +53,7 @@ a {
 }
 /* Couleur de fond de la navbar lors du défilement */
 .navbar.scrolled {
-    background-color: var(--primaire);
+    background-color: rgba(var(--primaire-rgb),0.8);
     transition: var(--transdelay);
 }
 .navbar.scrolled .nav-link{
@@ -149,7 +155,7 @@ a {
 
 /* Start css contact */
 .page-header-contact {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/image36.jpg);
+    background-image: url(../images/image36.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,9 +163,9 @@ a {
     padding-bottom: 3rem !important;
 }
 
-.page-header, .header-carousel {
-    margin-top: -84px;
-}
+/*.page-header, .header-carousel {*/
+/*    margin-top: -84px;*/
+/*}*/
 
 .container-bottom {
     width: 90%;
@@ -230,7 +236,7 @@ h3.text-dark {
 }
 
 .page-header-about {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/about_1.png);
+    background-image: url(../images/about_1.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -249,7 +255,7 @@ h3.text-dark {
 
 
 .page-header-produit {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/produit_header.png);
+    background-image:  url(../images/sanaga.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -261,7 +267,9 @@ h3.text-dark {
     color: var(--secondaire);
 }
 
-
+.carousel-fade {
+    transition: 0.6s 0.6s;
+}
 .carousel-img {
     width: 100%;
     background-size: cover;
@@ -284,7 +292,7 @@ h3.text-dark {
 
 .carousel-overlay {
     background: linear-gradient(90deg, rgba(151, 136, 136, 0.8) 10%, transparent);
-    width: 100%;
+    width: 70%;
     position: absolute;
     top: 0;
     left: 0;
@@ -885,6 +893,12 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+    .carousel-overlay {
+    /*background: linear-gradient(90deg, rgba(151, 136, 136, 0.8) 10%, transparent);*/
+    width: 100%;
+
+}
+
     .custom-card {
         width: 100%;
     }
@@ -901,7 +915,6 @@ textarea.form-control {
     .navbar {
         border-bottom: 2px solid var(--primaire-soft);
     }
-
     .carousel-img.slide_1 {
         background-image: url('../images/slide_1.jpg');
     }

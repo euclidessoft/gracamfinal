@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function () {
     const readMoreButtons = document.querySelectorAll(".read-more-button");
 
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+*/
 
 (function ($) {
     "use strict";

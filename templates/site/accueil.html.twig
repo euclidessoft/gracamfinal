@@ -6,19 +6,19 @@
 
     <!--PreLoader Ends-->
      <div class="container-fluid px-0">
-         <div id="header-carousel" class="carousel header-carousel" data-bs-ride="carousel">
+         <div id="header-carousel" class="carousel header-carousel carousel-fade" data-bs-ride="carousel">
              <div class="carousel-inner">
                  <div class="carousel-item position-relative active">
-                     <div class="carousel-img slide_1 animated fadeInLeft">
+                     <div class="carousel-img slide_1 animated fadeIn">
                      </div>
                      <div class="carousel-overlay">
                          <div class="container mt-md-5">
                              <div class="row justify-content-center mt-md-5 text-center">
                                  <div class="col-10 col-lg-8">
-                                     <h1 class="fs-2 text-white fw-bold mb-4 animated fadeInDownBig delay-05s">
+                                     <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
                                          {{ "Promotion médicale et pharmaceutique"|trans }}
                                      </h1>
-                                     <div class="fs-5 text-white mb-4 pb-2 animated fadeInUpBig delay-05s">
+                                     <div class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
                                          <p class="paragraphe-1 mb-0">
                                              {{ "Notre passion pour l'excellence médicale nous motive à redéfinir constamment les normes de l'industrie et à mettre la barre plus haut pour le bénéfice de tous."|trans }}
                                          </p>
@@ -29,16 +29,16 @@
                      </div>
                  </div>
                  <div class="carousel-item position-relative">
-                     <div class="carousel-img slide_3 animated fadeInLeft">
+                     <div class="carousel-img slide_3 animated fadeIn">
                      </div>
                      <div class="carousel-overlay">
                          <div class="container mt-md-5">
                              <div class="row justify-content-center mt-md-5 text-center">
                                  <div class="col-10 col-lg-8">
-                                     <h1 class="fs-2 text-white fw-bold mb-4 animated fadeInDownBig delay-05s">
+                                     <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
                                          {{ "Importation et stockage de produits pharmaceutiques"|trans }}
                                      </h1>
-                                     <p class="fs-5 text-white mb-4 pb-2 animated fadeInUpBig delay-05s">
+                                     <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
                                          {{ "Nous prenons à cœur notre rôle essentiel dans la chaîne d'approvisionnement pharmaceutique en veillant à ce que chaque produit qui entre dans nos entrepôts soit traité avec le plus grand soin et la plus grande précision"|trans }}
                                      </p>
 
@@ -48,16 +48,16 @@
                      </div>
                  </div>
                  <div class="carousel-item position-relative">
-                     <div class="carousel-img slide_2 animated fadeInLeft">
+                     <div class="carousel-img slide_2 animated fadeIn">
                      </div>
                      <div class="carousel-overlay">
                          <div class="container mt-md-5">
                              <div class="row justify-content-center mt-md-5 text-center">
                                  <div class="col-10 col-lg-8">
-                                     <h1 class="fs-2 text-white fw-bold mb-4 animated fadeInDownBig delay-05s">
+                                     <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
                                          {{ "Distribution de produits pharmaceutiques"|trans }}
                                      </h1>
-                                     <p class="fs-5 text-white mb-4 pb-2 animated fadeInUpBig delay-05s">
+                                     <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
                                          {{ "Nous nous engageons à jouer un rôle crucial dans la chaîne d'approvisionnement pharmaceutique en fournissant des solutions de distribution innovantes et fiables pour les laboratoires à travers le monde"|trans }}
                                      </p>
                                  </div>
@@ -94,12 +94,10 @@
         </div>
         <div class="row ">
             <div class="col-lg-6  ">
-                <div class=" shadow p-5 rounded-4 bordure">
+                <div class=" shadow p-5 bordure">
                     <h3 class="font-weight-bold">
                         Notre histoire
                     </h3>
-                    <hr class="w-20 border-primaire border-4 ">
-                    <br>
                     <p>
                         Fondée depuis plusieurs décennies, Gracam est le fruit d'une vision audacieuse pour créer une
                         entreprise qui soit à la fois un leader dans l'industrie des granulats et un exemple de
@@ -107,14 +105,13 @@
                         dans la technologie, la formation de notre personnel, et la recherche de méthodes d'extraction
                         novatrices, permettant ainsi à Gracam de devenir un acteur de premier plan dans ce secteur.
                     </p>
-
                     <a class="btn btn-order rounded-4" href="{{ path('About') }}">Lire plus</a>
                 </div>
             </div>
             <div class="col-lg-6 d-flex align-items-center ">
                 <div class="w-100">
-                    <img src="{{ asset('images/groupe.jpeg') }}"
-                         class="img-fluid img-centre start-0 mt-5 rounded-4 "
+                    <img src="{{ asset('images/sanaga.jpg') }}"
+                         class="img-fluid img-centre shadow start-0 mt-5 rounded-4 "
                          alt="...">
                 </div>
             </div>
@@ -124,7 +121,7 @@
     <div class="container-fluid  p-5">
 
         <div class="text-center   wow fadeInUp" data-wow-delay="0.1s">
-            <h2 class="section-title bg-white text-center text-bleu px-3 mb-5">
+            <h2 class="section-title bg-white text-center px-3 mb-5">
                 {{ "POURQUOI NOUS CHOISIR"|trans }}
             </h2>
 
@@ -282,10 +279,10 @@
                 </div>
 
             </div>
-            {#<div class="col-lg-6 text-center d-flex align-items-center">
+            <div class="col-lg-6 text-center d-flex align-items-center">
                 <img src="{{ asset('images/image12.jpg') }}" class="img-fluid  start-0 rounded-4 " alt="">
 
-            </div>#}
+            </div>
 
         </div>
     </div>
@@ -293,71 +290,69 @@
 
 
 
+{#    <div class="container-fluid p-5 h-100">#}
 
+{#        <div class="container ">#}
+{#            <div class="text-center ">#}
 
-    <div class="container-fluid p-5 h-100">
+{#                <div class="text-center  wow fadeInUp" data-wow-delay="0.1s">#}
+{#                    <h1 class="section-title bg-white text-center text-bleu px-3 ">#}
+{#                        {{ "GALERIE"|trans }}#}
+{#                    </h1>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row ">#}
+{#                <div class="col-lg-12 ">#}
+{#                    <div class="row ">#}
+{#                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">#}
 
-        <div class="container ">
-            <div class="text-center ">
+{#                            <a class="galerie-img" href=""> #}
+{#                                <img src="{{ asset('images/image15.jpg') }}" class="img-fluid   rounded-4 " alt="">#}
+{#                            </a>#}
 
-                <div class="text-center  wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="section-title bg-white text-center text-bleu px-3 ">
-                        {{ "GALERIE"|trans }}
-                    </h1>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-lg-12 ">
-                    <div class="row ">
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+{#                        </div>#}
+{#                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">#}
 
-                            <a class="galerie-img" href=""> 
-                                <img src="{{ asset('images/image15.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
+{#                            <a class="galerie-img" href=""> #}
+{#                                <img src="{{ asset('images/image16.jpg') }}" class="img-fluid   rounded-4 " alt="">#}
+{#                            </a>#}
 
-                        </div>
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+{#                        </div>#}
 
-                            <a class="galerie-img" href=""> 
-                                <img src="{{ asset('images/image16.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
+{#                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">#}
 
-                        </div>
+{#                            <a class="galerie-img" href="">#}
+{#                                <img src="{{ asset('images/image18.jpg') }}" class="img-fluid   rounded-4 " alt="">#}
+{#                            </a>#}
 
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+{#                        </div>#}
+{#                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">#}
 
-                            <a class="galerie-img" href="">
-                                <img src="{{ asset('images/image18.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
+{#                            <a class="galerie-img" href=""> #}
+{#                                <img src="{{ asset('images/image19.jpg') }}" class="img-fluid   rounded-4 " alt="">#}
+{#                            </a>#}
 
-                        </div>
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+{#                        </div>#}
+{#                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">#}
 
-                            <a class="galerie-img" href=""> 
-                                <img src="{{ asset('images/image19.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
+{#                            <a class="galerie-img" href="">#}
+{#                                <img src="{{ asset('images/image20.jpg') }}" class="img-fluid rounded-4" alt="">#}
+{#                            </a>#}
 
-                        </div>
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+{#                        </div>#}
+{#                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">#}
 
-                            <a class="galerie-img" href="">
-                                <img src="{{ asset('images/image20.jpg') }}" class="img-fluid rounded-4" alt="">
-                            </a>
+{#                            <a class="galerie-img" href="">#}
+{#                                <img src="{{ asset('images/sable.jpg') }}" class="img-fluid rounded-4" alt="">#}
+{#                            </a>#}
 
-                        </div>
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
+{#                        </div>#}
 
-                            <a class="galerie-img" href="">
-                                <img src="{{ asset('images/sable.jpg') }}" class="img-fluid rounded-4" alt="">
-                            </a>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
 
 {% endblock %}

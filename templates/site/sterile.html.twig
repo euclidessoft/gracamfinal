@@ -68,7 +68,12 @@
 
                 </div>
                 <div class="col-lg-6 end-0 shadow rounded-3">
+                    {{ form_start(form, {'attr':{'id': 'form'}}) }}
+
                     {{ include('site/calculateurpierres.html.twig') }}
+
+                    {{ form_rest(form) }}
+                    {{ form_end(form) }}
                 </div>
             </div>
         </div>

@@ -69,7 +69,9 @@
 
                 </div>
                 <div class="col-lg-6 end-0 shadow rounded-3">
-                    {{ include('site/calculateurGraviers.html.twig') }}
+                    <input type="hidden" id="prixHt" value="6708" />
+                    <input type="hidden" id="prixTTC" value="8000" />
+                    {{ include('site/calculateurGrave.html.twig') }}
                 </div>
             </div>
         </div>

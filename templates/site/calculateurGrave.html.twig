@@ -70,7 +70,6 @@
 
 <script>
     function Calcules() {
-
         if ($('#largeur').val() > 0 && $('#longueur').val() > 0 && ($('#epaisseur').val() / 100) > 0) {
             $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100));
          }
@@ -84,9 +83,9 @@
         $('#total').val(Math.ceil($('#tonnage').val() * 5870));
         $('#totalTTc').val(Math.ceil($('#tonnage').val() * 7000));
 
-        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 5870));
+        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * $('#prixHt').val()));
         $('#total').val(prix);
-        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 7000));
+        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * $('#prixTTC').val()));
         $('#totalTTc').val(prix);
     }
     function ValeurNeg() {
@@ -100,6 +99,7 @@
             $("#epaisseur").val("");
             $("#tonnage").val("");
             $("#total").val("");
+            $("#totalTTc").val("");
         }
 
     }

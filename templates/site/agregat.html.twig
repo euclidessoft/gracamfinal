@@ -67,35 +67,7 @@
         </div>
     </div>
 </form>
+<input type="hidden" id="prixHt" value="4192" />
+<input type="hidden" id="prixTTC" value="5000" />
+{{ include('calculateurGravier.html.twig') }}
 
-<script>
-    function Calcules() {
-
-        if ($('#largeur').val() > 0 && $('#longueur').val() > 0 && ($('#epaisseur').val() / 100) > 0) {
-            $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100));
-        }
-        else {
-            $("#longueur").val("");
-            $("#largeur").val("");
-            $("#epaisseur").val("");
-        }
-
-        $('#tonnage').val(($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100) * 1.35).toFixed(2));
-        $('#total').val(Math.ceil($('#tonnage').val() * 4192));
-        $('#totalTTc').val(Math.ceil($('#tonnage').val() * 5000));
-    }
-    function ValeurNeg() {
-        if ($("#longueur").val() > 0 || $("#largeur").val() > 0 || $("#largeur").val() > 0 || $('#epaisseur') > 0 ||$('#tonnage').val()>0 || $('#tonnage').val()>0  ) {
-            $("#volume").val("");
-            $("#tonnage").val("");
-            $("#total").val("");
-        } else {
-            $("#longueur").val("");
-            $("#largeur").val("");
-            $("#epaisseur").val("");
-            $("#tonnage").val("");
-            $("#total").val("");
-        }
-
-    }
-</script>

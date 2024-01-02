@@ -1,8 +1,8 @@
 {% extends 'layout.html.twig' %}
 {% block title %} {{ "Galerie"|trans }} - Eau là là{% endblock %}
-{% block gallery %} actif {% endblock %}
-{%  block photobox_css %}
-<link href="https://cdnjs.cloudflare.com/ajax/libs/photobox/1.9.2/photobox/photobox.min.css" rel="stylesheet">
+{% block gallery %} active {% endblock %}
+{% block photobox_css %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/photobox/1.9.2/photobox/photobox.min.css" rel="stylesheet">
 {% endblock %}
 {% block body %}
     <div class="container-fluid py-5 page-header-galerie">
@@ -16,8 +16,8 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item">
-                                <a class="text-white" href="{{ path('Accueil') }}">
-                                    {{ "Accueil"|trans }}
+                                <a class="text-white" href="{{ path('Gallery') }}">
+                                    {{ "Gallery"|trans }}
                                 </a>
                             </li>
                             <li class="breadcrumb-item text-white">
@@ -32,71 +32,55 @@
 
 
 
-   {# <div class="container-fluid image35">
+    {# <div class="container-fluid image35">
 
-    </div>
-#}
+     </div>
+ #}
     <div class="container-fluid p-5 h-100">
 
         <div class="container ">
-            <div class="text-center ">
-                <h1 class="section-title bg-white text-bleu text-center ">
-                    GALERIE PHOTO
+            <div class="text-center">
+                <h1 class="service-title text-center">
+                    Galérie photo
                 </h1>
             </div>
-            <div class="row ">
-                <div class="col-lg-12 ">
-                    <div class="row mt-5">
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
-
-                            <a class="galerie-img" href=""> 
-                                <img src="{{ asset('images/image5.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
-
-                        </div>
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
-
-                            <a class="galerie-img" href=""> 
-                                <img src="{{ asset('images/image6.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
-
-                        </div>
-
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
-
-                            <a class="galerie-img" href="">
-                                <img src="{{ asset('images/image7.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
-
-                        </div>
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
-
-                            <a class="galerie-img" href=""> 
-                                <img src="{{ asset('images/image9.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
-
-                        </div>
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
-
-                            <a class="galerie-img" href="">
-                                <img src="{{ asset('images/image22-22.jpg') }}" class="img-fluid  rounded-4 " alt="">
-                            </a>
-
-                        </div>
-                        <div class="col-lg-4  wow zoomIn g-5" data-wow-delay="0.2s">
-
-                            <a class="galerie-img" href="">
-                                <img src="{{ asset('images/image23.jpg') }}" class="img-fluid   rounded-4 " alt="">
-                            </a>
-
-                        </div>
-
+            <div class="row g-5 justify-content-center mt-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="album-cover mb-5">
+                        <img src="../images/realisation1.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="album-cover mb-5">
+                        <img src="/images/realisation3.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="album-cover mb-5">
+                        <img src="/images/realisation7.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="album-cover mb-5">
+                        <img src="/images/realisation5.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="album-cover mb-5">
+                        <img src="/images/image17.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="album-cover mb-5">
+                        <img src="/images/realisation6.jpeg" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {%  block photobox_js %}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/photobox/1.9.2/photobox/jquery.photobox.min.js" ></script>
+    </div>
+    </div>
+    {% block photobox_js %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photobox/1.9.2/photobox/jquery.photobox.min.js"></script>
     {% endblock %}
 {% endblock %}

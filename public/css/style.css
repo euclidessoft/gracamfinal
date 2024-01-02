@@ -36,12 +36,14 @@
     /*transition: var(--transdelay) !important;*/
 }
 
-.bordere{
+.bordere {
     border: 5px solid black;
 }
-body{
+
+body {
     margin-top: -84px;
 }
+
 a {
     text-decoration: none;
 }
@@ -51,12 +53,14 @@ a {
 .navbar {
     background-color: transparent;
 }
+
 /* Couleur de fond de la navbar lors du défilement */
 .navbar.scrolled {
-    background-color: rgba(var(--primaire-rgb),0.8);
+    background-color: rgba(var(--primaire-rgb), 0.8);
     transition: var(--transdelay);
 }
-.navbar.scrolled .nav-link{
+
+.navbar.scrolled .nav-link {
     color: var(--secondaire) !important;
 }
 
@@ -255,7 +259,7 @@ h3.text-dark {
 
 
 .page-header-produit {
-    background-image:  url(../images/sanaga.jpg);
+    background-image: url(../images/sanaga.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -270,6 +274,7 @@ h3.text-dark {
 .carousel-fade {
     transition: 0.6s 0.6s;
 }
+
 .carousel-img {
     width: 100%;
     background-size: cover;
@@ -460,6 +465,20 @@ textarea.form-control {
 
 /***********End agregats***********/
 
+/*****Start Galery****/
+.page-header-galerie{
+    background-image: url("../images/about_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+.alerie-img{
+    aspect-ratio: 3/4;
+}
+/*****End Galery****/
+
 /*** Footer ***/
 .footer {
     background-color: var(--primaire);
@@ -511,7 +530,9 @@ textarea.form-control {
 .footer .btn {
     background: none !important;
 }
-
+footer .btn:hover{
+    color: var(--secondaire) !important;
+}
 .footer .btn.btn-link,
 .footer .footer-link {
     display: block;
@@ -889,15 +910,86 @@ textarea.form-control {
 }
 
 .shadow {
-    box-shadow: 5px 5px 25px rgba(var(--noir-rgb), 0.3) !important;
+    box-shadow: -1px 1px 15px rgba(var(--noir-rgb), 0.3) !important;
 }
+
+/**Start page Service **/
+
+.page-header-service {
+    background-image: url(../images/service.png);
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.service-title {
+    color: var(--primaire);
+}
+
+.service-bordure {
+    border-right: 5px solid var(--primaire);
+    border-top: 5px solid var(--primaire);
+    border-bottom: 5px solid var(--primaire);
+    margin-left: -37px;
+}
+
+.service .service-image {
+    margin-right: -37px !important;
+}
+
+.service-bordure-right {
+    border-left: 5px solid var(--primaire);
+    border-top: 5px solid var(--primaire);
+    border-bottom: 5px solid var(--primaire);
+    margin-right: -37px;
+}
+
+.service .service-image-right {
+    margin-left: -37px !important;
+}
+
+/**end page Service **/
+
 
 @media (max-width: 768px) {
-    .carousel-overlay {
-    /*background: linear-gradient(90deg, rgba(151, 136, 136, 0.8) 10%, transparent);*/
-    width: 100%;
 
-}
+    .carousel-overlay {
+        /*background: linear-gradient(90deg, rgba(151, 136, 136, 0.8) 10%, transparent);*/
+        width: 100%;
+    }
+
+    .service-title {
+        font-size: 2rem;
+        color: var(--secondaire);
+        font-weight: bold;
+    }
+
+    .service-bordure {
+        border-right: 5px solid var(--primaire);
+        border-left: 5px solid var(--primaire);
+        border-bottom: 5px solid var(--primaire);
+        border-top: none;
+        margin-right: 33px;
+    }
+
+    .service .service-image {
+        aspect-ratio: 3 / 4;
+        margin-bottom: -33px;
+    }
+
+    .service-bordure-right {
+        border-left: 5px solid var(--primaire);
+        border-top: 5px solid var(--primaire);
+        border-bottom: none;
+        border-right: 5px solid var(--primaire);
+    }
+
+    .service .service-image-right {
+        aspect-ratio: 3 / 4;
+        margin-top: -75px !important;
+    }
 
     .custom-card {
         width: 100%;
@@ -915,6 +1007,7 @@ textarea.form-control {
     .navbar {
         border-bottom: 2px solid var(--primaire-soft);
     }
+
     .carousel-img.slide_1 {
         background-image: url('../images/slide_1.jpg');
     }
@@ -981,5 +1074,23 @@ textarea.form-control {
         position: absolute;
         right: 30%;
         top: 20px;
+    }
+
+    .service-title {
+        font-size: 2rem;
+        color: var(--secondaire);
+        font-weight: bold;
+    }
+
+    .service-bordure {
+        border-right: 5px solid var(--primaire);
+        border-left: 5px solid var(--primaire);
+        border-bottom: 5px solid var(--primaire);
+        border-top: none;
+    }
+
+    .service .service-image {
+        aspect-ratio: 3 / 4;
+        margin-bottom: -75px;
     }
 }

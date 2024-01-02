@@ -136,25 +136,28 @@
                     </a>
                     <div class="dropdown-menu">
                         <div>
-                            <a class="dropdown-item" href="#">
-                                {{ "Matériaux"|trans }}
+                            <a class="dropdown-item" href="{{ path('distribution') }}">
+                                {{ "Distribution"|trans }}
                             </a>
-                        </div>
-                        <div>
-                            <a class="dropdown-item" href="#">
-                                {{ "Exploitation"|trans }}
-                            </a>
-                        </div>
-                        <div>
-                            <a class="dropdown-item px-5" href="#">
+                            <a class="dropdown-item" href="{{ path('accompagnement') }}">
                                 {{ "Accompagnement"|trans }}
                             </a>
                         </div>
-                        <div>
-                            <a class="dropdown-item" href="#">
-                                {{ "Transformation"|trans }}
-                            </a>
-                        </div>
+{#                        <div>#}
+{#                            <a class="dropdown-item" href="#">#}
+{#                                {{ "Exploitation"|trans }}#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <a class="dropdown-item px-5" href="#">#}
+{#                                {{ "Accompagnement"|trans }}#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <a class="dropdown-item" href="#">#}
+{#                                {{ "Transformation"|trans }}#}
+{#                            </a>#}
+{#                        </div>#}
                     </div>
                 </div>
                 <div class="nav-item">
@@ -163,7 +166,7 @@
                     </a>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ path('Gallery') }}">
                         {{ "Galerie"|trans }}
                     </a>
                 </div>

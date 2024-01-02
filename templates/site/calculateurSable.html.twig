@@ -19,7 +19,8 @@
             </div>
             <div class="col-md-4">
                 <div class="form-floating">
-                    <input type="number" id="epaisseur" required="required" placeholder="epaisseur" onchange="ValeurNeg()"
+                    <input type="number" id="epaisseur" required="required" placeholder="epaisseur"
+                           onchange="ValeurNeg()"
                            class="form-control"/>
                     <label for="epaisseur" class="required">Epaisseur (en cm)</label>
                 </div>
@@ -31,30 +32,34 @@
             </div>
             <div class="col-md-6">
                 <div class="form-floating">
-                    <input type="number" id="volume" required="required" placeholder="Volume" onchange="ValeurNeg()"
+                    <input type="number" id="volume" required="required" placeholder="Volume"
+                           onchange="ValeurNeg()"
                            class="form-control" readonly/>
                     <label for="volume" class="required">Volume (en m3)</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-floating">
-                    <input type="text" id="tonnage" required="required" placeholder="tonnage" onchange="ValeurNeg()"
+                    <input type="number" id="tonnage" required="required" placeholder="tonnage"
+                           onchange="ValeurNeg()"
                            class="form-control" readonly/>
                     <label for="tonnage" class="required">Tonnage (en t)</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-floating">
-                    <input type="text" id="total" required="required" placeholder="Total" onchange="ValeurNeg()"
+                    <input type="text" id="total" required="required" placeholder="Total"
+                           onchange="ValeurNeg()"
                            class="form-control" readonly/>
                     <label for="total" class="required">Total</label>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-floating">
-                    <input type="text" id="totalTTc" required="required" placeholder="total/ttc" onchange="ValeurNeg()"
+                    <input type="text" id="totalTTc" required="required" placeholder="total/ttc"
+                           onchange="ValeurNeg()"
                            class="form-control" readonly/>
-                    <label for="totalTTc" class="required">Total/TTC</label>
+                    <label for="volume" class="required">Total/TTC</label>
                 </div>
             </div>
             <div class="col-md-12">
@@ -70,26 +75,25 @@
 
 <script>
     function Calcules() {
+
         if ($('#largeur').val() > 0 && $('#longueur').val() > 0 && ($('#epaisseur').val() / 100) > 0) {
             $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100));
-         }
-        else {
+        } else {
             $("#longueur").val("");
             $("#largeur").val("");
             $("#epaisseur").val("");
         }
-
-        $('#tonnage').val(($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100) * 1.35).toFixed(2));
-        $('#total').val(Math.ceil($('#tonnage').val() * 5870));
-        $('#totalTTc').val(Math.ceil($('#tonnage').val() * 7000));
-
+        // new Intl.NumberFormat().format(72000)
+        $('#tonnage').val(($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100) * 1.4).toFixed(2));
         var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * $('#prixHt').val()));
         $('#total').val(prix);
         var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * $('#prixTTC').val()));
         $('#totalTTc').val(prix);
+
     }
+
     function ValeurNeg() {
-        if ($("#longueur").val() > 0 || $("#largeur").val() > 0 || $("#largeur").val() > 0 || $('#epaisseur') > 0 ||$('#tonnage').val()>0 || $('#tonnage').val()>0  ) {
+        if ($("#longueur").val() > 0 || $("#largeur").val() > 0 || $("#largeur").val() > 0 || $('#epaisseur') > 0 || $('#tonnage').val() > 0 || $('#tonnage').val() > 0) {
             $("#volume").val("");
             $("#tonnage").val("");
             $("#total").val("");
@@ -100,8 +104,6 @@
             $("#epaisseur").val("");
             $("#tonnage").val("");
             $("#total").val("");
-            $("#totalTTc").val("");
         }
-
     }
 </script>

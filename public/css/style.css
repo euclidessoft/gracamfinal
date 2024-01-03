@@ -478,7 +478,29 @@ textarea.form-control {
     aspect-ratio: 3/4;
 }
 /*****End Galery****/
+/**Start about accueil**/
+.about-bordure {
+    border-right: 5px solid var(--primaire);
+    border-top: 5px solid var(--primaire);
+    border-bottom: 5px solid var(--primaire);
+    margin-left: -37px;
+}
 
+.service .service-image {
+    margin-right: -37px !important;
+}
+
+.about-bordure-right {
+    border-left: 5px solid var(--primaire);
+    border-top: 5px solid var(--primaire);
+    border-bottom: 5px solid var(--primaire);
+    margin-right: -37px;
+}
+
+.service .about-image-right {
+    margin-left: -37px !important;
+}
+/**End about accueil**/
 /*** Footer ***/
 .footer {
     background-color: var(--primaire);

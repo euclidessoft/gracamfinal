@@ -26,21 +26,21 @@
         </div>
     </div>
 
-   {# <div class="container-fluid image33">
+    {# <div class="container-fluid image33">
 
-    </div>#}
+     </div>#}
 
     <div class="container-fluid mb-5 py-5 ">
-        <div class="container container-bottom">
-            {% for message in app.flashes('notice') %}
-                <div class="alert alert-success  mb-2 alert-dismissible fade show radius-10">
-                    {{ message|trans }}
-                </div>
-            {% endfor %}
+        <div class="container">
             <div class="row g-5 h-100">
-                <div class="col-lg-6 col-md-12 h-100 wow fadeInUp p-5" data-wow-delay="0.5s">
-
+                <div class="col-lg-6 col-md-12 h-100 p-5" data-wow-delay="0.5s">
                     <div class="row g-2 h-100">
+                        {% for message in app.flashes('notice') %}
+                            <div class="alert alert-success alert-dismissible mb-2 fade show radius-10" role="alert">
+                                {{ message|trans }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
                         <div class="col-md-6">
                             {{ form_start(form, {'attr':{'id': 'form'}}) }}
                             <div class="mt-2">
@@ -68,8 +68,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                    <h3 class="text-dark animated slideInDown">{{ 'Contactez-nous'|trans }}</h3>
+                <div class="col-lg-6 col-md-12" data-wow-delay="0.1s">
+                    <h3 class="text-dark">{{ 'Contactez-nous'|trans }}</h3>
                     <p class="text-dark">
                         {{ 'Merci de partager vos impressions avec Gracam.'|trans }}
                         {{ 'Vous pouvez nous écrire pour n\'importe quel besoin et nous nous ferons un plaisir de l\'étudier.'|trans }}

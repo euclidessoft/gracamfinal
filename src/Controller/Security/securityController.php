@@ -40,34 +40,37 @@ class securityController extends AbstractController
         return $this->render('site/accueil.html.twig');
     }
 
-     /**
+    /**
      * @Route("/Motdupresident", name="Motdupresident")
      */
     public function motdupresident(Request $request)
-        {
-            return $this->render('site/motdupresident.html.twig');
-        }
-          /**
+    {
+        return $this->render('site/motdupresident.html.twig');
+    }
+
+    /**
      * @Route("/Mines", name="Mines")
      */
     public function mines(Request $request)
-        {
-            return $this->render('site/mines.html.twig');
-        }
-        /**
+    {
+        return $this->render('site/mines.html.twig');
+    }
+
+    /**
      * @Route("/Pierres Orenementales", name="Pierres Ornementales")
      */
     public function pierreornementale(Request $request)
-        {
-            return $this->render('site/pierreornementale.html.twig');
-        }
-        /**
+    {
+        return $this->render('site/pierreornementale.html.twig');
+    }
+
+    /**
      * @Route("/Agregat", name="Agregat")
      */
     public function agregat(Request $request)
-        {
-            return $this->render('site/agregat.html.twig');
-        }
+    {
+        return $this->render('site/agregat.html.twig');
+    }
 
     /**
      * @Route("/About", name="About")
@@ -112,7 +115,7 @@ class securityController extends AbstractController
     /**
      * @Route("/Contact", name="Contact")
      */
-    public function contact(Request $request)
+    public function contact(Request $request, \Swift_Mailer $mail)
     {
         $contact = new Contact();
         $form = $this->createForm(ContactFormType::class, $contact);
@@ -123,6 +126,14 @@ class securityController extends AbstractController
                 $em->persist($contact);
                 $em->flush();
                 $this->addFlash('notice', 'Message enregistrée avec succée');
+                // envoie mail
+                $message = (new \Swift_Message('Nouveau message'))
+                    ->setFrom('support@gntpharma-cameroun.com')
+                    ->setTo($contact->getEmail())
+                    ->setBody($this->renderView('site/affichageMailContact.html.twig',['nom' => $contact->getNom(),'sujet' => $contact->getSujet(),'message' => $contact->getMessage()]),  'text/html');
+
+                $mail->send($message);
+                // fin envoie mail
                 return $this->redirectToRoute('Contact');
             }
         }

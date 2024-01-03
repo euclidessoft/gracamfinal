@@ -121,19 +121,47 @@ class AccueilController extends AbstractController
     /**
      * @Route("/sterile", name="sterile")
      */
-    public function sterile()
+    public function sterile(Request $request)
     {
+        $calcul = new Produit();
+        $form = $this->createForm(CalculType::class, $calcul);
+        if ($request->isMethod('POST')) {
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+//                $em = $this->getDoctrine()->getManager();
+//                $em->persist($calcul);
+//                $em->flush();
+//                $this->addFlash('notice', 'Message enregistrée avec succée');
+//                return $this->redirectToRoute('Contact');
+            }
+        }
 
-        return $this->render('site/sterile.html.twig');
+        return $this->render('site/sterile.html.twig',[
+            'form' => $form->createView(),
+        ]);
     }
 
     /**
      * @Route("/moellons", name="moellons")
      */
-    public function moellons()
+    public function moellons(Request $request)
     {
+        $calcul = new Produit();
+        $form = $this->createForm(CalculType::class, $calcul);
+        if ($request->isMethod('POST')) {
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+//                $em = $this->getDoctrine()->getManager();
+//                $em->persist($calcul);
+//                $em->flush();
+//                $this->addFlash('notice', 'Message enregistrée avec succée');
+//                return $this->redirectToRoute('Contact');
+            }
+        }
 
-        return $this->render('site/moellons.html.twig');
+        return $this->render('site/moellons.html.twig',[
+            'form' => $form->createView(),
+        ]);
     }
 
 

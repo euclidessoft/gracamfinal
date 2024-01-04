@@ -54,13 +54,14 @@
                 <div class="form-floating">
                     <input type="text" id="totalTTc" required="required" placeholder="total/ttc" onchange="ValeurNeg()"
                            class="form-control" readonly/>
-                    <label for="volume" class="required">Total/TTC</label>
+                    <label for="totalTTc" class="required">Total/TTC</label>
                 </div>
             </div>
             <div class="col-md-12 mb-5">
                 <div class="form-floating">
                     <button class="btn btn-primaire btn-effect p-3 w-100"
-                            type="submit" disabled><strong>{{ 'Commander'|trans }}</strong>
+                            type="submit" disabled id="form-btn">
+                        <strong>{{ 'Commander'|trans }}</strong>
                     </button>
                 </div>
             </div>
@@ -68,13 +69,50 @@
     </div>
 </form>
 
+{#<script>#}
+{#    function Calcules() {#}
+
+{#        if ($('#largeur').val() > 0 && $('#longueur').val() > 0 && ($('#epaisseur').val() / 100) > 0) {#}
+{#            $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100).toFixed(2));#}
+{#         }#}
+{#        else {#}
+{#            $("#longueur").val("");#}
+{#            $("#largeur").val("");#}
+{#            $("#epaisseur").val("");#}
+{#        }#}
+
+{#        $('#tonnage').val(($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100) * 1.35).toFixed(2));#}
+{#        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 4192));#}
+{#        $('#total').val(prix);#}
+{#        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 5000));#}
+{#        $('#totalTTc').val(prix);#}
+{#    }#}
+{#    function ValeurNeg() {#}
+{#        if ($("#longueur").val() > 0 || $("#largeur").val() > 0 || $("#largeur").val() > 0 || $('#epaisseur') > 0 ||$('#tonnage').val()>0 || $('#tonnage').val()>0  ) {#}
+{#            $("#volume").val("");#}
+{#            $("#tonnage").val("");#}
+{#            $("#total").val("");#}
+{#        } else {#}
+{#            $("#longueur").val("");#}
+{#            $("#largeur").val("");#}
+{#            $("#epaisseur").val("");#}
+{#            $("#tonnage").val("");#}
+{#            $("#total").val("");#}
+{#        }#}
+
+{#    }#}
+
+{#    function BtnEnable() {#}
+{#        if(Calcules()){#}
+{#            $("#form-btn").val("").enable();#}
+{#        }#}
+{#    }#}
+{#</script>#}
 <script>
     function Calcules() {
-
         if ($('#largeur').val() > 0 && $('#longueur').val() > 0 && ($('#epaisseur').val() / 100) > 0) {
-            $('#volume').val($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100).toFixed(2));
-         }
-        else {
+            $('#volume').val(($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100)).toFixed(2));
+        } else {
             $("#longueur").val("");
             $("#largeur").val("");
             $("#epaisseur").val("");
@@ -83,11 +121,15 @@
         $('#tonnage').val(($('#largeur').val() * $('#longueur').val() * ($('#epaisseur').val() / 100) * 1.35).toFixed(2));
         var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 4192));
         $('#total').val(prix);
-        var prix = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 5000));
-        $('#totalTTc').val(prix);
+        var prixTTC = new Intl.NumberFormat().format(Math.ceil($('#tonnage').val() * 5000));
+        $('#totalTTc').val(prixTTC);
+
+        // Enable the button
+        BtnEnable();
     }
+
     function ValeurNeg() {
-        if ($("#longueur").val() > 0 || $("#largeur").val() > 0 || $("#largeur").val() > 0 || $('#epaisseur') > 0 ||$('#tonnage').val()>0 || $('#tonnage').val()>0  ) {
+        if ($("#longueur").val() > 0 || $("#largeur").val() > 0 || $("#epaisseur").val() > 0 || $('#tonnage').val() > 0) {
             $("#volume").val("");
             $("#tonnage").val("");
             $("#total").val("");
@@ -98,6 +140,9 @@
             $("#tonnage").val("");
             $("#total").val("");
         }
+    }
 
+    function BtnEnable() {
+        $("#form-btn").prop("disabled", false);
     }
 </script>

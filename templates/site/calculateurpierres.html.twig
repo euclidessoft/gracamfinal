@@ -48,7 +48,7 @@
         </div>
         <div class="col-md-4">
             <div class="form-floating">
-                <input type="number" id="quantite" required="required" placeholder="quantite" onchange="quantites()"
+                <input type="number" id="quantite" required="required" placeholder="quantite"
                        class="form-control" readonly/>
                 <label for="quantite" class="required">Quantite</label>
             </div>
@@ -63,7 +63,10 @@
         <div class="col-md-12">
             <div class="form-floating">
                 <button class="btn btn-primaire btn-effect p-3 w-100"
-                        type="submit" disabled><strong>{{ 'Commander'|trans }}</strong>
+                        type="submit" disabled id="form-btn">
+                    <strong>
+                        {{ 'Commander'|trans }}
+                    </strong>
                 </button>
             </div>
         </div>
@@ -71,3 +74,317 @@
 </div>
 {{ form_rest(form) }}
 {{ form_end(form) }}
+<script>
+    function calcule() {
+        if($("#longueur").val() <0){
+            $("#longueur").val("");
+            $("#surface").val("");
+            BtnDisable();
+        }
+       else if($("#largeur").val() <0){
+            $("#largeur").val("");
+            $("#surface").val("");
+            BtnDisable();
+        }
+       else {
+            $("#surface").val($("#longueur").val() * $("#largeur").val());
+            $("#quantite").val("");
+            $("#total").val("");
+            BtnDisable();
+        }
+
+    }
+
+
+    function Prix() {
+
+        $("#quantite").val("");
+        $("#total").val("");
+        BtnDisable();
+        var dimension = $('#calcul_dimenssion option:selected').val();
+        var epaiss = $('#calcul_epaisseur option:selected').val();
+
+
+        // if (!dimension || !epaiss) {
+        //     alert("Veuillez remplir la dimension et l'épaisseur.");
+        //     return;
+        // }
+        switch (dimension) {
+            case '1':
+                position = 1200 * 600;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("72000");
+                } else if (epaiss === '2') {
+                    $("#prixUnitaire").val("55000");
+                } else if (epaiss === '3') {
+                    $("#prixUnitaire").val("77000");
+                } else if (epaiss === '4') {
+                    $("#prixUnitaire").val("80000");
+                }
+                break;
+            case '2':
+                position = 600 * 600;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                } else if (epaiss === '2') {
+                    $("#prixUnitaire").val("38000");
+                } else if (epaiss === '3') {
+                    $("#prixUnitaire").val("54000");
+                } else if (epaiss === '4') {
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            case '3':
+                position = 600 * 300;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                } else if (epaiss === '2') {
+                    $("#prixUnitaire").val("38000");
+                } else if (epaiss === '3') {
+                    $("#prixUnitaire").val("54000");
+                } else if (epaiss === '4') {
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            case '4':
+                position = 600 * 100;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                } else if (epaiss === '2') {
+                    $("#prixUnitaire").val("38000");
+                } else if (epaiss === '3') {
+                    $("#prixUnitaire").val("54000");
+                } else if (epaiss === '4') {
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            case '5':
+                position = 300 * 300;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                } else if (epaiss === '2') {
+                    $("#prixUnitaire").val("38000");
+                } else if (epaiss === '3') {
+                    $("#prixUnitaire").val("54000");
+                } else if (epaiss === '4') {
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            case '6':
+                position = 300 * 100;
+                if (epaiss === '1') {
+                    $("#prixUnitaire").val("50000");
+                } else if (epaiss === '2') {
+                    $("#prixUnitaire").val("38000");
+                } else if (epaiss === '3') {
+                    $("#prixUnitaire").val("54000");
+                } else if (epaiss === '4') {
+                    $("#prixUnitaire").val("55000");
+                }
+                break;
+            default:
+                break;
+        }
+
+    }
+
+
+    function quantites() {
+        var longueur = $("#longueur").val();
+        var largeur = $("#largeur").val();
+        var dimension = $('#calcul_dimenssion').val();
+        var epaiss = $('#calcul_epaisseur').val();
+
+        if (!longueur || !largeur || !dimension || !epaiss || longueur <= 0 || largeur <= 0) {
+            // alert("Veuillez remplir correctement tous les champs avant de calculer.");
+            // $("#longueur").val("");
+            // $("#largeur").val("");
+            BtnDisable();
+            return;
+        }
+
+        var surface = longueur * largeur * 1000000;
+        var dimension = $('#calcul_dimenssion option:selected').val();
+        var position;
+        var quantity;
+        var quantite = $("#quantite");
+        var epaiss = $('#calcul_epaisseur option:selected').val();
+        switch (dimension) {
+
+
+            case '1':
+                position = 1200 * 600;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    var prix = new Intl.NumberFormat().format(72000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 72000);
+                    $("#total").val(tot);
+                } else if (epaiss === '2') {
+                    var prix = new Intl.NumberFormat().format(55000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 55000);
+                    $("#total").val(tot);
+                } else if (epaiss === '3') {
+                    var prix = new Intl.NumberFormat().format(77000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 77000);
+                    $("#total").val(tot);
+                } else if (epaiss === '4') {
+                    var prix = new Intl.NumberFormat().format(80000);
+                    $("#prixUnitaire").val(prix);
+                    $("#total").val(quantity * 80000);
+                    var tot = new Intl.NumberFormat().format(quantity * 80000);
+                    $("#total").val(tot);
+                }
+                break;
+            case '2':
+                position = 600 * 600;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+
+                    var prix = new Intl.NumberFormat().format(50000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 50000);
+                    $("#total").val(tot);
+
+                } else if (epaiss === '2') {
+
+                    var prix = new Intl.NumberFormat().format(38000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 38000);
+                    $("#total").val(tot);
+                } else if (epaiss === '3') {
+
+                    var prix = new Intl.NumberFormat().format(54000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 54000);
+                    $("#total").val(tot);
+                } else if (epaiss === '4') {
+
+                    var prix = new Intl.NumberFormat().format(55000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 55000);
+                    $("#total").val(tot);
+                }
+                break;
+            case '3':
+                position = 600 * 300;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    var prix = new Intl.NumberFormat().format(50000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 50000);
+                    $("#total").val(tot);
+                } else if (epaiss === '2') {
+                    var prix = new Intl.NumberFormat().format(38000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 38000);
+                    $("#total").val(tot);
+                } else if (epaiss === '3') {
+                    var prix = new Intl.NumberFormat().format(54000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 54000);
+                    $("#total").val(tot);
+                } else if (epaiss === '4') {
+                    var prix = new Intl.NumberFormat().format(55000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 55000);
+                    $("#total").val(tot);
+                }
+                break;
+            case '4':
+                position = 600 * 100;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    var prix = new Intl.NumberFormat().format(50000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 50000);
+                    $("#total").val(tot);
+                } else if (epaiss === '2') {
+                    var prix = new Intl.NumberFormat().format(38000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 38000);
+                    $("#total").val(tot);
+                } else if (epaiss === '3') {
+                    var prix = new Intl.NumberFormat().format(54000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 54000);
+                    $("#total").val(tot);
+                } else if (epaiss === '4') {
+                    var prix = new Intl.NumberFormat().format(55000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 55000);
+                    $("#total").val(tot);
+                }
+                break;
+            case '5':
+                position = 300 * 300;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    var prix = new Intl.NumberFormat().format(50000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 50000);
+                    $("#total").val(tot);
+                } else if (epaiss === '2') {
+                    var prix = new Intl.NumberFormat().format(38000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 38000);
+                    $("#total").val(tot);
+                } else if (epaiss === '3') {
+                    var prix = new Intl.NumberFormat().format(54000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 54000);
+                    $("#total").val(tot);
+                } else if (epaiss === '4') {
+                    var prix = new Intl.NumberFormat().format(55000);
+                    $("#prixUnitaire").val(prix);
+
+                    var tot = new Intl.NumberFormat().format(quantity * 55000);
+                    $("#total").val(tot);
+                }
+                break;
+            case '6':
+                position = 300 * 100;
+                quantity = Math.ceil(surface / position);
+                quantite.val(quantity);
+                if (epaiss === '1') {
+                    var prix = new Intl.NumberFormat().format(55000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 50000);
+                    $("#total").val(tot);
+                } else if (epaiss === '2') {
+                    var prix = new Intl.NumberFormat().format(38000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 38000);
+                    $("#total").val(tot);
+                } else if (epaiss === '3') {
+                    var prix = new Intl.NumberFormat().format(54000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 54000);
+                    $("#total").val(tot);
+                } else if (epaiss === '4') {
+                    var prix = new Intl.NumberFormat().format(55000);
+                    $("#prixUnitaire").val(prix);
+                    var tot = new Intl.NumberFormat().format(quantity * 55000);
+                    $("#total").val(tot);
+                }
+                break;
+            default:
+                break;
+        }
+        BtnEnable();
+    }
+    function BtnEnable() {
+        $("#form-btn").prop("disabled", false);
+    }
+
+    function BtnDisable() {
+        $("#form-btn").prop("disabled", true);
+    }
+</script>

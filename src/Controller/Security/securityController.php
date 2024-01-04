@@ -130,8 +130,7 @@ class securityController extends AbstractController
                 $message = (new \Swift_Message('Nouveau message'))
                     ->setFrom('support@gntpharma-cameroun.com')
                     ->setTo($contact->getEmail())
-                    ->setBody($this->renderView('site/affichageMailContact.html.twig',['nom' => $contact->getNom(),'sujet' => $contact->getSujet(),'message' => $contact->getMessage()]),  'text/html');
-
+                    ->setBody($this->renderView('site/affichageMailContact.html.twig', ['nom' => $contact->getNom(), 'sujet' => $contact->getSujet(), 'message' => $contact->getMessage()]), 'text/html');
                 $mail->send($message);
                 // fin envoie mail
                 return $this->redirectToRoute('Contact');

@@ -182,4 +182,13 @@ class AccueilController extends AbstractController
 
         return $this->render('site/distribution.html.twig');
     }
+
+/**
+     * @Route("/order", name="order")
+     */
+    public function order()
+    {
+
+        return $this->render('site/order.html.twig');
+    }
 }

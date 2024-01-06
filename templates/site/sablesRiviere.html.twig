@@ -1,32 +1,32 @@
 {% extends 'layout.html.twig' %}
 {% block title %} {{ "A propos"|trans }} - Gracam {% endblock %}
-{% block about %}active{% endblock %}
+{% block produits %}active{% endblock %}
 {% block body %}
 
     <div class="container-fluid">
-        <div class="container">
-            <div class="row g-5 mt-2">
+        <div class="container mt-5">
+            <div class="row g-5">
                 <div class="col-lg-6">
                     <div class="col">
-                        <img src="{{ asset('images/produits1.jpg') }}" class="img-fluid rounded-4" id="ProductImg"
+                        <img src="{{ asset('images/produits1.jpg') }}" class="img-fluid" id="ProductImg"
                              alt="produits1">
                     </div>
                     <div class="row mt-3">
                         <div class="col-4">
-                            <img src="{{ asset('images/image20.jpg') }}" class="img-fluid rounded-3 small-img"
+                            <img src="{{ asset('images/image20.jpg') }}" class="img-fluid small-img"
                                  alt="produits1">
                         </div>
                         <div class="col-4">
-                            <img src="{{ asset('images/sable.jpg') }}" class="img-fluid rounded-3 small-img"
+                            <img src="{{ asset('images/sable.jpg') }}" class="img-fluid small-img"
                                  alt="produits1">
                         </div>
                         <div class="col-4">
-                            <img src="{{ asset('images/produits1.jpg') }}" class="img-fluid rounded-3 small-img"
+                            <img src="{{ asset('images/produits1.jpg') }}" class="img-fluid small-img"
                                  alt="produits1">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 shadow rounded-3 p-3">
+                <div class="col-lg-6 shadow p-3">
                     <div class="row">
                         <h2 class="text-title">Description</h2>
                         <span class="texte_titre">Sables Rivière</span>
@@ -68,7 +68,7 @@
                 <div class="col-lg-6">
 
                 </div>
-                <div class="col-lg-6 end-0 shadow rounded-3">
+                <div class="col-lg-6 end-0 shadow">
                     <input type="hidden" id="prixHt" value="4192" />
                     <input type="hidden" id="prixTTC" value="5000" />
                     {{ include('site/calculateurSable.html.twig') }}

@@ -1,6 +1,5 @@
 {{ form_start(form, {'attr':{'id': 'form'}}) }}
-<div class="col-lg-12">
-    <div class="row g-4 py-4">
+    <div class="row g-4 py-4 shadow m-0">
         <div class="col-md-4">
             <div class="form-floating">
                 <input type="number" id="longueur" required="required" onchange="calcule()"
@@ -71,7 +70,6 @@
             </div>
         </div>
     </div>
-</div>
 {{ form_rest(form) }}
 {{ form_end(form) }}
 <script>

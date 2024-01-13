@@ -216,14 +216,3 @@ for (var i = 0; i < SmallImg.length; i++) {
 
 /*************End Product image*************/
 
-/***Start Funtion pour Scroll navbar**/
-window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('navbar');
-    var links = navbar.getElementsByClassName('nav-link');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-/***End Funtion pour Scroll navbar**/

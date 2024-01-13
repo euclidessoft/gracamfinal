@@ -56,7 +56,7 @@ a {
 
 /* Couleur de fond de la navbar lors du défilement */
 .navbar.scrolled {
-    background-color: rgba(var(--primaire-rgb), 0.8);
+    background-color: rgba(var(--primaire-rgb), 0.9);
     transition: var(--transdelay);
 }
 
@@ -248,12 +248,7 @@ h3.text-dark {
     padding-bottom: 3rem !important;
 }
 
-.bg-valeur {
-    background-image: url(../images/image10.jpg);
-    background-size: cover;
-    background-position: center;
 
-}
 
 /* End css about */
 
@@ -396,31 +391,18 @@ h3.text-dark {
 
 .card-header {
     font-size: 1.5rem;
-    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
-    /* margin-bottom: 0; */
-    color: var(--primaire);
-    background: var(--secondaire);
-    font-weight: 500;
+    color: var(--secondaire);
+    background: var(--primaire);
+    font-weight: bold;
+    text-align: center;
 }
 
-/*.text-title {*/
-/*    background-color: var(--primaire);*/
-/*    border-top-right-radius: 15px;*/
-/*    border-top-left-radius: 15px;*/
-/*    text-align: center;*/
-/*    font-size: 1.5rem;*/
-/*    font-weight: bold;*/
-/*    color: var(--secondaire);*/
-/*    margin-bottom: 15px;*/
-/*    padding: 10px;*/
-/*    width: 100%;*/
-/*}*/
 .card-title {
-    /* background-color: var(--primaire); */
-    /* padding: 10px; */
-    margin-bottom: 0;
+    font-size: 2rem;
     color: var(--primaire);
-    /* border-radius: 10px; */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .texte_titre {
@@ -511,6 +493,8 @@ textarea.form-control {
 
 .bloc-title {
     text-align: center;
+    font-weight: bold;
+    color: var(--primaire);
 }
 
 .bloc-text-center-primaire {
@@ -631,7 +615,7 @@ textarea.form-control {
 .bloc-text-center-secondaire .bloc-title {
     position: absolute;
     top: -20px;
-    left: 45%;
+    left: 40%;
 }
 
 .bloc-text-right .bloc-title {
@@ -687,6 +671,7 @@ hr {
     text-align: center;
     color: var(--primaire);
     border-bottom: 2px solid var(--primaire);
+    font-weight: bold;
 }
 
 .bloc-text-center-primaire {
@@ -1275,7 +1260,12 @@ textarea.form-control {
 }
 
 /**end page Service **/
-
+.bloc-titre-service {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primaire);
+    margin-top: 2rem;
+}
 
 @media (max-width: 768px) {
     .service-bordure {
@@ -1329,12 +1319,11 @@ textarea.form-control {
     .valeurs{
         padding: 1rem;
     }
-    .bloc-titre-service {
-        padding: 2rem;
-        font-size: 2rem;
-    }
 
-    .bloc-text-left, .bloc-text-right, .bloc-text-center-primaire, .bloc-text-center-secondaire {
+
+    .bloc-text-left, .bloc-text-right,
+    .bloc-text-center-primaire,
+    .bloc-text-center-secondaire {
         padding: 2rem !important;
         height: 100%;
     }
@@ -1357,6 +1346,7 @@ textarea.form-control {
 
     .bloc-title {
         text-align: center;
+
     }
 
     .h2, h2 {
@@ -1468,6 +1458,11 @@ textarea.form-control {
 
     .carousel-overlay {
         width: 100%;
+    }
+    .bloc-titre-service {
+        padding: 2rem;
+        font-size: 2rem;
+        margin-bottom: 0 !important;
     }
 }
 

@@ -1,6 +1,7 @@
-{% extends 'layout_produit.html.twig' %}
-{% block title %} {{ "A propos"|trans }} - Gracam {% endblock %}
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Gravier 5/25"|trans }} - Gracam {% endblock %}
 {% block produits %}active{% endblock %}
+{% block nav %}scrolled{% endblock %}
 {% block body %}
 
     <div class="container-fluid">
@@ -28,11 +29,11 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="card shadow border-primaire h-100">
-                        <div class="card-header text-center">
+                        <div class="card-header">
                             Information du produit
                         </div>
                         <div class="card-body px-5">
-                            <h5 class="card-title text-center">Pières ornementales</h5>
+                            <h5 class="card-title">Gravier 15/25</h5>
                             <div class="produit-info">
                                 <h4 class="header-title">Caractéristiques</h4>
                                 <ul>
@@ -67,10 +68,11 @@
                                         pétanque.
                                     </li>
                                 </ul>
-                                <h4 class="header-title">Conditionnement : </h4>
+                                <h4 class="header-title">Conditionnement</h4>
                                 <ul>
-                                    <li> Sable vendu en vrac et Big Bag.</li>
-                                    <li>PrixHT/ : 4192 FCFA /Tonne</li>
+                                    <li class="mb-2"> Sable vendu en vrac et Big Bag.</li>
+                                    <li> <span class="fw-bold">Prix HT :</span> 5870 FCFA / Tonne</li>
+                                    <li> <span class="fw-bold">Prix TTC :</span> 7000 FCFA / Tonne</li>
                                 </ul>
                             </div>
                         </div>
@@ -80,13 +82,16 @@
 
                 </div>
                 <div class="col-lg-6">
-                    {{ include('site/calculateurpierres.html.twig') }}
+                    <input type="hidden" id="prixHt" value="5870" />
+                    <input type="hidden" id="prixTTC" value="7000" />
+                    {{ include('site/calculateurGravier.html.twig') }}
                 </div>
             </div>
         </div>
     </div>
 
     <!-- item End -->
+    {% block scroll %} {% endblock %}
 {% endblock %}
 
 

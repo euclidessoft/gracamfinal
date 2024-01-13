@@ -1,8 +1,8 @@
-{% extends 'layout_produit.html.twig' %}
-{% block title %} {{ "A propos"|trans }} - Gracam {% endblock %}
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Moellons"|trans }} - Gracam {% endblock %}
 {% block produits %}active{% endblock %}
+{% block nav %}scrolled{% endblock %}
 {% block body %}
-
     <div class="container-fluid">
         <div class="container pt-5">
             <div class="row g-5 mb-5 mt-5">
@@ -28,11 +28,11 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="card shadow border-primaire h-100">
-                        <div class="card-header text-center">
+                        <div class="card-header">
                             Information du produit
                         </div>
                         <div class="card-body px-5">
-                            <h5 class="card-title text-center">Sables rivieres</h5>
+                            <h5 class="card-title">Moellons</h5>
                             <div class="produit-info">
                                 <h4 class="header-title">Caractéristiques</h4>
                                 <ul>
@@ -67,11 +67,9 @@
                                         pétanque.
                                     </li>
                                 </ul>
-                                <h4 class="header-title">Conditionnement : </h4>
+                                <h4 class="header-title">Conditionnement</h4>
                                 <ul>
-                                    <li> Sable vendu en vrac et Big Bag.</li>
-                                    <li>PrixHT/ : 4192 FCFA /Tonne</li>
-                                    <li>PrixTTC/ : 5000 FCFA /Tonne</li>
+                                    <li class="mb-2"> Sable vendu en vrac et Big Bag.</li>
                                 </ul>
                             </div>
                         </div>
@@ -81,15 +79,19 @@
 
                 </div>
                 <div class="col-lg-6">
-                    <input type="hidden" id="prixHt" value="4192"/>
-                    <input type="hidden" id="prixTTC" value="5000"/>
-                    {{ include('site/calculateurSable.html.twig') }}
+                    {{ form_start(form, {'attr':{'id': 'form'}}) }}
+
+                    {{ include('site/calculateurpierres.html.twig') }}
+
+                    {{ form_rest(form) }}
+                    {{ form_end(form) }}
                 </div>
             </div>
         </div>
     </div>
 
     <!-- item End -->
+    {% block scroll %} {% endblock %}
 {% endblock %}
 
 

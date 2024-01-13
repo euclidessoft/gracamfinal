@@ -27,7 +27,7 @@ class AccueilController extends AbstractController
     public function SablesRiviere()
     {
 
-        return $this->render('site/SablesRiviere.html.twig');
+        return $this->render('site/produits/sableriviere.html.twig');
     }
 
     /**
@@ -36,7 +36,7 @@ class AccueilController extends AbstractController
     public function SablesSanaga()
     {
 
-        return $this->render('site/SablesSanaga.html.twig');
+        return $this->render('site/produits/sablesanaga.html.twig');
     }
 
 
@@ -46,7 +46,7 @@ class AccueilController extends AbstractController
     public function gravier5_15()
     {
 
-        return $this->render('site/gravier5_15.html.twig');
+        return $this->render('site/produits/gravier5_15.html.twig');
     }
 
     /**
@@ -55,7 +55,7 @@ class AccueilController extends AbstractController
     public function gravier15_25()
     {
 
-        return $this->render('site/gravier15_25.html.twig');
+        return $this->render('site/produits/gravier15_25.html.twig');
     }
 
 
@@ -65,7 +65,7 @@ class AccueilController extends AbstractController
     public function gravier5_25()
     {
 
-        return $this->render('site/gravier5_25.html.twig');
+        return $this->render('site/produits/gravier5_25.html.twig');
     }
 
     /**
@@ -74,7 +74,7 @@ class AccueilController extends AbstractController
     public function gravier0_5()
     {
 
-        return $this->render('site/gravier0_5.html.twig');
+        return $this->render('site/produits/gravier0_5.html.twig');
     }
 
     /**
@@ -83,7 +83,7 @@ class AccueilController extends AbstractController
     public function gravier0_100()
     {
 
-        return $this->render('site/gravier0_100.html.twig');
+        return $this->render('site/produits/gravier0_100.html.twig');
     }
 
     /**
@@ -92,7 +92,7 @@ class AccueilController extends AbstractController
     public function ballast()
     {
 
-        return $this->render('site/ballast.html.twig');
+        return $this->render('site/produits/ballast.html.twig');
     }
 
     /**
@@ -112,7 +112,7 @@ class AccueilController extends AbstractController
 //                return $this->redirectToRoute('Contact');
             }
         }
-        return $this->render('site/pierreornementale.html.twig',[
+        return $this->render('site/produits/pierreornementale.html.twig',[
         'form' => $form->createView(),
             ]);
     }
@@ -136,7 +136,7 @@ class AccueilController extends AbstractController
             }
         }
 
-        return $this->render('site/sterile.html.twig',[
+        return $this->render('site/produits/sterile.html.twig',[
             'form' => $form->createView(),
         ]);
     }
@@ -159,7 +159,7 @@ class AccueilController extends AbstractController
             }
         }
 
-        return $this->render('site/moellons.html.twig',[
+        return $this->render('site/produits/moellons.html.twig',[
             'form' => $form->createView(),
         ]);
     }

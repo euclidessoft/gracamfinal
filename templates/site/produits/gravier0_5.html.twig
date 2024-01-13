@@ -1,7 +1,9 @@
 {% extends 'layout.html.twig' %}
-{% block title %} {{ "Moellons"|trans }} - Gracam {% endblock %}
+{% block title %} {{ "Graviers 0/50"|trans }} - Gracam {% endblock %}
 {% block produits %}active{% endblock %}
+{% block nav %}scrolled{% endblock %}
 {% block body %}
+
     <div class="container-fluid">
         <div class="container pt-5">
             <div class="row g-5 mb-5 mt-5">
@@ -27,11 +29,11 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="card shadow border-primaire h-100">
-                        <div class="card-header text-center">
+                        <div class="card-header">
                             Information du produit
                         </div>
                         <div class="card-body px-5">
-                            <h5 class="card-title text-center">Moellons</h5>
+                            <h5 class="card-title">Gravier 0/50</h5>
                             <div class="produit-info">
                                 <h4 class="header-title">Caractéristiques</h4>
                                 <ul>
@@ -66,11 +68,11 @@
                                         pétanque.
                                     </li>
                                 </ul>
-                                <h4 class="header-title">Conditionnement : </h4>
+                                <h4 class="header-title">Conditionnement</h4>
                                 <ul>
-                                    <li> Sable vendu en vrac et Big Bag.</li>
-                                    <li>PrixHT/ : 6289 FCFA /Tonne</li>
-                                    <li>PrixTTC/ : 7500 FCFA /Tonne</li>
+                                    <li class="mb-2"> Sable vendu en vrac et Big Bag.</li>
+                                    <li> <span class="fw-bold">Prix HT :</span>6708 FCFA /Tonne</li>
+                                    <li> <span class="fw-bold">Prix TTC :</span> 8200 FCFA /Tonne</li>
                                 </ul>
                             </div>
                         </div>
@@ -80,19 +82,14 @@
 
                 </div>
                 <div class="col-lg-6">
-                    {{ form_start(form, {'attr':{'id': 'form'}}) }}
-
-                    {{ include('site/calculateurpierres.html.twig') }}
-
-                    {{ form_rest(form) }}
-                    {{ form_end(form) }}
+                    <input type="hidden" id="prixHt" value="6708" />
+                    <input type="hidden" id="prixTTC" value="8200" />
+                    {{ include('site/calculateurGravier.html.twig') }}
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- item End -->
+<!-- item End -->
+{% block scroll %} {% endblock %}
 {% endblock %}
-
-
-

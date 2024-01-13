@@ -20,7 +20,7 @@
     {#    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">#}
 </head>
 <body>
-<nav class="navbar navbar-expand-lg sticky-top p-0" id="navbar">
+<nav class="navbar navbar-expand-lg sticky-top p-0 {% block nav %}{% endblock %}" id="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ path('Accueil') }}">
             <img class="img-logo" src="{{ asset('../images/logo.png') }}" alt="Logo">
@@ -187,9 +187,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6 position-relative">
                     <h4 class="footer-tittle">{{ "Liens utiles"|trans }}</h4>
+                    <a class="btn btn-link" href="{{ path('Accueil') }}">{{ "Accueil"|trans }}</a>
+                    <a class="btn btn-link" href="{{ path('Produits') }}">{{ "Produits"|trans }}</a>
+                    <a class="btn btn-link" href="{{ path('Distribution') }}">{{ "Services"|trans }}</a>
                     <a class="btn btn-link" href="{{ path('About') }}">{{ "A propos"|trans }}</a>
                     <a class="btn btn-link" href="{{ path('Gallery') }}">{{ "Galerie"|trans }}</a>
-                    <a class="btn btn-link" href="{{ path('Carriere') }}">{{ "Carrière"|trans }}</a>
+{#                    <a class="btn btn-link" href="{{ path('Carriere') }}">{{ "Carrière"|trans }}</a>#}
                     <a class="btn btn-link" href="{{ path('Contact') }}">{{ "Contact"|trans }}</a>
                 </div>
                 <div class="col-lg-3 col-md-6 position-relative">
@@ -290,6 +293,21 @@
 
 <!-- Main Javascript -->
 <script src="{{ asset('js/main.js') }}"></script>
+{% block scroll %}
+    <script>
+        /***Start Funtion pour Scroll navbar**/
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            var links = navbar.getElementsByClassName('nav-link');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        /***End Funtion pour Scroll navbar change bg-color**/
+    </script>
+{% endblock %}
 {#<script src="{{ asset('js/main.min.js')}}"></script>#}
 
 

@@ -51,7 +51,7 @@ a {
 
 /************** Nav start **********/
 .navbar {
-    background-color: transparent;
+background-color: rgba(var(--secondaire-rgb), 0.2);
 }
 
 /* Couleur de fond de la navbar lors du défilement */
@@ -279,15 +279,15 @@ h3.text-dark {
 }
 
 .carousel-img.slide_1 {
-    background-image: url('../images/slde.jpg');
+    background-image: url('../images/galerie_1.jpg');
 }
 
 .carousel-img.slide_2 {
-    background-image: url('../images/slide_2.jpg');
+    background-image: url('../images/slides_1.jpg');
 }
 
 .carousel-img.slide_3 {
-    background-image: url('../images/slide_3.jpg');
+    background-image: url('../images/service.png');
 }
 
 .carousel-overlay {
@@ -652,6 +652,7 @@ hr {
     /*padding-bottom: 3rem !important;*/
     padding: 6rem;
     margin: 0 -15px;
+    background-position: center;
 }
 
 .valeur-bloc {
@@ -1409,15 +1410,15 @@ textarea.form-control {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/slde.jpg');
+        background-image: url('../images/galerie_1.jpg');
     }
 
     .carousel-img.slide_2 {
-        background-image: url('../images/slide_2.jpg');
+        background-image: url('../images/slides_1.jpg');
     }
 
     .carousel-img.slide_3 {
-        background-image: url('../images/slide_3.jpg');
+        background-image: url('../images/service.png');
     }
 }
 
@@ -1451,15 +1452,15 @@ textarea.form-control {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/about_mobil.jpg');
+        background-image: url('../images/galerie_1.jpg');
     }
 
     .carousel-img.slide_2 {
-        background-image: url('../images/slide_2.jpg');
+        background-image: url('../images/slides_1.jpg');
     }
 
     .carousel-img.slide_3 {
-        background-image: url('../images/slide_3.jpg');
+        background-image: url('../images/service.png');
     }
 
     .carousel-overlay {

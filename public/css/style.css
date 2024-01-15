@@ -279,7 +279,7 @@ h3.text-dark {
 }
 
 .carousel-img.slide_1 {
-    background-image: url('../images/slide_1.jpg');
+    background-image: url('../images/slde.jpg');
 }
 
 .carousel-img.slide_2 {
@@ -897,12 +897,18 @@ footer .btn:hover {
     /*border-radius: 1rem !important;*/
     box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.3) !important;
     overflow: hidden !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
 }
 
 .album-cover img {
     object-fit: cover !important;
     transition: 0.5s;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100% !important;
+    height: 100% !important;
 }
 
 .album-cover:hover img {
@@ -1403,7 +1409,7 @@ textarea.form-control {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/about_mobil.jpg');
+        background-image: url('../images/slde.jpg');
     }
 
     .carousel-img.slide_2 {
@@ -1465,6 +1471,7 @@ textarea.form-control {
         margin-bottom: 0 !important;
     }
 }
+
 
 @media (max-width: 992px) {
 

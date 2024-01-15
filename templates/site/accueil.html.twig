@@ -260,7 +260,7 @@
             </div>
         </div>
         <div class="galerie">
-            <div class="row mt-5 g-5">
+            <div class="row mt-5">
                 <div class="col-lg-12 position-relative">
                     <div class="bloc-text-center-primaire">
                         <h2 class="bloc-title text-primaire">
@@ -269,17 +269,32 @@
                         <div class="row g-4">
                             <div class="col-lg-4 col-sm-12">
                                 <div class="album-cover mb-5">
-                                    <img src="../images/realisation1.jpeg" alt="">
+                                    <img src="{{ asset ('../images/galerie.jpg') }}" alt="">
                                   </div>
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <div class="album-cover mb-5">
-                                    <img src="/images/realisation3.jpeg" alt="">
+                                    <img src="{{ asset ('../images/galerie_1.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <div class="album-cover mb-5">
-                                    <img src="/images/realisation7.jpeg" alt="">
+                                    <img src="{{ asset ('/images/galerie_3.jpg') }}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="album-cover mb-5">
+                                    <img src="{{ asset ('/images/galerie_4.jpg') }}" alt="" class="h-100">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="album-cover mb-5">
+                                    <img src="{{ asset ('/images/realisation1.jpeg') }}" alt="" class="h-100">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="album-cover mb-5">
+                                    <img src="{{ asset ('/images/realisation8.jpeg') }}" alt="" class="h-100">
                                 </div>
                             </div>
                         </div>
@@ -354,7 +369,7 @@
                                 <div class="card shadow border-primaire shadow">
                                     <div class="content p-5">
                                         <div class="bloc-img">
-                                            <img src="../images/team5.jpg" alt="">
+                                            <img src="{{ asset ('../images/team5.jpg') }}" alt="">
                                         </div>
                                         <div class="bloc-team-text">
                                             <h4>Michel</h4>
@@ -373,7 +388,7 @@
                                 <div class="card shadow border-primaire shadow">
                                     <div class="content p-5">
                                         <div class="bloc-img">
-                                            <img src="../images/team2.jpg" alt="">
+                                            <img src="{{ asset ('../images/team2.jpg') }}" alt="">
                                         </div>
                                         <div class="bloc-team-text">
                                             <h4>Frank </h4>
@@ -392,7 +407,7 @@
                                 <div class="card shadow border-primaire shadow">
                                     <div class="content p-5">
                                         <div class="bloc-img">
-                                            <img src="../images/team3.jpg" alt="">
+                                            <img src="{{ asset ('../images/team3.jpg') }}" alt="">
                                         </div>
                                         <div class="bloc-team-text">
                                             <h4>Victoire</h4>
@@ -411,7 +426,7 @@
                                 <div class="card shadow border-primaire shadow">
                                     <div class="content p-5">
                                         <div class="bloc-img">
-                                            <img src="../images/team4.jpg" alt="">
+                                            <img src="{{ asset ('../images/team4.jpg') }}" alt="">
                                         </div>
                                         <div class="bloc-team-text">
                                             <h4>Joseph</h4>

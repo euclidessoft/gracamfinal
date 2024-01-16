@@ -36,10 +36,6 @@
     /*transition: var(--transdelay) !important;*/
 }
 
-.bordere {
-    border: 5px solid black;
-}
-
 body {
     margin-top: -84px;
 }
@@ -273,9 +269,9 @@ h3.text-dark {
 .carousel-img {
     width: 100%;
     background-size: cover;
-    background-position: center center;
-    aspect-ratio: 18 / 9;
-    height: 700px;
+    background-position: center top;
+    aspect-ratio: 18.5 / 9;
+
 }
 
 .carousel-img.slide_1 {
@@ -482,7 +478,7 @@ textarea.form-control {
 /**Start about accueil**/
 
 .about,
-.valeurs,
+.testimonial,
 .pourquoi,
 .produits,
 .services,
@@ -648,10 +644,8 @@ hr {
     background: url("../images/image17.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /*padding-top: 3rem !important;*/
-    /*padding-bottom: 3rem !important;*/
     padding: 6rem;
-    margin: 0 -15px;
+    margin: 0 -12px;
     background-position: center;
 }
 
@@ -668,10 +662,9 @@ hr {
 
 .valeur-title {
     height: 65px;
-    /* background-color: var(--primaire); */
     text-align: center;
     color: var(--primaire);
-    border-bottom: 2px solid var(--primaire);
+    border-bottom: 3px solid var(--primaire);
     font-weight: bold;
 }
 
@@ -894,9 +887,8 @@ footer .btn:hover {
 }
 
 .album-cover {
-    border: 1px solid var(--primaire);
-    /*border-radius: 1rem !important;*/
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid var(--secondaire);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15) !important;
     overflow: hidden !important;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1314,7 +1306,7 @@ textarea.form-control {
     }
 
     .about,
-    .valeurs,
+    .testimonial,
     .pourquoi,
     .produits,
     .services,

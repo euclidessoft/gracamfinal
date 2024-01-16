@@ -254,11 +254,12 @@ h3.text-dark {
 
 
 .page-header-produit {
-    background-image: url(../images/sanaga.jpg);
+    background-image: url(../images/produit_1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 3rem !important;
+    background-position: center;
     padding-bottom: 3rem !important;
 }
 
@@ -457,8 +458,13 @@ label {
 textarea.form-control {
     height: 200px !important;
 }
+#ProductImg{
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
 
 .container .small-img {
+    display: flex;
     cursor: pointer;
 }
 
@@ -1159,7 +1165,7 @@ textarea.form-control {
 }
 
 .pierre .categorie-title {
-    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/image20.jpg);
+    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/produit_3.jpg);
 }
 
 .border-primaire {

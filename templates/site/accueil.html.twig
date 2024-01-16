@@ -3,10 +3,29 @@
 
 {% block body %}
 
-    <!--PreLoader Ends-->
+    <!--Page Header Starts-->
     <div class="container-fluid px-0">
         <div id="header-carousel" class="carousel header-carousel carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
+                <div class="carousel-item position-relative active">
+                    <div class="carousel-img slide_1 animated fadeIn">
+                    </div>
+                    <div class="carousel-overlay">
+                        <div class="container mt-md-5">
+                            <div class="row mt-md-5 text-center">
+                                <div class="col-sm-10 col-lg-8">
+                                    <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
+                                        {{ "Granites"|trans }}
+                                    </h1>
+                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
+                                        {{ "GRACAM se distingue dans le domaine des matériaux de construction en proposant des solutions innovantes et
+                                        fiables pour répondre aux besoins croissants de l'industrie. Gracam vous offre les meilleurs matériaux sur le marché."|trans }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="carousel-item position-relative">
                     <div class="carousel-img slide_2 animated fadeIn">
                     </div>
@@ -14,15 +33,12 @@
                         <div class="container mt-md-5">
                             <div class="row mt-md-5 text-center">
                                 <div class="col-sm-10 col-lg-8">
-                                    <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
+                                    <h1 class="fs-2 fw-bold mb-4 animated fadeIn delay-1s">
                                         {{ "Graviers"|trans }}
                                     </h1>
-                                    <div class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
-                                        <p class="paragraphe-1 mb-0">
-                                            {{ "L’entreprise propose aujourd’hui une offre complète de matériaux
-                                             qui satisferont aussi bien la demande industrielle que la demande des particuliers."|trans }}
-                                        </p>
-                                    </div>
+                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
+                                        {{ "Nous avons une équipe de professionnels qualifiés et expérimentés qui travaillent avec précision et efficacité pour réaliser votre projet."|trans }}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -47,29 +63,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item position-relative active">
-                    <div class="carousel-img slide_1 animated fadeIn">
-                    </div>
-                    <div class="carousel-overlay">
-                        <div class="container mt-md-5">
-                            <div class="row mt-md-5 text-center">
-                                <div class="col-sm-10 col-lg-8">
-                                    <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
-                                        {{ "Granites"|trans }}
-                                    </h1>
-                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
-                                        {{ "GRACAM se distingue dans le domaine des matériaux de construction en proposant des solutions innovantes et
-                                        fiables pour répondre aux besoins croissants de l'industrie. Gracam vous offre les meilleurs matériaux sur le marché."|trans }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    {#Start about#}
+    <!--Page Header Ends-->
     <div class="container-fluid">
         <div class="about">
             <div class="row mt-5 gy-5">
@@ -91,18 +88,51 @@
                             ce secteur.
                         </p>
                         <a href="{{ path('About') }}" class="btn btn-primary px-3 py-2">
-                            Lire plus...
+                            En savoir plus...
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="bloc-image">
-                        <img src="{{ asset("../images/header_1.jpg") }}" alt="">
+                        <img src="{{ asset("../images/carriere_3_copie.jpg") }}" alt="">
                     </div>
                 </div>
             </div>
         </div>
-        {#    </div>#}
+        <div class="pourquoi">
+            <div class="row gy-5 mb-5">
+                <div class="col-lg-5">
+                    <div class="bloc-image">
+                        <img src="{{ asset("../images/about_3.jpg") }}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7 position-relative">
+                    <div class="bloc-text-right">
+                        <h2 class="bloc-title">
+                            POURQUOI NOUS CHOISIR
+                        </h2>
+                        <h4 class="">
+                            La société GRACAM s’appuie sur des valeurs fortes qui lui permettent de garantir la
+                            satisfaction totale de ses partenaires.
+                        </h4>
+                        <hr class="border-1 border-primaire">
+                        <p class="">
+                            Notre engagement envers la qualité, la durabilité et l'innovation est au cœur de notre ADN.
+                            Nous mettons un point d'honneur à fournir des produits et des services de la plus haute
+                            qualité, répondant aux normes les plus strictes de l'industrie. La responsabilité
+                            environnementale guide chacune de nos actions, de l'extraction des matériaux à la livraison,
+                            assurant ainsi une empreinte écologique minimale. De plus, notre dévouement envers nos
+                            partenaires se traduit par une collaboration transparente et des solutions sur mesure pour
+                            répondre à leurs besoins spécifiques. Chez GRACAM, l'éthique, l'intégrité et le respect sont
+                            des valeurs fondamentales, garantissant une relation solide et durable avec nos clients,
+                            fournisseurs et communautés locales. Notre engagement envers l'excellence et notre souci
+                            constant de l'amélioration continue font de nous un partenaire de confiance, prêt à relever
+                            les défis les plus exigeants de l'industrie des granulats.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="valeurs">
             <div class="row">
                 <div class="col-lg-12 position-relative">
@@ -142,49 +172,13 @@
                             </div>
                             <div class="col-lg-3">
                                 <div class="valeur-bloc">
-                                    <h5 class="valeur-title">Qualité et Respect des Normes</h5>
+                                    <h5 class="valeur-title">Qualité et Respect des normes</h5>
                                     <p class="valeur-text">Chaque matériau que nous fournissons est soumis à des normes
                                         strictes, garantissant sa conformité aux exigences industrielles et aux attentes
-                                        des
-                                        particuliers.</p>
+                                        des particuliers.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {#    <div class="container-fluid">#}
-        <div class="pourquoi">
-            <div class="row mt-5 gy-5">
-                <div class="col-lg-5">
-                    <div class="bloc-image">
-                        <img src="{{ asset("../images/about_3.jpg") }}" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-7 position-relative">
-                    <div class="bloc-text-right">
-                        <h2 class="bloc-title">
-                            POURQUOI NOUS CHOISIR
-                        </h2>
-                        <h4 class="">
-                            La société GRACAM s’appuie sur des valeurs fortes qui lui permettent de garantir la
-                            satisfaction totale de ses partenaires.
-                        </h4>
-                        <hr class="border-1 border-primaire">
-                        <p class="">
-                            Notre engagement envers la qualité, la durabilité et l'innovation est au cœur de notre ADN.
-                            Nous mettons un point d'honneur à fournir des produits et des services de la plus haute
-                            qualité, répondant aux normes les plus strictes de l'industrie. La responsabilité
-                            environnementale guide chacune de nos actions, de l'extraction des matériaux à la livraison,
-                            assurant ainsi une empreinte écologique minimale. De plus, notre dévouement envers nos
-                            partenaires se traduit par une collaboration transparente et des solutions sur mesure pour
-                            répondre à leurs besoins spécifiques. Chez GRACAM, l'éthique, l'intégrité et le respect sont
-                            des valeurs fondamentales, garantissant une relation solide et durable avec nos clients,
-                            fournisseurs et communautés locales. Notre engagement envers l'excellence et notre souci
-                            constant de l'amélioration continue font de nous un partenaire de confiance, prêt à relever
-                            les défis les plus exigeants de l'industrie des granulats.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -198,7 +192,7 @@
                         </h2>
                         <div class="row g-4">
                             <div class="col-lg-4">
-                                <a href="{{ path('Produits') }}">
+                                <a href="{{ path('Produits') }}#sables">
                                     <div class="produit">
                                         <!-- Product image-->
                                         <div class="produit-img">
@@ -217,7 +211,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="{{ path('Produits') }}">
+                                <a href="{{ path('Produits') }}#graviers">
                                     <div class="produit">
                                         <!-- Product image-->
                                         <div class="produit-img">
@@ -236,7 +230,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="{{ path('Produits') }}">
+                                <a href="{{ path('Produits') }}#granites">
                                     <div class="produit">
                                         <!-- Product image-->
                                         <div class="produit-img">
@@ -258,50 +252,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="galerie">
-            <div class="row mt-5">
-                <div class="col-lg-12 position-relative">
-                    <div class="bloc-text-center-primaire">
-                        <h2 class="bloc-title text-primaire">
-                            NOTRE GALERIE
-                        </h2>
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-sm-12">
-                                <div class="album-cover mb-5">
-                                    <img src="{{ asset ('../images/galerie.jpg') }}" alt="">
-                                  </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-12">
-                                <div class="album-cover mb-5">
-                                    <img src="{{ asset ('../images/galerie_1.jpg') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-12">
-                                <div class="album-cover mb-5">
-                                    <img src="{{ asset ('/images/galerie_3.jpg') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="album-cover">
-                                    <img src="{{ asset ('/images/galerie_9.jpg') }}" alt="" class="h-100">
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="album-cover">
-                                    <img src="{{ asset ('/images/galerie_8.jpg') }}" alt="" class="h-100">
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="album-cover">
-                                    <img src="{{ asset ('/images/galerie_10.jpg') }}" alt="" class="h-100">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <div class="services">
             <div class="row">
@@ -326,7 +276,8 @@
                         </div>
                         <div class="col-lg-5">
                             <div class="bloc-image">
-                                <img src="{{ asset("../images/distribution.jpg") }}" alt="" class="d-flex justify-content-center">
+                                <img src="{{ asset("../images/distribution.jpg") }}" alt=""
+                                     class="d-flex justify-content-center">
                             </div>
                         </div>
                     </div>
@@ -357,8 +308,64 @@
                 </div>
             </div>
         </div>
+        <div class="galerie">
+            <div class="row mt-5">
+                <div class="col-lg-12 position-relative">
+                    <div class="bloc-text-center-primaire">
+                        <h2 class="bloc-title text-primaire">
+                            NOTRE GALERIE
+                        </h2>
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="album-cover">
+                                    <img src="{{ asset ('../images/galerie.jpg') }}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="album-cover">
+                                    <img src="{{ asset ('../images/galerie_1.jpg') }}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="album-cover">
+                                    <img src="{{ asset ('/images/galerie_3.jpg') }}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="album-cover">
+                                    <img src="{{ asset ('/images/galerie_9.jpg') }}" alt="" class="h-100">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="album-cover">
+                                    <img src="{{ asset ('/images/galerie_8.jpg') }}" alt="" class="h-100">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="album-cover">
+                                    <img src="{{ asset ('/images/galerie_10.jpg') }}" alt="" class="h-100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="row mt-5 mb-5">
+                <div class="col-lg-12 position-relative">
+                    <div class="bloc-text-center-primaire">
+                        <h2 class="bloc-title text-primaire">
+                            TEMOIGNAGE
+                        </h2>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <div class="team">
-            <div class="row my-5">
+            <div class="row mt-5 mb-5">
                 <div class="col-lg-12 position-relative">
                     <div class="bloc-text-center-primaire">
                         <h2 class="bloc-title text-primaire">
@@ -448,6 +455,5 @@
             </div>
         </div>
     </div>
-    {#End about#}
 
 {% endblock %}

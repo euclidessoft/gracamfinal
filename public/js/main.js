@@ -216,3 +216,8 @@ for (var i = 0; i < SmallImg.length; i++) {
 
 /*************End Product image*************/
 
+const myCarouselElement = document.getElementById('header-carousel')
+
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+    pause: false
+})

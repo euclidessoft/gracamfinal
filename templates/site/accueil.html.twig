@@ -12,8 +12,8 @@
                     </div>
                     <div class="carousel-overlay">
                         <div class="container mt-md-5">
-                            <div class="row mt-md-5 text-center">
-                                <div class="col-sm-10 col-lg-8">
+                            <div class="row mt-md-5">
+                                <div class="col-sm-10 col-lg-8 p-lg-5">
                                     <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
                                         {{ "Granites"|trans }}
                                     </h1>
@@ -30,8 +30,8 @@
                     </div>
                     <div class="carousel-overlay">
                         <div class="container mt-md-5">
-                            <div class="row mt-md-5 text-center">
-                                <div class="col-sm-10 col-lg-8">
+                            <div class="row mt-md-5">
+                                <div class="col-sm-10 col-lg-8 p-lg-5">
                                     <h1 class="fs-2 fw-bold mb-4 animated fadeIn delay-1s">
                                         {{ "Graviers"|trans }}
                                     </h1>
@@ -48,8 +48,8 @@
                     </div>
                     <div class="carousel-overlay">
                         <div class="container mt-md-5">
-                            <div class="row mt-md-5 text-center">
-                                <div class="col-sm-10 col-lg-8">
+                            <div class="row mt-md-5">
+                                <div class="col-sm-10 col-lg-8 p-lg-5">
                                     <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
                                         {{ "Sables"|trans }}
                                     </h1>
@@ -370,7 +370,67 @@
                         <h2 class="bloc-title text-primaire">
                             {{ "TEMOIGNAGE"|trans }}
                         </h2>
-
+                        <div id="testimonial" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="col-lg-4 offset-lg-4 d-flex justify-content-center">
+                                        <img src="{{ asset ('../images/team2.jpg') }}" alt="...">
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <div class="col-lg-8 offset-lg-2">
+                                            <h5>Jean Koulagna</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum
+                                                fugiat molestiae? Aliquid asperiores assumenda, consequatur culpa
+                                                dignissimos incidunt iste libero nobis non nostrum quae temporibus totam
+                                                velit voluptate voluptates?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-lg-4 offset-lg-4 d-flex justify-content-center">
+                                        <img src="{{ asset ('../images/team3.jpg') }}" alt="...">
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <div class="col-lg-8 offset-lg-2">
+                                            <h5>Albert Mangou</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis
+                                                cumque delectus dignissimos dolore doloribus illo incidunt itaque maxime
+                                                necessitatibus nemo nostrum placeat possimus provident, quam quos
+                                                temporibus veniam. Impedit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-lg-4 offset-lg-4 d-flex justify-content-center">
+                                        <img src="{{ asset ('../images/team5.jpg') }}" alt="...">
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <div class="col-lg-8 offset-lg-2">
+                                            <h5>Pascaline Kalang</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa
+                                                dolor, hic quo sint sit vero. Aliquam assumenda culpa, dolor ducimus eos
+                                                illum laborum nemo obcaecati totam ut vitae, voluptas!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#testimonial" data-bs-slide-to="0" class="active"
+                                        aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#testimonial" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#testimonial" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonial"
+                                    data-bs-slide="prev">
+                                <i class="fa fa-chevron-left fa-2x"></i>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#testimonial"
+                                    data-bs-slide="next">
+                                <i class="fa fa-chevron-right fa-2x"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -381,90 +441,106 @@
                 <div class="col-lg-12 position-relative">
                     <div class="bloc-text-center-primaire">
                         <h2 class="bloc-title text-primaire">
-                            {{ "EQUIPE DIRIGEANTE"|trans }}
+                            EQUIPE DIRIGEANTE
                         </h2>
                         <div class="row gy-5">
                             <div class="col-lg-3">
-                                <div class="card shadow border-primaire shadow">
-                                    <div class="content p-5">
-                                        <div class="bloc-img">
-                                            <img src="{{ asset ('../images/team5.jpg') }}" alt="">
-                                        </div>
-                                        <div class="bloc-team-text">
-                                            <h4>Michel</h4>
-                                            <h5>
-                                                {{ "Director General"|trans }}
-                                            </h5>
-                                        </div>
-                                        <div class="bloc-team-icon">
-                                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                        </div>
+                                <div class="bloc-team">
+                                    <div class="bloc-team-img">
+                                        <img src="{{ asset ('../images/team2.jpg') }}" alt="">
+                                    </div>
+                                    <div class="bloc-team-text">
+                                        <h4>Michel Ovono</h4>
+                                        <h5>Directeur Général</h5>
+                                    </div>
+                                    <div class="bloc-team-icon">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="card shadow border-primaire shadow">
-                                    <div class="content p-5">
-                                        <div class="bloc-img">
-                                            <img src="{{ asset ('../images/team2.jpg') }}" alt="">
-                                        </div>
-                                        <div class="bloc-team-text">
-                                            <h4>Frank </h4>
-                                            <h5>
-                                                {{ "Director General"|trans }}
-                                            </h5>
-                                        </div>
-                                        <div class="bloc-team-icon">
-                                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                        </div>
+                                <div class="bloc-team">
+                                    <div class="bloc-team-img">
+                                        <img src="{{ asset ('../images/team3.jpg') }}" alt="">
+                                    </div>
+                                    <div class="bloc-team-text">
+                                        <h4>Yves Ondoa</h4>
+                                        <h5>Directeur Commercial</h5>
+                                    </div>
+                                    <div class="bloc-team-icon">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="card shadow border-primaire shadow">
-                                    <div class="content p-5">
-                                        <div class="bloc-img">
-                                            <img src="{{ asset ('../images/team3.jpg') }}" alt="">
-                                        </div>
-                                        <div class="bloc-team-text">
-                                            <h4>Victoire</h4>
-                                            <h5>
-                                                {{ "Director General"|trans }}
-                                            </h5>
-                                        </div>
-                                        <div class="bloc-team-icon">
-                                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                        </div>
+                                <div class="bloc-team">
+                                    <div class="bloc-team-img">
+                                        <img src="{{ asset ('../images/team4.jpg') }}" alt="">
+                                    </div>
+                                    <div class="bloc-team-text">
+                                        <h4>Didier Njako</h4>
+                                        <h5>Directeur Marketing</h5>
+                                    </div>
+                                    <div class="bloc-team-icon">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="card shadow border-primaire shadow">
-                                    <div class="content p-5">
-                                        <div class="bloc-img">
-                                            <img src="{{ asset ('../images/team4.jpg') }}" alt="">
-                                        </div>
-                                        <div class="bloc-team-text">
-                                            <h4>Joseph</h4>
-                                            <h5>
-                                                {{ "Director General"|trans }}
-                                            </h5>
-                                        </div>
-                                        <div class="bloc-team-icon">
-                                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                        </div>
+                                <div class="bloc-team">
+                                    <div class="bloc-team-img">
+                                        <img src="{{ asset ('../images/team5.jpg') }}" alt="">
+                                    </div>
+                                    <div class="bloc-team-text">
+                                        <h4>Amelia Konga</h4>
+                                        <h5>Ressources humaines</h5>
+                                    </div>
+                                    <div class="bloc-team-icon">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

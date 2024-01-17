@@ -184,6 +184,11 @@
             <div class="row">
                 <div class="col-lg-3 ">
                     <h1>Gracam</h1>
+                    <p class="mt-4 text-white">
+                        Gracam est le fruit d'une vision audacieuse pour créer
+                        une entreprise qui soit à la fois un leader dans l'industrie des granulats et un exemple de
+                        responsabilité environnementale.
+                    </p>
                 </div>
                 <div class="col-lg-3 col-md-6 position-relative">
                     <h4 class="footer-tittle">{{ "Liens utiles"|trans }}</h4>
@@ -192,11 +197,13 @@
                     <a class="btn btn-link" href="{{ path('Distribution') }}">{{ "Services"|trans }}</a>
                     <a class="btn btn-link" href="{{ path('About') }}">{{ "A propos"|trans }}</a>
                     <a class="btn btn-link" href="{{ path('Gallery') }}">{{ "Galerie"|trans }}</a>
-{#                    <a class="btn btn-link" href="{{ path('Carriere') }}">{{ "Carrière"|trans }}</a>#}
-                    <a class="btn btn-link" href="{{ path('Contact') }}">{{ "Contact"|trans }}</a>
+                    {#                    <a class="btn btn-link" href="{{ path('Carriere') }}">{{ "Carrière"|trans }}</a>#}
+                    {#                    <a class="btn btn-link" href="{{ path('Contact') }}">{{ "Contact"|trans }}</a>#}
                 </div>
                 <div class="col-lg-3 col-md-6 position-relative">
-                    <h4 class="footer-tittle">{{ "Réseaux sociaux"|trans }}</h4>
+                    <h4 class="footer-tittle">
+                        {{ "Réseaux sociaux"|trans }}
+                    </h4>
                     <div class="row">
                         <div class="col-12">
                             <a class="socialink" href="#">
@@ -241,18 +248,25 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 position-relative">
-                    <h3>Contact</h3>
-                    <div class="mt-1">
-                        Nkolmekok-Myom II, Yaoundé
+                    <h4 class="footer-tittle">
+                        {{ "Contact"|trans }}
+                    </h4>
+                    <div class="mt-1 text-white">
+                            Nkolmekok-Myom II, Yaoundé
                     </div>
-                    <div class="mt-1">
-                        Tel : +237 682 223 658 / 665 549 639
+                    <div class="mt-1 text-white">
+                        Tel :
+                        <a class="footer-link" href="tel:+237682223658">+237 682 223 658</a> /
+                        <a class="footer-link" href="tel:+237665549639"> +237 665 549 639</a>
                     </div>
-                    <div class="mt-1">
-                        BP : 3582 Yaoundé
+                    <div class="mt-1 text-white">
+                            BP : 3582 Yaoundé
                     </div>
-                    <div class="mt-1">
-                        Email : info@granulatsducameroun.com
+                    <div class="mt-1 text-white">
+                            Email :
+                        <a class="footer-link" href="mailto:info@granulatsducameroun.com">
+                            info@granulatsducameroun.com
+                        </a>
                     </div>
                 </div>
             </div>
@@ -261,7 +275,7 @@
     <div class="container-fluid copyright px-0">
         <div class="d-flex flex-column flex-md-row justify-content-between">
             <div class="py-4 px-5 text-center text-md-start">
-                <p class="mb-0">&copy; 2023 Gracam, {{ "Tout droits réservés."|trans }}</p>
+                <p class="mb-0">&copy; 2024 Gracam, {{ "Tout droits réservés."|trans }}</p>
             </div>
             <div class="py-4 px-5 bg-secondaire footer-shape position-relative text-center text-md-end">
                 <p class="mb-0 text-primaire">
@@ -296,7 +310,7 @@
 {% block scroll %}
     <script>
         /***Start Funtion pour Scroll navbar**/
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             var navbar = document.getElementById('navbar');
             var links = navbar.getElementsByClassName('nav-link');
             if (window.scrollY > 50) {
@@ -309,7 +323,6 @@
     </script>
 {% endblock %}
 {#<script src="{{ asset('js/main.min.js')}}"></script>#}
-
 
 
 </body>

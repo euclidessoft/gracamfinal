@@ -19,8 +19,8 @@
     --blanc: #fff;
     --blanc-rgb: 255, 255, 255;
     --twitter: #1d9bf0;
-    --facebook: #385898;
-    --linkedin: #004182;
+    --facebook: #0866FF;
+    --linkedin: #0a66c2;
     --instagram: #e83e8c;
     --youtube: #ff0000;
     --header-overlay: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
@@ -47,12 +47,12 @@ a {
 
 /************** Nav start **********/
 .navbar {
-background-color: rgba(var(--secondaire-rgb), 0.2);
+    background-color: rgba(var(--secondaire-rgb), 0.2);
 }
 
 /* Couleur de fond de la navbar lors du défilement */
 .navbar.scrolled {
-    background-color: rgba(var(--primaire-rgb), 0.9);
+    background-color: var(--primaire);
     transition: var(--transdelay);
 }
 
@@ -255,7 +255,6 @@ h3.text-dark {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 3rem !important;
-    background-position: center;
     padding-bottom: 3rem !important;
 }
 
@@ -288,8 +287,8 @@ h3.text-dark {
 }
 
 .carousel-overlay {
-    background: linear-gradient(90deg, rgba(151, 136, 136, 0.8) 10%, transparent);
-    width: 70%;
+    background: linear-gradient(90deg, rgba(var(--noir-rgb), 0.5), transparent);
+    width: 60%;
     position: absolute;
     top: 0;
     left: 0;
@@ -298,85 +297,8 @@ h3.text-dark {
     align-items: center;
 }
 
-.header-carousel .carousel-control {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 95%;
-    z-index: 4000;
-}
-
-.header-carousel .carousel-control .carousel-control-prev,
-.header-carousel .carousel-control .carousel-control-next {
-    margin: 7px 0;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondaire);
-    background: transparent;
-    font-size: 50px;
-    transition: .5s;
-    border-radius: 50%;
-}
-
-.header-carousel .carousel-control .carousel-control-prev:hover,
-.header-carousel .carousel-control .carousel-control-next:hover {
-    color: var(--primaire);
-}
-
-.header-carousel .carousel-indicators {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.header-carousel .carousel-indicators [data-bs-target] {
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: 3px solid var(--primaire);
-    border-radius: 3px;
-}
-
-.header-carousel .carousel-indicators [data-bs-target].active {
-    background-color: var(--primaire-soft);
-    border-radius: 50%;
-    border: 3px solid var(--primaire);
-}
-
-
-.testimonial-carousel .owl-dot {
-    position: relative;
-    width: 15px;
-    height: 15px;
-    border: 1px solid var(--primaire);
-    border-radius: 15px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    position: inherit;
-}
-
-.testimonial-carousel .owl-nav .owl-prev {
-    left: -30px;
-}
-
-.testimonial-carousel .owl-nav .owl-next {
-    right: -30px;
-}
-
 .carousel-item h1.fs-2 {
-    font-size: 3rem !important;
+    font-size: 5rem !important;
     color: var(--secondaire) !important;
 }
 
@@ -647,12 +569,12 @@ hr {
 }
 
 .valeurs {
-    background: url("../images/image17.jpg");
+    background-image: url("../images/image17.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     padding: 6rem;
     margin: 0 -12px;
-    background-position: center;
 }
 
 .valeur-bloc {
@@ -684,97 +606,77 @@ hr {
     border-top: none;
 }
 
-/*team accueil*/
-.card {
-    --bs-card-border-color: none;
-    --bs-card-border-radius: none;
-    --bs-card-inner-border-radius: none;
+/**** Team Starts*/
+.bloc-team {
+    border: 1px solid var(--primaire);
+    box-shadow: 10px 10px 10px rgba(var(--noir-rgb), 0.1);
+    padding: 3rem;
+    height: 100%;
 }
 
-.team-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+.bloc-team .bloc-team-img {
+    width: 100%;
+    aspect-ratio: 1 /1;
+    margin: 0 auto 20px;
 }
 
-/*.card{*/
-/*    !*width: 280px;*!*/
-/*    !*height: 416px;*!*/
-/*    padding: 30px;*/
-/*    background-color: #f2f3f7;*/
-/*    border: none !important;*/
-/*}*/
-.card .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card .bloc-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    position: relative;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-.card .bloc-img img {
+.bloc-team .bloc-team-img img {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    border-radius: 50%;
     object-fit: cover;
 }
 
-.card .bloc-team-text h4 {
+.bloc-team .bloc-team-text {
+    margin-bottom: 20px;
+}
+
+.bloc-team .bloc-team-text h4 {
     color: var(--primaire);
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    letter-spacing: 1px;
     text-align: center;
 }
 
-.card .bloc-team-text h5 {
+.bloc-team .bloc-team-text h5 {
     color: var(--primaire-soft);
     font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-weight: normal;
     text-align: center;
+    font-style: italic;
 }
 
-.card .bloc-team-icon {
+.bloc-team .bloc-team-icon {
     border-top: 1px solid var(--primaire);
     display: flex;
     align-items: center;
-    margin-top: 26px;
+    /*margin-top: 26px;*/
 }
 
-.card .bloc-team-icon a {
+.bloc-team .bloc-team-icon a {
     text-decoration: none;
     color: var(--primaire);
     margin: 9px;
     font-size: 30px;
 }
 
-.card .bloc-team-icon .fa-facebook:hover {
-    color: #0196e3;
+.bloc-team .bloc-team-icon .fa-facebook:hover {
+    color: var(--facebook);
 }
 
-.card .bloc-team-icon .fa-instagram:hover {
-    color: #FF5850;
+.bloc-team .bloc-team-icon .fa-instagram:hover {
+    color: var(--instagram);
 }
 
-.card .bloc-team-icon .fa-x-twitter:hover {
-    color: #0F1419;
+.bloc-team .bloc-team-icon .fa-x-twitter:hover {
+    color: var(--noir);
 }
 
-.card .bloc-team-icon .fa-linkedin:hover {
-    color: #0196e3;
+.bloc-team .bloc-team-icon .fa-linkedin:hover {
+    color: var(--linkedin);
 }
+
+/************* Team Ends *****************/
 
 .btn{
     --bs-btn-border-radius: none;
@@ -782,9 +684,7 @@ hr {
 .breadcrumb-item+.breadcrumb-item::before{
     color: var(--blanc) !important;
 }
-/*team accueil*/
 
-/**End about accueil**/
 /*** Footer ***/
 .footer {
     background-color: var(--primaire);
@@ -800,15 +700,6 @@ hr {
     color: var(--secondaire);
     margin-bottom: 2rem !important;
     border-bottom: 3px solid var(--secondaire);
-}
-
-.footer-tittle::after {
-    position: absolute;
-    content: "\f043";
-    font-family: "Font Awesome 6 Free", sans-serif;
-    top: 50px;
-    right: 18px;
-    font-size: 15px;
 }
 
 .footer .btn.btn-social {
@@ -866,10 +757,11 @@ footer .btn:hover {
 
 .footer .btn.btn-link:hover,
 .footer .footer-link:hover {
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
     box-shadow: none;
     font-weight: bold;
     transition: all ease-in-out 0.4s;
+    color: var(--secondaire);
 }
 
 .copyright {
@@ -1272,6 +1164,49 @@ textarea.form-control {
     margin-top: 2rem;
 }
 
+#testimonial{
+    margin-top: 2rem;
+}
+
+.testimonial .carousel-item {
+    /*height: 100%;*/
+}
+
+.testimonial .carousel-item img {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.testimonial .carousel-caption {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: var(--primaire);
+}
+
+.testimonial .carousel-indicators {
+    position: relative;
+}
+
+.testimonial .carousel-indicators [data-bs-target] {
+    background-color: var(--secondaire);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.testimonial .carousel-indicators .active {
+    background-color: var(--primaire);
+}
+
+.testimonial .carousel-control-next,
+.testimonial .carousel-control-prev {
+    color: var(--primaire);
+}
+
 @media (max-width: 768px) {
     .service-bordure {
         margin-left: 0;
@@ -1404,7 +1339,7 @@ textarea.form-control {
     }
 
     .navbar {
-        border-bottom: 2px solid var(--primaire-soft);
+        border-bottom: 2px solid var(--secondaire);
     }
 
     .carousel-img.slide_1 {
@@ -1470,7 +1405,6 @@ textarea.form-control {
         margin-bottom: 0 !important;
     }
 }
-
 
 @media (max-width: 992px) {
 

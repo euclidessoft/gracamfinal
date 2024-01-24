@@ -549,7 +549,7 @@ textarea.form-control {
 .bloc-text-left .bloc-title {
     position: absolute;
     top: -15px;
-    left: 20%;
+    left: 15%;
 }
 
 .bloc-text-center-primaire .bloc-title,
@@ -562,7 +562,7 @@ textarea.form-control {
 .bloc-text-right .bloc-title {
     position: absolute;
     top: -15px;
-    right: 20%;
+    right: 15%;
 }
 
 .bloc-image {

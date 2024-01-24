@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
     //Loading
-    jQuery(window).on("load", function () {
+    /*jQuery(window).on("load", function () {
         jQuery(".loader").fadeOut(500);
-    });
+    });*/
 
     // Initiate the wowjs
     new WOW().init();
@@ -219,5 +219,6 @@ for (var i = 0; i < SmallImg.length; i++) {
 const myCarouselElement = document.getElementById('header-carousel')
 
 const carousel = new bootstrap.Carousel(myCarouselElement, {
+    interval: 5000,
     pause: false
 })

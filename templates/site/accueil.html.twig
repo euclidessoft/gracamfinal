@@ -5,19 +5,19 @@
 
     <!--Page Header Starts-->
     <div class="container-fluid px-0">
-        <div id="header-carousel" class="carousel header-carousel carousel-fade" data-bs-ride="carousel">
+        <div id="header-carousel" class="header-carousel carousel carousel-fade slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active">
-                    <div class="carousel-img slide_1 animated fadeIn">
+                    <div class="carousel-img slide_1 animated slow fadeIn">
                     </div>
                     <div class="carousel-overlay">
                         <div class="container mt-md-5">
                             <div class="row mt-md-5">
                                 <div class="col-sm-10 col-lg-8 p-lg-5">
-                                    <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
+                                    <h1 class="fs-2 animated fadeIn delay-1s">
                                         {{ "Granites"|trans }}
                                     </h1>
-                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
+                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-2s">
                                         {{ "Transformez vos espaces avec l'élégance intemporelle que seul le granite peut offrir."|trans }}
                                     </p>
                                 </div>
@@ -26,17 +26,17 @@
                     </div>
                 </div>
                 <div class="carousel-item position-relative">
-                    <div class="carousel-img slide_2 animated fadeIn">
+                    <div class="carousel-img slide_2 animated slow fadeIn">
                     </div>
                     <div class="carousel-overlay">
                         <div class="container mt-md-5">
                             <div class="row mt-md-5">
                                 <div class="col-sm-10 col-lg-8 p-lg-5">
-                                    <h1 class="fs-2 fw-bold mb-4 animated fadeIn delay-1s">
+                                    <h1 class="fs-2 animated fadeIn delay-1s">
                                         {{ "Graviers"|trans }}
                                     </h1>
-                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
-                                        {{ "Explorez la polyvalence du gravier de qualité de GRACAM, idéal pour divers projets de construction. Faites confiance à notre engagement pour des résultats durables sur tous vos chantiers."|trans }}
+                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-2s">
+                                        {{ "Explorez la polyvalence du gravier de qualité de GRACAM, idéal pour divers projets de construction."|trans }}
                                     </p>
                                 </div>
                             </div>
@@ -44,17 +44,17 @@
                     </div>
                 </div>
                 <div class="carousel-item position-relative">
-                    <div class="carousel-img slide_3 animated fadeIn">
+                    <div class="carousel-img slide_3 animated slow fadeIn">
                     </div>
                     <div class="carousel-overlay">
                         <div class="container mt-md-5">
                             <div class="row mt-md-5">
                                 <div class="col-sm-10 col-lg-8 p-lg-5">
-                                    <h1 class="fs-2 text-white fw-bold mb-4 animated fadeIn delay-1s">
+                                    <h1 class="fs-2 animated fadeIn delay-1s">
                                         {{ "Sables"|trans }}
                                     </h1>
-                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-1s">
-                                        {{ "Au cœur de la Haute-Sanaga, GRACAM s'engage à fournir des solutions de sable de la plus haute qualité, extraites avec soin des profondeurs du fleuve Sanaga."|trans }}
+                                    <p class="fs-5 text-white mb-4 pb-2 animated fadeIn delay-2s">
+                                        {{ "Au cœur de la Haute-Sanaga, GRACAM fournit des solutions de sable de la plus haute qualité."|trans }}
                                     </p>
 
                                 </div>
@@ -70,15 +70,15 @@
         <div class="about">
             <div class="row mt-5 gy-5">
                 <div class="col-lg-7 position-relative">
-                    <div class="bloc-text-left">
-                        <h2 class="bloc-title">
+                    <div class="bloc-text-left wow animated fadeInUp" data-wow-delay="0.1s">
+                        <h2 class="bloc-title wow animated fadeInLeft" data-wow-delay="1s">
                             {{ "A PROPOS DE GRACAM"|trans }}
                         </h2>
                         <h4 class="">
                             {{ "Notre histoire"|trans }}
                         </h4>
                         <hr class="border-1 border-primaire">
-                        <p class="">
+                        <p class="fs-5">
                             {{ "Fondée depuis plusieurs décennies, Gracam est le fruit d'une vision audacieuse pour créer
                             une entreprise qui soit à la fois un leader dans l'industrie des granulats et un exemple de
                             responsabilité environnementale. Notre parcours a été marqué par des investissements
@@ -92,8 +92,8 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="bloc-image">
-                        <img src="{{ asset("../images/carriere_3_copie.jpg") }}" alt="">
+                    <div class="bloc-image wow animated fadeInUp" data-wow-delay="0.5s">
+                        <img src="{{ asset("../images/about.jpg") }}" alt="">
                     </div>
                 </div>
             </div>
@@ -101,13 +101,13 @@
         <div class="pourquoi">
             <div class="row gy-5 mb-5">
                 <div class="col-lg-5">
-                    <div class="bloc-image">
+                    <div class="bloc-image wow animated fadeInUp" data-wow-delay="0.5s">
                         <img src="{{ asset("../images/about_3.jpg") }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 position-relative">
-                    <div class="bloc-text-right">
-                        <h2 class="bloc-title">
+                    <div class="bloc-text-right wow animated fadeInUp" data-wow-delay="0.1s">
+                        <h2 class="bloc-title wow animated fadeInRight" data-wow-delay="1s">
                             {{ "POURQUOI NOUS CHOISIR"|trans }}
                         </h2>
                         <h4 class="">
@@ -115,7 +115,7 @@
                             satisfaction totale de ses partenaires."|trans }}
                         </h4>
                         <hr class="border-1 border-primaire">
-                        <p class="">
+                        <p class="fs-5">
                             {{ "Notre engagement envers la qualité, la durabilité et l'innovation est au cœur de notre ADN.
                             Nous mettons un point d'honneur à fournir des produits et des services de la plus haute
                             qualité, répondant aux normes les plus strictes de l'industrie. La responsabilité
@@ -141,7 +141,7 @@
                         </h2>
                         <div class="row g-4">
                             <div class="col-lg-3">
-                                <div class="valeur-bloc">
+                                <div class="valeur-bloc wow animated fadeInUp" data-wow-delay="0.1s">
                                     <h5 class="valeur-title">
                                         {{ "Engagement envers l'Excellence"|trans }}
                                     </h5>
@@ -152,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="valeur-bloc">
+                                <div class="valeur-bloc wow animated fadeInUp" data-wow-delay="0.3s">
                                     <h5 class="valeur-title">
                                         {{ " Intégrité et Responsabilité"|trans }}
                                     </h5>
@@ -163,7 +163,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="valeur-bloc">
+                                <div class="valeur-bloc wow animated fadeInUp" data-wow-delay="0.5s">
                                     <h5 class="valeur-title">
                                         {{ "Innovation"|trans }}
                                     </h5>
@@ -174,7 +174,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="valeur-bloc">
+                                <div class="valeur-bloc wow animated fadeInUp" data-wow-delay="0.7s">
                                     <h5 class="valeur-title">
                                         {{ "Qualité et Respect des normes"|trans }}
                                     </h5>
@@ -200,7 +200,7 @@
                         <div class="row g-4">
                             <div class="col-lg-4">
                                 <a href="{{ path('Produits') }}#sables">
-                                    <div class="produit">
+                                    <div class="produit wow animated fadeInUp" data-wow-delay="0.1s">
                                         <!-- Product image-->
                                         <div class="produit-img">
                                             <img src="{{ asset('images/sable.jpg') }}"
@@ -221,7 +221,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <a href="{{ path('Produits') }}#graviers">
-                                    <div class="produit">
+                                    <div class="produit wow animated fadeInUp" data-wow-delay="0.3s">
                                         <!-- Product image-->
                                         <div class="produit-img">
                                             <img src="{{ asset('images/gravier10.jpg') }}"
@@ -242,7 +242,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <a href="{{ path('Produits') }}#granites">
-                                    <div class="produit">
+                                    <div class="produit wow animated fadeInUp" data-wow-delay="0.5s">
                                         <!-- Product image-->
                                         <div class="produit-img">
                                             <img src="{{ asset('images/produit_7.jpg') }}"
@@ -274,8 +274,8 @@
                 <div class="col-lg-6">
                     <div class="row gy-3">
                         <div class="col-lg-7 position-relative">
-                            <div class="bloc-text-left">
-                                <h2 class="bloc-title">
+                            <div class="bloc-text-left wow animated fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="bloc-title wow animated fadeInLeft" data-wow-delay="1s">
                                     {{ "Distribution"|trans }}
                                 </h2>
                                 <p class="">
@@ -288,7 +288,7 @@
                             </div>
                         </div>
                         <div class="col-lg-5">
-                            <div class="bloc-image">
+                            <div class="bloc-image wow animated fadeInUp" data-wow-delay="0.5s">
                                 <img src="{{ asset("../images/distribution.jpg") }}" alt=""
                                      class="d-flex justify-content-center">
                             </div>
@@ -298,13 +298,13 @@
                 <div class="col-lg-6">
                     <div class="row row gy-3">
                         <div class="col-lg-5">
-                            <div class="bloc-image">
+                            <div class="bloc-image wow animated fadeInUp" data-wow-delay="0.5s">
                                 <img src="{{ asset("../images/header_2.jpg") }}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-7 position-relative">
-                            <div class="bloc-text-right">
-                                <h2 class="bloc-title">
+                            <div class="bloc-text-right wow animated fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="bloc-title wow animated fadeInRight" data-wow-delay="1s">
                                     {{ "Accompagnement"|trans }}
                                 </h2>
                                 <p class="">
@@ -329,32 +329,32 @@
                         </h2>
                         <div class="row g-4">
                             <div class="col-lg-4">
-                                <div class="album-cover">
+                                <div class="album-cover wow animated fadeInUp" data-wow-delay="0.1s">
                                     <img src="{{ asset ('../images/galerie.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="album-cover">
+                                <div class="album-cover wow animated fadeInUp" data-wow-delay="0.3s">
                                     <img src="{{ asset ('../images/galerie_1.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="album-cover">
+                                <div class="album-cover wow animated fadeInUp" data-wow-delay="0.5s">
                                     <img src="{{ asset ('/images/galerie_3.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="album-cover">
+                                <div class="album-cover wow animated fadeInUp" data-wow-delay="0.7s">
                                     <img src="{{ asset ('/images/galerie_9.jpg') }}" alt="" class="h-100">
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="album-cover">
+                                <div class="album-cover wow animated fadeInUp" data-wow-delay="0.9s">
                                     <img src="{{ asset ('/images/galerie_8.jpg') }}" alt="" class="h-100">
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="album-cover">
+                                <div class="album-cover wow animated fadeInUp" data-wow-delay="1.1s">
                                     <img src="{{ asset ('/images/galerie_10.jpg') }}" alt="" class="h-100">
                                 </div>
                             </div>
@@ -374,7 +374,7 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="col-lg-4 offset-lg-4 d-flex justify-content-center">
-                                        <img src="{{ asset ('../images/team2.jpg') }}" alt="...">
+                                        <img src="{{ asset ('../images/images.jpg') }}" alt="...">
                                     </div>
                                     <div class="carousel-caption">
                                         <div class="col-lg-8 offset-lg-2">
@@ -388,7 +388,7 @@
                                 </div>
                                 <div class="carousel-item">
                                     <div class="col-lg-4 offset-lg-4 d-flex justify-content-center">
-                                        <img src="{{ asset ('../images/team3.jpg') }}" alt="...">
+                                        <img src="{{ asset ('../images/carriere_2.jpg') }}" alt="...">
                                     </div>
                                     <div class="carousel-caption">
                                         <div class="col-lg-8 offset-lg-2">
@@ -402,7 +402,7 @@
                                 </div>
                                 <div class="carousel-item">
                                     <div class="col-lg-4 offset-lg-4 d-flex justify-content-center">
-                                        <img src="{{ asset ('../images/team5.jpg') }}" alt="...">
+                                        <img src="{{ asset ('../images/carriere_4.jpg') }}" alt="...">
                                     </div>
                                     <div class="carousel-caption">
                                         <div class="col-lg-8 offset-lg-2">
@@ -445,7 +445,7 @@
                         </h2>
                         <div class="row gy-5">
                             <div class="col-lg-3">
-                                <div class="bloc-team">
+                                <div class="bloc-team wow animated fadeInUp" data-wow-delay="0.1s">
                                     <div class="bloc-team-img">
                                         <img src="{{ asset ('../images/team2.jpg') }}" alt="">
                                     </div>
@@ -470,7 +470,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="bloc-team">
+                                <div class="bloc-team wow animated fadeInUp" data-wow-delay="0.3s">
                                     <div class="bloc-team-img">
                                         <img src="{{ asset ('../images/team3.jpg') }}" alt="">
                                     </div>
@@ -495,7 +495,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="bloc-team">
+                                <div class="bloc-team wow animated fadeInUp" data-wow-delay="0.5s">
                                     <div class="bloc-team-img">
                                         <img src="{{ asset ('../images/team4.jpg') }}" alt="">
                                     </div>
@@ -520,7 +520,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="bloc-team">
+                                <div class="bloc-team wow animated fadeInUp" data-wow-delay="0.7s">
                                     <div class="bloc-team-img">
                                         <img src="{{ asset ('../images/team5.jpg') }}" alt="">
                                     </div>

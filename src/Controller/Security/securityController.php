@@ -61,7 +61,7 @@ class securityController extends AbstractController
      */
     public function pierreornementale(Request $request)
     {
-        return $this->render('site/pierreornementale.html.twig');
+        return $this->render('site/granite.html.twig');
     }
 
     /**

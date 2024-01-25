@@ -112,7 +112,7 @@ class AccueilController extends AbstractController
 //                return $this->redirectToRoute('Contact');
             }
         }
-        return $this->render('site/produits/pierreornementale.html.twig',[
+        return $this->render('site/produits/granite.html.twig',[
         'form' => $form->createView(),
             ]);
     }

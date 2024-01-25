@@ -155,7 +155,7 @@ a {
 
 /* Start css contact */
 .page-header-contact {
-    background-image: url(../images/image36.jpg);
+    background-image: url(../images/banniere_contact.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,7 +236,7 @@ h3.text-dark {
 }
 
 .page-header-about {
-    background-image: url(../images/ab2.jpg);
+    background-image: url(../images/banniere_about.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -250,7 +250,7 @@ h3.text-dark {
 
 
 .page-header-produit {
-    background-image: url(../images/produit_1.jpg);
+    background-image: url(../images/banniere_produit.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -280,11 +280,11 @@ h3.text-dark {
 }
 
 .carousel-img.slide_1 {
-    background-image: url('../images/galerie_1.jpg');
+    background-image: url('../images/slide_granite.jpg');
 }
 
 .carousel-img.slide_2 {
-    background-image: url('../images/slides_1.jpg');
+    background-image: url('../images/slide_gravier.jpg');
 }
 
 .carousel-img.slide_3 {
@@ -585,7 +585,7 @@ hr {
 }
 
 .valeurs {
-    background-image: url("../images/about_1.png");
+    background-image: url("../images/bg-valeurs.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -1027,11 +1027,11 @@ a {
 }
 
 .gravier .categorie-title {
-    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/gravier10.jpg);
+    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/gravier.jpg);
 }
 
 .pierre .categorie-title {
-    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/produit_3.jpg);
+    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/granite.jpg);
 }
 
 .border-primaire {
@@ -1104,7 +1104,7 @@ a {
 /**Start page Service **/
 
 .page-header-service {
-    background-image: url(../images/banniereheader.jpg);
+    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)), url(../images/banniere_services.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1114,6 +1114,8 @@ a {
 
 .service-title {
     color: var(--primaire);
+    text-align: center;
+    font-weight: bold;
 }
 
 .service-bordure {
@@ -1328,15 +1330,15 @@ a {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/galerie_1.jpg');
+        background-image: url('../images/slide_granite.jpg');
     }
 
     .carousel-img.slide_2 {
-        background-image: url('../images/slides_1.jpg');
+        background-image: url('../images/slide_gravier.jpg');
     }
 
     .carousel-img.slide_3 {
-        background-image: url('../images/service.png');
+        background-image: url('../images/slide_sable.png');
     }
 }
 
@@ -1370,15 +1372,15 @@ a {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/galerie_1.jpg');
+        background-image: url('../images/slide_granite.jpg');
     }
 
     .carousel-img.slide_2 {
-        background-image: url('../images/slides_1.jpg');
+        background-image: url('../images/slide_gravier.jpg');
     }
 
     .carousel-img.slide_3 {
-        background-image: url('../images/service.png');
+        background-image: url('../images/slide_sable.jpg');
     }
 
     .carousel-overlay {

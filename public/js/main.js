@@ -221,6 +221,7 @@ for (var i = 0; i < SmallImg.length; i++) {
     };
 }
 
+
 /*************End Product image*************/
 
 const myCarouselElement = document.getElementById('header-carousel')

@@ -28,7 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 */
+/*************Start Product image*************/
+var ProductImg = document.getElementById("ProductImg");
+var SmallImg = document.getElementsByClassName("small-img");
 
+for (var i = 0; i < SmallImg.length; i++) {
+    SmallImg[i].onclick= function(event) {
+        ProductImg.src = event.target.src;
+    };
+}
+/*************End Product image*************/
 (function ($) {
     "use strict";
 
@@ -216,13 +225,10 @@ var ProductImg = document.getElementById("ProductImg");
 var SmallImg = document.getElementsByClassName("small-img");
 
 for (var i = 0; i < SmallImg.length; i++) {
-    SmallImg[i].addEventListener("click", function(event) {
+    SmallImg[i].onclick= function(event) {
         ProductImg.src = event.target.src;
-    });
+    };
 }
-
-
-
 /*************End Product image*************/
 
 const myCarouselElement = document.getElementById('header-carousel')

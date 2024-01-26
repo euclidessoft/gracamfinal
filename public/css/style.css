@@ -1118,14 +1118,14 @@ a {
     font-weight: bold;
 }
 
-.service-bordure {
+.service-bordure-left {
     border-right: 5px solid var(--primaire);
     border-top: 5px solid var(--primaire);
     border-bottom: 5px solid var(--primaire);
     /*margin-left: -37px;*/
 }
 
-.service .service-image {
+.service .service-image-left {
     margin-right: -37px !important;
 }
 
@@ -1133,12 +1133,11 @@ a {
     border-left: 5px solid var(--primaire);
     border-top: 5px solid var(--primaire);
     border-bottom: 5px solid var(--primaire);
-    margin-right: -37px;
+    margin-right: -50px;
 }
 
 .service .service-image-right {
     margin-left: -12px !important;
-    height: 500px;
     width: 100%;
 }
 

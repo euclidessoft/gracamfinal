@@ -605,11 +605,11 @@ hr {
 }
 
 .valeur-title {
-    height: 65px;
     text-align: center;
     color: var(--primaire);
     border-bottom: 3px solid var(--primaire);
     font-weight: bold;
+    padding-bottom: 15px;
 }
 
 .valeur-text {
@@ -674,14 +674,16 @@ hr {
     border-top: 1px solid var(--primaire);
     display: flex;
     align-items: center;
+    justify-content: center;
     /*margin-top: 26px;*/
 }
 
 .bloc-team .bloc-team-icon a {
     text-decoration: none;
     color: var(--primaire);
-    margin: 9px;
-    font-size: 30px;
+    margin: 5px;
+    font-size: 28px;
+    box-sizing: border-box;
 }
 
 .bloc-team .bloc-team-icon .fa-facebook:hover {
@@ -1431,5 +1433,20 @@ a {
         margin-left: 0 !important;
         border-bottom: none;
         margin-top: 10px;
+    }
+}
+@media (min-width: 1024px) {
+    .tab {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-top: 3rem !important;
+    }
+    .tab-bloc{
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        margin-bottom: 3rem !important;
+    }
+    .carousel-img {
+        aspect-ratio: 18.5 / 11;
     }
 }

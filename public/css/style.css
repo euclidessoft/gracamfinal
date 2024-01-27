@@ -585,7 +585,7 @@ hr {
 }
 
 .valeurs {
-    background-image: url("../images/bg-valeurs.png");
+    background-image: url("../images/bg-valeurs.jpg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -1122,7 +1122,7 @@ a {
     border-right: 5px solid var(--primaire);
     border-top: 5px solid var(--primaire);
     border-bottom: 5px solid var(--primaire);
-    /*margin-left: -37px;*/
+    margin-left: -37px;
 }
 
 .service .service-image-left {

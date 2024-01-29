@@ -578,9 +578,13 @@ textarea.form-control {
     object-fit: cover;
 }
 .bloc-image .bg_about{
+    background-size: cover;
+    background-position: center;
     background-image: url("../images/about_home.jpg");
 }
 .bloc-image .bg_pourquoi{
+    background-size: cover;
+    background-position: center;
     background-image: url("../images/pourquoi.jpg");
 }
 
@@ -1084,13 +1088,30 @@ a {
     transform: scale(1.2);
 }
 
-.produit-img img {
+.produit-img .gravier,
+.produit-img .sable,
+.produit-img .granite{
     width: 100%;
     /*border-radius: 10px 10px 0 0;*/
     padding: 0;
     aspect-ratio: 1/1;
     object-fit: cover;
     transition: calc(var(--transdelay) * 1.5);
+}
+.produit-img .gravier{
+    background-image: url("../images/gravier_home.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.produit-img .sable{
+    background-image: url("../images/sable_home.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.produit-img .granite {
+    background-image: url("../images/granite_home.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .produit-description {
@@ -1357,6 +1378,15 @@ a {
     .carousel-img.slide_3 {
         background-image: url('../images/slide_sable.jpg');
     }
+    .produit-img .gravier{
+        background-image: url("../images/gravier_home_mobil.jpg");
+    }
+    .produit-img .sable{
+        background-image: url("../images/sable_home_mobil.jpg");
+    }
+    .produit-img .granite {
+        background-image: url("../images/granite_home_mobil.jpg");
+    }
 
     .bloc-image img,
     .bg_pourquoi,
@@ -1373,7 +1403,6 @@ a {
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-
     .service-bordure-right {
         border-left: 5px solid var(--primaire);
         border-right: 5px solid var(--primaire);
@@ -1463,19 +1492,4 @@ a {
         border-bottom: none;
         margin-top: 10px;
     }
-}
-/*@media (max-width: 1024px) and (min-width: 993px){*/
-/*    .tab {*/
-/*        flex: 0 0 100%;*/
-/*        max-width: 100%;*/
-/*        margin-top: 3rem;*/
-/*    }*/
-/*    .tab-bloc{*/
-/*        flex: 0 0 50%;*/
-/*        max-width: 50%;*/
-/*        margin-bottom: 3rem;*/
-/*    }*/
-/*    .carousel-img {*/
-/*        aspect-ratio: 18.5 / 11;*/
-/*    }*/
 }

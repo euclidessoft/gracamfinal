@@ -1437,14 +1437,14 @@ a {
 }
 @media (max-width: 1024px) and (min-width: 993px){
     .tab {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        margin-top: 3rem !important;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 3rem;
     }
     .tab-bloc{
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
-        margin-bottom: 3rem !important;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 3rem;
     }
     .carousel-img {
         aspect-ratio: 18.5 / 11;

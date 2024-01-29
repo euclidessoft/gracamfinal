@@ -570,10 +570,18 @@ textarea.form-control {
     padding: 0 !important;
 }
 
-.bloc-image img {
+.bloc-image img,
+.bg_pourquoi,
+.bg_about{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+.bloc-image .bg_about{
+    background-image: url("../images/about_home.jpg");
+}
+.bloc-image .bg_pourquoi{
+    background-image: url("../images/pourquoi.jpg");
 }
 
 .border-primaire {
@@ -1124,13 +1132,14 @@ a {
     border-right: 5px solid var(--primaire);
     border-top: 5px solid var(--primaire);
     border-bottom: 5px solid var(--primaire);
-    margin-left: -37px;
 }
 
-.service .service-image-left {
-    margin-right: -37px !important;
+/*.service .service-image-left {*/
+/*    margin-right: -37px !important;*/
+/*}*/
+.service-image-left{
+    margin-right: -64px;
 }
-
 .service-bordure-right {
     border-left: 5px solid var(--primaire);
     border-top: 5px solid var(--primaire);
@@ -1195,11 +1204,18 @@ a {
 }
 
 @media (max-width: 768px) {
-    .service-bordure {
+    .service-bordure-left {
+        border-right: 5px solid var(--primaire);
+        border-left: 5px solid var(--primaire);
+        border-bottom: 5px solid var(--primaire);
+        border-top: none;
+        margin-top: -3px
+    }
+    .service-bordure-left {
         margin-left: 0;
     }
 
-    .service .service-image {
+    .service .service-image-left {
         margin-right: 0;
     }
 
@@ -1341,6 +1357,19 @@ a {
     .carousel-img.slide_3 {
         background-image: url('../images/slide_sable.jpg');
     }
+
+    .bloc-image img,
+    .bg_pourquoi,
+    .bg_about{
+        aspect-ratio: 1 / 1;
+    }
+    .bloc-image .bg_about{
+        background-image: url("../images/about_home_mobil.jpg");
+    }
+    .bloc-image .bg_pourquoi{
+        background-image: url("../images/pourquoi_home_mobil.jpg");
+    }
+
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -1413,7 +1442,7 @@ a {
 
     .service-title {
         font-size: 2rem;
-        color: var(--secondaire);
+        color: var(--primaire);
         font-weight: bold;
     }
 

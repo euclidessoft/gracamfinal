@@ -1257,7 +1257,7 @@ a {
     .services,
     .galerie,
     .team {
-        padding: 1px;
+        padding: 1rem;
     }
 
     .valeurs{
@@ -1464,18 +1464,18 @@ a {
         margin-top: 10px;
     }
 }
-@media (max-width: 1024px) and (min-width: 993px){
-    .tab {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-top: 3rem;
-    }
-    .tab-bloc{
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin-bottom: 3rem;
-    }
-    .carousel-img {
-        aspect-ratio: 18.5 / 11;
-    }
+/*@media (max-width: 1024px) and (min-width: 993px){*/
+/*    .tab {*/
+/*        flex: 0 0 100%;*/
+/*        max-width: 100%;*/
+/*        margin-top: 3rem;*/
+/*    }*/
+/*    .tab-bloc{*/
+/*        flex: 0 0 50%;*/
+/*        max-width: 50%;*/
+/*        margin-bottom: 3rem;*/
+/*    }*/
+/*    .carousel-img {*/
+/*        aspect-ratio: 18.5 / 11;*/
+/*    }*/
 }

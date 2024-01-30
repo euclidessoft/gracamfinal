@@ -407,7 +407,7 @@ textarea.form-control {
 
 /*****Start Galery****/
 .page-header-galerie {
-    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)),url("../images/galerie_8.avif");
+    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)),url("../images/banniere_galerie.avif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

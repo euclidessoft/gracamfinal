@@ -1366,15 +1366,15 @@ a {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/slide_granite.jpg');
+        background-image: url('../images/slide_granite_mobil.jpg');
     }
 
     .carousel-img.slide_2 {
-        background-image: url('../images/slide_gravier.jpg');
+        background-image: url('../images/slide_gravier_mobil.jpg');
     }
 
     .carousel-img.slide_3 {
-        background-image: url('../images/slide_sable.jpg');
+        background-image: url('../images/slide_sable_mobil.jpg');
     }
     .produit-img .gravier{
         background-image: url("../images/gravier_home_mobil.jpg");
@@ -1426,15 +1426,15 @@ a {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/slide_granite.jpg');
+        background-image: url('../images/slide_granite_tab.jpg');
     }
 
     .carousel-img.slide_2 {
-        background-image: url('../images/slide_gravier.jpg');
+        background-image: url('../images/slide_gravier_tab.jpg');
     }
 
     .carousel-img.slide_3 {
-        background-image: url('../images/slide_sable.jpg');
+        background-image: url('../images/slide_sable_tab.jpg');
     }
 
     .carousel-overlay {
@@ -1457,7 +1457,7 @@ a {
 @media (max-width: 992px) {
 
     .navbar {
-        background-color: var(--primaire);
+        background-color: var(--primaire) !important;
     }
 
     .navbar .nav-link {

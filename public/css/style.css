@@ -1286,10 +1286,9 @@ a {
     .services,
     .galerie,
     .team,
-    .valeur {
-        padding: 1rem;
+    .valeurs {
+        padding: 1rem !important;
     }
-
 
     .bloc-text-left, .bloc-text-right,
     .bloc-text-center-primaire,

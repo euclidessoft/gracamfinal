@@ -9,6 +9,7 @@ for (var i = 0; i < SmallImg.length; i++) {
     };
 }
 /*************End Product image*************/
+
 (function ($) {
     "use strict";
 
@@ -19,7 +20,6 @@ for (var i = 0; i < SmallImg.length; i++) {
 
     // Initiate the wowjs
     new WOW().init();
-
 
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
@@ -90,7 +90,6 @@ for (var i = 0; i < SmallImg.length; i++) {
     }
 
 })(jQuery);
-
 
 function upload() {
     $('#candidature_cv').trigger('click');

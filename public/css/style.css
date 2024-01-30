@@ -155,7 +155,7 @@ a {
 
 /* Start css contact */
 .page-header-contact {
-    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)),url(../images/banniere_contact.jpg);
+    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)),url(../images/banniere_contact.avif);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,7 +236,7 @@ h3.text-dark {
 }
 
 .page-header-about {
-    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)),url(../images/banniere_about.jpg);
+    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)),url(../images/banniere_about.avif);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -250,7 +250,7 @@ h3.text-dark {
 
 
 .page-header-produit {
-    background-image:linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)), url(../images/banniere_produit.jpg);
+    background-image:linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)), url(../images/banniere_produit.avif);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -280,15 +280,15 @@ h3.text-dark {
 }
 
 .carousel-img.slide_1 {
-    background-image: url('../images/slide_granite.jpg');
+    background-image: url('../images/slide_granite.avif');
 }
 
 .carousel-img.slide_2 {
-    background-image: url('../images/slide_gravier.jpg');
+    background-image: url('../images/slide_gravier.avif');
 }
 
 .carousel-img.slide_3 {
-    background-image: url('../images/slide_sable.jpg');
+    background-image: url('../images/slide_sable.avif');
 }
 
 .carousel-overlay {
@@ -407,7 +407,7 @@ textarea.form-control {
 
 /*****Start Galery****/
 .page-header-galerie {
-    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)),url("../images/galerie_8.jpg");
+    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)),url("../images/galerie_8.avif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -585,12 +585,12 @@ textarea.form-control {
 .bloc-image .bg_about{
     background-size: cover;
     background-position: center;
-    background-image: url("../images/about_home.jpg");
+    background-image: url("../images/about_home.avif");
 }
 .bloc-image .bg_pourquoi{
     background-size: cover;
     background-position: center;
-    background-image: url("../images/pourquoi.jpg");
+    background-image: url("../images/pourquoi.avif");
 }
 
 .border-primaire {
@@ -602,7 +602,7 @@ hr {
 }
 
 .valeurs {
-    background-image: url("../images/bg-valeurs.jpg");
+    background-image: url("../images/bg-valeurs.avif");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -1040,15 +1040,15 @@ a {
 }
 
 .sable .categorie-title {
-    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/sable.jpg);
+    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/sable.avif);
 }
 
 .gravier .categorie-title {
-    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/gravier.jpg);
+    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/gravier.avif);
 }
 
 .pierre .categorie-title {
-    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/granite.jpg);
+    background-image: radial-gradient(transparent, rgba(var(--noir-rgb), 0.9)), url(../images/granite.avif);
 }
 
 .border-primaire {
@@ -1108,17 +1108,17 @@ a {
     transition: calc(var(--transdelay) * 1.5);
 }
 .produit-img .gravier{
-    background-image: url("../images/gravier_home.jpg");
+    background-image: url("../images/gravier_home.avif");
     background-size: cover;
     background-position: center;
 }
 .produit-img .sable{
-    background-image: url("../images/sable_home.jpg");
+    background-image: url("../images/sable_home.avif");
     background-size: cover;
     background-position: center;
 }
 .produit-img .granite {
-    background-image: url("../images/granite_home.jpg");
+    background-image: url("../images/granite_home.avif");
     background-size: cover;
     background-position: center;
 }
@@ -1144,7 +1144,7 @@ a {
 /**Start page Service **/
 
 .page-header-service {
-    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)), url(../images/banniere_services.jpg);
+    background-image: linear-gradient(rgba(var(--noir-rgb), 0.6), rgba(var(--noir-rgb), 0.6)), url(../images/banniere_services.avif);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1372,24 +1372,24 @@ a {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/slide_granite_mobil.jpg');
+        background-image: url('../images/slide_granite_mobil.avif');
     }
 
     .carousel-img.slide_2 {
-        background-image: url('../images/slide_gravier_mobil.jpg');
+        background-image: url('../images/slide_gravier_mobil.avif');
     }
 
     .carousel-img.slide_3 {
-        background-image: url('../images/slide_sable_mobil.jpg');
+        background-image: url('../images/slide_sable_mobil.avif');
     }
     .produit-img .gravier{
-        background-image: url("../images/gravier_home_mobil.jpg");
+        background-image: url("../images/gravier_home_mobil.avif");
     }
     .produit-img .sable{
-        background-image: url("../images/sable_home_mobil.jpg");
+        background-image: url("../images/sable_home_mobil.avif");
     }
     .produit-img .granite {
-        background-image: url("../images/granite_home_mobil.jpg");
+        background-image: url("../images/granite_home_mobil.avif");
     }
 
     .bloc-image img,
@@ -1399,10 +1399,10 @@ a {
     }
 
     .bloc-image .bg_about{
-        background-image: url("../images/about_home_mobil.jpg");
+        background-image: url("../images/about_home_mobil.avif");
     }
     .bloc-image .bg_pourquoi{
-        background-image: url("../images/pourquoi_home_mobil.jpg");
+        background-image: url("../images/pourquoi_home_mobil.avif");
     }
 
     .categorie-title {
@@ -1436,15 +1436,15 @@ a {
     }
 
     .carousel-img.slide_1 {
-        background-image: url('../images/slide_granite_tab.jpg');
+        background-image: url('../images/slide_granite_tab.avif');
     }
 
     .carousel-img.slide_2 {
-        background-image: url('../images/slide_gravier_tab.jpg');
+        background-image: url('../images/slide_gravier_tab.avif');
     }
 
     .carousel-img.slide_3 {
-        background-image: url('../images/slide_sable_tab.jpg');
+        background-image: url('../images/slide_sable_tab.avif');
     }
 
     .carousel-overlay {

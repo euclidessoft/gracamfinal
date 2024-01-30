@@ -1387,10 +1387,11 @@ a {
     }
 
     .bloc-image img,
-    .bg_pourquoi,
-    .bg_about{
+    .bloc-image .bg_pourquoi,
+    .bloc-image .bg_about{
         aspect-ratio: 1 / 1;
     }
+
     .bloc-image .bg_about{
         background-image: url("../images/about_home_mobil.jpg");
     }
@@ -1424,10 +1425,6 @@ a {
         aspect-ratio: 4 / 3;
     }
 
-    .flex-nowrap {
-        /*aspect-ratio: 1/1;*/
-    }
-
     .carousel-img.slide_1 {
         background-image: url('../images/slide_granite.jpg');
     }
@@ -1443,6 +1440,13 @@ a {
     .carousel-overlay {
         width: 100%;
     }
+
+    .bloc-image img,
+    .bloc-image .bg_pourquoi,
+    .bloc-image .bg_about{
+        aspect-ratio: 4 / 3;
+    }
+
     .bloc-titre-service {
         padding: 2rem;
         font-size: 2rem;
@@ -1451,6 +1455,14 @@ a {
 }
 
 @media (max-width: 992px) {
+
+    .navbar {
+        background-color: var(--primaire);
+    }
+
+    .navbar .nav-link {
+        color: var(--secondaire) !important;
+    }
 
     .navbar .navbar-toggler {
         background-color: transparent;

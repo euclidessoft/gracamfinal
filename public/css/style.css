@@ -1234,6 +1234,9 @@ a {
 }
 
 @media (max-width: 768px) {
+    .bloc-team-mobil{
+        left: 18% !important;
+    }
     .service-bordure-left {
         border-right: 5px solid var(--primaire);
         border-left: 5px solid var(--primaire);
@@ -1315,7 +1318,6 @@ a {
 
     .bloc-title {
         text-align: center;
-
     }
 
     .h2, h2 {

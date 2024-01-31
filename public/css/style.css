@@ -560,7 +560,7 @@ textarea.form-control {
 .bloc-text-center-secondaire .bloc-title {
     position: absolute;
     top: -20px;
-    left: 40%;
+    left: 41.9%;
 }
 
 .bloc-text-right .bloc-title {
@@ -1308,8 +1308,11 @@ a {
     .bloc-text-center-secondaire .bloc-title {
         position: absolute;
         top: -15px;
-        left: 30.5%;
+        left: 25.5%;
         margin-top: 8px !important;
+    }
+    .bloc-valeur-mobil{
+        left: 29% !important;
     }
 
     /*.text-secondaire {*/

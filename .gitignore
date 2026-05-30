@@ -1,6 +1,23 @@
-.gitignore
+/.idea/
+###> symfony/framework-bundle ###
 .env
-style.min.min.css
+.env.local
+.env.local.php
+.env.*.local
+/public/bundles/
+/public/uploads/
+/public/Documents/
 /var/
-/.idea/*
-.htaccess
+/vendor/
+qodana.yaml
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> symfony/asset-mapper ###
+/public/assets/
+/assets/vendor/
+###< symfony/asset-mapper ###

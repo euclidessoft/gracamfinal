@@ -49,15 +49,16 @@ for (var i = 0; i < SmallImg.length; i++) {
     });
 
     // Back to top button
+    const backToTop = $('.back-to-top');
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-            $('.back-to-top').css('display','flex');
+            backToTop.fadeIn('slow');
+            backToTop.css('display','flex');
         } else {
             $('.back-to-top').fadeOut('slow');
         }
     });
-    $('.back-to-top').click(function () {
+    backToTop.click(function () {
         $('html, body').animate({scrollTop: 0}, 150, 'easeInOutExpo');
         return false;
     });
